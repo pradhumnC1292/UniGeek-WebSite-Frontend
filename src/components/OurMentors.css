@@ -75,7 +75,6 @@
     transform: translateX(-50%);
   }
 }
-
 .mentor-card {
   min-width: 350px;
   height: 180px;
@@ -817,5 +816,331 @@
     overflow: hidden;
     position: absolute;
     left: 0;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .our-mentors-section.mobile {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 3rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .our-mentors-upperDiv {
+    width: 100%;
+    height: 40%;
+  }
+
+  .upper-heading h2 {
+    font-size: 2rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .upper-heading h2 span {
+    color: #5b47b0;
+  }
+
+  .upper-sub-pera {
+    font-size: 1.2rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: #666;
+    margin: 0 auto;
+  }
+
+  /* Enable horizontal scrolling on the lower div */
+  .our-mentors-lowerDiv.scrollable {
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #fff;
+    border-radius: 0.5rem;
+  }
+
+  .mentor-sliderr {
+    display: inline-flex;
+    gap: 2rem;
+    /* Prevent wrapping so that all cards remain in one row */
+    white-space: nowrap;
+  }
+
+  .mentor-card {
+    width: 330px;
+    height: 190px;
+    display: flex;
+    background-color: #f5f5fe;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+
+  .card-left-div {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+
+  .tag-div {
+    width: 65%;
+    height: 15%;
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #fff;
+  }
+
+  .name-info-div {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    position: absolute;
+    top: 25%;
+  }
+
+  .name-info-div h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .name-info-div p {
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: #666;
+  }
+
+  .name-info-div p span {
+    color: #5b47b0;
+  }
+
+  .social-link-div {
+    width: 40%;
+    height: 22%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .card-img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0.3rem;
+  }
+
+  .card-img02 {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card-right-div {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    right: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .mentor-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+  }
+
+  .carousel-controls {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .our-mentors-section.mobile {
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+    margin-top: 3rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .our-mentors-upperDiv {
+    width: 100%;
+    height: 40%;
+  }
+
+  .upper-heading h2 {
+    font-size: 2rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .upper-heading h2 span {
+    color: #5b47b0;
+  }
+
+  .upper-sub-pera {
+    font-size: 1rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: #666;
+    margin: 0 auto;
+  }
+
+  /* Enable horizontal scrolling on the lower div */
+  .our-mentors-lowerDiv.scrollable {
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #fff;
+    border-radius: 0.5rem;
+  }
+
+  .mentor-sliderr {
+    display: inline-flex;
+    gap: 2rem;
+    white-space: nowrap;
+  }
+
+  .mentor-card {
+    width: 320px;
+    height: 180px;
+    display: flex;
+    background-color: #f5f5fe;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+
+  .card-left-div {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+
+  .tag-div {
+    width: 65%;
+    height: 15%;
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #fff;
+  }
+
+  .name-info-div {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    position: absolute;
+    top: 25%;
+  }
+
+  .name-info-div h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .name-info-div p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: #666;
+  }
+
+  .name-info-div p span {
+    color: #5b47b0;
+  }
+
+  .social-link-div {
+    width: 40%;
+    height: 22%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .card-img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0.3rem;
+  }
+
+  .card-img02 {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card-right-div {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    right: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  .mentor-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+  }
+
+  .carousel-controls {
+    display: none;
   }
 }

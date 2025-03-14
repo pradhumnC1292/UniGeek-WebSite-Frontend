@@ -182,7 +182,7 @@ const OurMentors = () => {
       <div className="our-mentors-upperDiv">
         <div className="upper-heading">
           <h2 data-scroll data-scroll-speed="1">
-            “Meet Your <span>Expert</span> Mentors”
+            “Meet Your <span>Expert_DL</span> Mentors”
           </h2>
         </div>
         <div className="upper-sub-pera">

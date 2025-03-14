@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import "./Navbar.css";
 
@@ -6,24 +6,37 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const menuRef = useRef(null);
 
   const handleMenuToggle = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+    setMobileMenuOpen((prev) => !prev);
   };
 
   const handleCoursesToggle = () => {
-    setCoursesOpen(!coursesOpen);
+    setCoursesOpen((prev) => !prev);
   };
 
   const handleThemeToggle = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prev) => !prev);
   };
 
   useEffect(() => {
-    if (!mobileMenuOpen) {
-      setCoursesOpen(false);
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileMenuOpen(false);
+        setCoursesOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen || coursesOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
     }
-  }, [mobileMenuOpen]);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [mobileMenuOpen, coursesOpen]);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -35,9 +48,12 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="navbar-container">
+      <div className="navbar-container" ref={menuRef}>
         <div className="logo">LOGO</div>
-        <button className="hamburger" onClick={handleMenuToggle}>
+        <button
+          className={`hamburger ${mobileMenuOpen ? "open" : ""}`}
+          onClick={handleMenuToggle}
+        >
           <span></span>
           <span></span>
           <span></span>

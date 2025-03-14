@@ -520,3 +520,189 @@
     color: var(--color-gray);
   }
 }
+
+@media only screen and (max-width: 660px) {
+  .cs-mobile-section {
+    width: 100vw;
+    padding: 2rem 1rem;
+    background-color: #fffbfb;
+    text-align: center;
+    border-radius: 5rem 5rem 0 0;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 12px 16px -18px inset;
+  }
+
+  .cs-mobile-pre-title {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  .cs-mobile-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+  }
+
+  .cs-mobile-subtitle {
+    font-size: 1.18rem;
+    width: 80vw;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    margin: 0 auto 3rem;
+  }
+
+  .cs-mobile-container {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .cs-mobile-cards {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .cs-card {
+    width: 80vw;
+    height: 20vh;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #a7a7a7;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    padding: 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cs-card-icon {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs-card-icon img {
+    width: 100%;
+    height: auto;
+  }
+  .cs-card-info {
+  }
+  .cs-card-title {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    color: var(--color-primary);
+  }
+
+  .cs-card-text {
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 2rem;
+    width: 80%;
+    color: var(--color-dark);
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .cs-mobile-section {
+    width: 100vw;
+    padding: 3rem 1rem 1rem 1rem;
+    background-color: #fffbfb;
+    text-align: center;
+    border-radius: 5rem 5rem 0 0;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 30px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 12px 16px -18px inset;
+  }
+
+  .cs-mobile-pre-title {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  .cs-mobile-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+  }
+
+  .cs-mobile-subtitle {
+    font-size: 1.18rem;
+    width: 80vw;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    margin: 0 auto 3rem;
+  }
+
+  .cs-mobile-container {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .cs-mobile-cards {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .cs-card {
+    width: 85vw;
+    height: 25vh;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #a7a7a7;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    padding: 1rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cs-card-icon {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs-card-icon img {
+    width: 100%;
+    height: auto;
+  }
+  .cs-card-info {
+  }
+  .cs-card-title {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    color: var(--color-primary);
+  }
+
+  .cs-card-text {
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 2rem;
+    width: 80%;
+    color: var(--color-dark);
+  }
+}

@@ -39,7 +39,9 @@ const WhyDifferent02 = () => {
           </div>
           <div className="right-lower">
             <div className="right-lower-title">
-              <h2>Our platform's key & best features</h2>
+              <h2>
+                Our platform's key & best <span>features</span>
+              </h2>
             </div>
             <div className="right-lower-div">
               <div className="feature">

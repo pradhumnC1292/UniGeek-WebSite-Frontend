@@ -1306,27 +1306,27 @@
 }
 
 /* ==== CELLPHONES (480px and below) ==== */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 660px) {
   .hero-container {
-    border: 2px solid blue;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     width: 99vw;
+    margin-bottom: 2rem;
   }
   .hero-left {
     margin: 1rem 0;
     padding: 0.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: left;
     align-items: last baseline;
   }
   .hero-left-heading h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     text-align: left;
   }
   .hero-subtext {
-    font-size: 0.6rem;
+    font-size: 0.85rem;
     text-align: left;
   }
   .hero-cta {
@@ -1340,10 +1340,26 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   .hero-bubble {
-    display: none;
+    position: absolute;
+    top: -3rem;
+    right: -0.1rem;
+    width: 350px;
+    height: 350px;
+    background: var(--color-bubble);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   .hero-bubble2 {
-    display: none;
+    position: absolute;
+    bottom: -3rem;
+    left: -0.01rem;
+    width: 350px;
+    height: 350px;
+    background: var(--color-bubble2);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   .form-card {
     position: relative;
@@ -1375,7 +1391,139 @@
     margin: 0.5rem;
   }
   .form-subtitle {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .form-card form input,
+  .form-card form select {
+    margin-bottom: 0.7rem;
+    padding: 0.7rem;
+    border-radius: 6px;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-input-border);
+    font-size: 0.7rem;
+    outline: none;
+  }
+  .form-card form input:hover,
+  .form-card form select:hover {
+    border-color: var(--color-input-focus);
+  }
+  .submit-btn {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .submit-btn:hover {
+    background-color: var(--color-cta-hover);
+  }
+  .agreement {
+    margin-top: 0.7rem;
+    font-size: 0.5rem;
+    color: var(--color-agreement);
+  }
+  .agreement a {
+    font-size: 0.7rem;
+    color: var(--color-purple);
+    text-decoration: none;
+  }
+  .agreement a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 99vw;
+    margin-bottom: 2rem;
+  }
+  .hero-left {
+    margin: 1rem 0;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    align-items: last baseline;
+  }
+  .hero-left-heading h1 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .hero-subtext {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+  .hero-cta {
+    display: none;
+  }
+  .hero-right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .hero-bubble {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background: var(--color-bubble);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .hero-bubble2 {
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    width: 320px;
+    height: 320px;
+    background: var(--color-bubble2);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .form-card {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 410px;
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+  }
+  .form-card h3 {
+    font-size: 1rem;
+    color: var(--color-purple);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  #form-input {
+    font-size: 0.7rem;
+    text-align: left;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  .form-card h2 {
+    font-size: 1.3rem;
+    color: var(--color-gray-dark);
+    text-align: center;
+    margin: 0.5rem;
+  }
+  .form-subtitle {
+    font-size: 0.7rem;
     color: var(--color-text-secondary);
     margin-bottom: 0.5rem;
     text-align: center;

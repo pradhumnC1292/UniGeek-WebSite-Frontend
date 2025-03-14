@@ -1,12 +1,11 @@
 import React, { useRef, useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css"; // Import the CSS
 import Navbar from "./components/NavBar";
+// import EdtechNavbar from "./components/EdtechNavbar";
 import HeroSection from "./components/HeroSection";
 import StatsBanner from "./components/StatsBanner";
 import MentorBanner from "./components/MentorBanner";
-import OurMentors from "./components/OurMentors";
-import WhyDifferent_dl from "./components/WhyDifferent_DL";
+// import Different from "./components/Different";
 import WhyDifferent02 from "./components/WhyDifferent02";
 import CareerServices from "./components/CareerServices";
 import CourseSection from "./components/CourseSection";
@@ -14,6 +13,8 @@ import HowToGetAdmission from "./components/HowToGetAdmission";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import ResponsiveComponent from "./components/responsiveComponents/ResponsiveComponent";
+import ResponsiveComponentOurMentors from "./components/responsiveComponents/ResponsiveComponentOurMentors";
+import CareerServicesResponsive from "./components/responsiveComponents/CareerServicesResponsive ";
 // import "./App.css"; // If you have any global styles
 
 export default function App() {
@@ -41,13 +42,15 @@ export default function App() {
       // ^ This is crucial for Locomotive Scroll to work
     >
       <Navbar />
+      {/* <EdtechNavbar /> */}
       <HeroSection />
       <StatsBanner />
       <MentorBanner />
-      <OurMentors />
+      <ResponsiveComponentOurMentors />
       <ResponsiveComponent />
+      {/* <Different /> */}
       <WhyDifferent02 />
-      <CareerServices />
+      <CareerServicesResponsive />
       <CourseSection />
       <HowToGetAdmission />
       <FAQ />

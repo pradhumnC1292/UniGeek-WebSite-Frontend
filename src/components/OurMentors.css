@@ -1,0 +1,821 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #666;
+  --color-purple: #5b47b0;
+  --color-bg: #f5f5fe;
+}
+
+.our-mentors-section {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  margin-top: 6rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 5rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var (--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.our-mentors-upperDiv {
+  width: 100%;
+  height: 30%;
+}
+
+.upper-heading h2 {
+  font-size: 2.2rem;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.upper-heading h2 span {
+  color: var(--color-purple);
+}
+
+.upper-sub-pera {
+  font-size: 1.25rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  color: var(--color-gray);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.our-mentors-lowerDiv {
+  width: 100%;
+  height: 60%;
+  margin-top: 3rem;
+  padding: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 2rems;
+  /* border: 2px solid blue; */
+}
+
+.mentor-slider {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.mentor-card {
+  min-width: 350px;
+  height: 180px;
+  display: flex;
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.card-left-div {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  padding-left: 0.5rem;
+}
+.tag-div {
+  width: 65%;
+  height: 15%;
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  /* border: 1px solid black; */
+}
+.name-info-div {
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  position: absolute;
+  top: 25%;
+  /* border: 1px solid blue; */
+}
+.name-info-div h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.name-info-div p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+  color: var(--color-gray);
+}
+.name-info-div p span {
+  color: var(--color-purple);
+}
+.social-link-div {
+  width: 40%;
+  height: 25%;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  /* border: 1px solid black; */
+}
+.card-img {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0.3rem;
+}
+.card-img02 {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  /* right: 0; */
+}
+.card-right-div {
+  width: 40%;
+  height: 70%;
+  position: relative;
+  top: 15%;
+  right: 0.5rem;
+  border-radius: 50%;
+}
+/* .card-right-div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: rgba(253, 253, 253, 0.6);
+  border-bottom-right-radius: 1rem;
+  z-index: 0;
+} */
+.mentor-card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+
+@media only screen and (min-width: 96em) {
+  .our-mentors-section {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    padding: 1rem 3rem 3rem 3rem;
+    text-align: center;
+    background: #fefefa;
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .our-mentors-upperDiv {
+    width: 100%;
+    height: 30%;
+    /* border: 1px solid black; */
+  }
+
+  .upper-heading h2 {
+    font-size: 3rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
+  .upper-heading h2 span {
+    color: var(--color-purple);
+  }
+
+  .upper-sub-pera {
+    font-size: 1.5rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .our-mentors-lowerDiv {
+    width: 100%;
+    height: 60%;
+    margin-top: 3rem;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 2rems;
+    /* border: 2px solid blue; */
+  }
+
+  .mentor-slider {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: slide 30s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .mentor-card {
+    min-width: 380px;
+    height: 200px;
+    display: flex;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .card-left-div {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+  .tag-div {
+    width: 65%;
+    height: 15%;
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+    /* border: 1px solid black; */
+  }
+  .name-info-div {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    position: absolute;
+    top: 25%;
+    /* border: 1px solid blue; */
+  }
+  .name-info-div h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .name-info-div p {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: var(--color-gray);
+  }
+  .name-info-div p span {
+    color: var(--color-purple);
+  }
+  .social-link-div {
+    width: 40%;
+    height: 25%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    /* border: 1px solid black; */
+  }
+  .card-img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0.3rem;
+  }
+  .card-img02 {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+  }
+  .card-right-div {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    right: 0.5rem;
+    border-radius: 50%;
+  }
+  .mentor-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1040px) and (min-height: 1366px) and (max-height: 1380px) {
+  .our-mentors-section {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 6rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 5rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    background: var (--color-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .our-mentors-upperDiv {
+    width: 100%;
+    height: 30%;
+  }
+
+  .upper-heading h2 {
+    font-size: 2.5rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
+  .upper-heading h2 span {
+    color: var(--color-purple);
+  }
+
+  .upper-sub-pera {
+    font-size: 1.25rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .our-mentors-lowerDiv {
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 2rems;
+  }
+
+  .mentor-slider {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: slide 30s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .mentor-card {
+    min-width: 400px;
+    height: 200px;
+    display: flex;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .card-left-div {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+  .tag-div {
+    width: 65%;
+    height: 15%;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+  }
+  .name-info-div {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    position: absolute;
+    top: 25%;
+  }
+  .name-info-div h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .name-info-div p {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: var(--color-gray);
+  }
+  .name-info-div p span {
+    color: var(--color-purple);
+  }
+  .social-link-div {
+    width: 40%;
+    height: 22%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+  .card-img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0.3rem;
+  }
+  .card-img02 {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+  }
+  .card-right-div {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    right: 0.5rem;
+    border-radius: 50%;
+  }
+  .mentor-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1025px) and (min-height: 1180px) and (max-height: 1367px) {
+  .our-mentors-section {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 6rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 5rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    background: var (--color-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .our-mentors-upperDiv {
+    width: 100%;
+    height: 30%;
+  }
+
+  .upper-heading h2 {
+    font-size: 2.5rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
+  .upper-heading h2 span {
+    color: var(--color-purple);
+  }
+
+  .upper-sub-pera {
+    font-size: 1.25rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .our-mentors-lowerDiv {
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 2rems;
+  }
+
+  .mentor-slider {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: slide 20s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .mentor-card {
+    min-width: 400px;
+    height: 200px;
+    display: flex;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .card-left-div {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+  .tag-div {
+    width: 65%;
+    height: 15%;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+  }
+  .name-info-div {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    position: absolute;
+    top: 25%;
+  }
+  .name-info-div h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .name-info-div p {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: var(--color-gray);
+  }
+  .name-info-div p span {
+    color: var(--color-purple);
+  }
+  .social-link-div {
+    width: 40%;
+    height: 22%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+  .card-img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0.3rem;
+  }
+  .card-img02 {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+  }
+  .card-right-div {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    right: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .mentor-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 1060px) {
+  .our-mentors-section {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 6rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 5rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    background: var (--color-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .our-mentors-upperDiv {
+    width: 100%;
+    height: 30%;
+  }
+
+  .upper-heading h2 {
+    font-size: 2rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
+  .upper-heading h2 span {
+    color: var(--color-purple);
+  }
+
+  .upper-sub-pera {
+    font-size: 1rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .our-mentors-lowerDiv {
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 2rems;
+  }
+
+  .mentor-slider {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: slide 20s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .mentor-card {
+    min-width: 320px;
+    height: 180px;
+    display: flex;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .card-left-div {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    padding-left: 0.5rem;
+  }
+  .tag-div {
+    width: 65%;
+    height: 15%;
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+  }
+  .name-info-div {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    position: absolute;
+    top: 25%;
+  }
+  .name-info-div h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .name-info-div p {
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: var(--color-gray);
+  }
+  .name-info-div p span {
+    color: var(--color-purple);
+  }
+  .social-link-div {
+    width: 40%;
+    height: 22%;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+  .card-img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0.3rem;
+  }
+  .card-img02 {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+  }
+  .card-right-div {
+    width: 40%;
+    height: 70%;
+    position: relative;
+    top: 15%;
+    right: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .mentor-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+  }
+}

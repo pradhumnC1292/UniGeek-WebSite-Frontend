@@ -1,0 +1,7 @@
+.app {
+  /* So Locomotive Scroll can manage vertical scrolling */
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}

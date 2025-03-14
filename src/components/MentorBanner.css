@@ -1,0 +1,508 @@
+:root {
+  --mentor-bg: #5b47b0;
+  --mentor-white: #fff;
+  --mentor-text-dark: #333;
+  --mentor-purple: #6a33f8;
+  --mentor-border: #000;
+  --mentor-badge-bg: #fff;
+  --mentor-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --mentor-btn-hover-bg: #e1dbf7;
+  --mentor-btn-hover-text: #fff;
+  --mentor-opacity: 0.8;
+}
+
+.mentor-banner {
+  position: relative;
+  width: 100vw;
+  /* Shift the banner left so it spans full viewport width,
+     even if the parent container is centered or has max-width. */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 4rem;
+  height: 25rem;
+  background: var(--mentor-bg);
+  color: var(--mentor-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1;
+}
+
+/* Left Column */
+.mentor-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  height: 100%;
+}
+
+.mentor-girl-img {
+  position: absolute;
+  top: 12px;
+  left: 120px;
+  width: 370px;
+  height: auto;
+  z-index: 999;
+}
+
+/* Stats Badge */
+.mentor-stats-badge {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  background: var(--mentor-badge-bg);
+  color: var(--mentor-text-dark);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  width: 150px;
+  text-align: center;
+  box-shadow: var(--mentor-box-shadow);
+  z-index: 999;
+}
+
+.mentor-stats-badge h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--mentor-purple);
+}
+
+.mentor-stats-badge p {
+  margin: 0.2rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.mentor-group-img {
+  display: block;
+  width: 60%;
+  margin: 0.4rem auto 0;
+}
+
+/* Right Column */
+.mentor-right {
+  position: absolute;
+  right: 0;
+  width: 55%;
+  margin-left: 2rem;
+  height: 100%;
+  padding: 5rem 2rem;
+  text-align: left;
+}
+
+.mentor-right h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.mentor-right p {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.mentor-cta {
+  width: 20%;
+  background: var(--mentor-white);
+  color: var(--mentor-purple);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.mentor-cta:hover {
+  background: var(--mentor-btn-hover-bg);
+  color: var(--mentor-btn-hover-text);
+}
+
+/* Vector Image */
+.vector-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 280px;
+  height: auto;
+  z-index: 1;
+  opacity: var(--mentor-opacity);
+}
+
+/* Responsive */
+@media only screen and (min-width: 96em) {
+  .mentor-banner {
+    position: relative;
+    width: 100vw;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    height: 25rem;
+    background: var(--mentor-bg);
+    color: var(--mentor-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  /* Left Column */
+  .mentor-left {
+    position: absolute;
+    left: 5rem;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+  }
+
+  .mentor-girl-img {
+    position: absolute;
+    top: 12px;
+    left: 120px;
+    width: 400px;
+    height: auto;
+    z-index: 1;
+  }
+
+  /* Stats Badge */
+  .mentor-stats-badge {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    background: var(--mentor-badge-bg);
+    color: var(--mentor-text-dark);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: var(--mentor-box-shadow);
+    z-index: 2;
+  }
+
+  .mentor-stats-badge h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--mentor-purple);
+  }
+
+  .mentor-stats-badge p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .mentor-group-img {
+    display: block;
+    width: 60%;
+    margin: 0.4rem auto 0;
+  }
+
+  /* Right Column */
+  .mentor-right {
+    position: absolute;
+    right: 5rem;
+    width: 55%;
+    /* margin-left: 2rem; */
+    height: 100%;
+    padding: 5rem 2rem;
+    text-align: left;
+  }
+
+  .mentor-right h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .mentor-right p {
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .mentor-cta {
+    width: 20%;
+    background: var(--mentor-white);
+    color: var(--mentor-purple);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .mentor-cta:hover {
+    background: var(--mentor-btn-hover-bg);
+    color: var(--mentor-btn-hover-text);
+  }
+
+  /* Vector Image */
+  .vector-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: auto;
+    /* z-index: 2; */
+    opacity: var(--mentor-opacity);
+  }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1366px) {
+  .mentor-banner {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 4rem;
+    height: 20rem;
+    background: var(--mentor-bg);
+    color: var(--mentor-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  /* Left Column */
+  .mentor-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    height: 100%;
+  }
+
+  .mentor-girl-img {
+    position: absolute;
+    top: 3.5rem;
+    left: 80px;
+    width: 250px;
+    height: auto;
+    z-index: 999;
+  }
+
+  /* Stats Badge */
+  .mentor-stats-badge {
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    background: var(--mentor-badge-bg);
+    color: var(--mentor-text-dark);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 150px;
+    text-align: center;
+    box-shadow: var(--mentor-box-shadow);
+    z-index: 999;
+  }
+
+  .mentor-stats-badge h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--mentor-purple);
+  }
+
+  .mentor-stats-badge p {
+    margin: 0.2rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .mentor-group-img {
+    display: block;
+    width: 60%;
+    margin: 0.4rem auto 0;
+  }
+
+  /* Right Column */
+  .mentor-right {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    padding: 2rem 2rem;
+    text-align: left;
+  }
+
+  .mentor-right h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .mentor-right p {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .mentor-cta {
+    width: 30%;
+    background: var(--mentor-white);
+    color: var(--mentor-purple);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .mentor-cta:hover {
+    background: var(--mentor-btn-hover-bg);
+    color: var(--mentor-btn-hover-text);
+  }
+
+  /* Vector Image */
+  .vector-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: auto;
+    z-index: 1;
+    opacity: var(--mentor-opacity);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 820px) and (min-height: 1024px) and (max-height: 1180px) {
+  .mentor-banner {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 1rem;
+    height: 18rem;
+    background: var(--mentor-bg);
+    color: var(--mentor-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  /* Left Column */
+  .mentor-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    height: 100%;
+  }
+
+  .mentor-girl-img {
+    position: absolute;
+    top: 2.5rem;
+    left: 80px;
+    width: 250px;
+    height: auto;
+    z-index: 999;
+  }
+
+  /* Stats Badge */
+  .mentor-stats-badge {
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    background: var(--mentor-badge-bg);
+    color: var(--mentor-text-dark);
+    border-radius: 1rem;
+    width: 130px;
+    text-align: center;
+    box-shadow: var(--mentor-box-shadow);
+    z-index: 999;
+  }
+
+  .mentor-stats-badge h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--mentor-purple);
+  }
+
+  .mentor-stats-badge p {
+    margin: 0.2rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .mentor-group-img {
+    display: block;
+    width: 60%;
+    margin: 0.4rem auto 0;
+  }
+
+  /* Right Column */
+  .mentor-right {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    padding: 2rem 2rem;
+    text-align: left;
+  }
+
+  .mentor-right h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .mentor-right p {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .mentor-cta {
+    width: 30%;
+    background: var(--mentor-white);
+    color: var(--mentor-purple);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .mentor-cta:hover {
+    background: var(--mentor-btn-hover-bg);
+    color: var(--mentor-btn-hover-text);
+  }
+
+  /* Vector Image */
+  .vector-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: auto;
+    z-index: 1;
+    opacity: var(--mentor-opacity);
+  }
+}

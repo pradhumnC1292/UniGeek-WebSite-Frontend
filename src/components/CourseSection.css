@@ -1,0 +1,697 @@
+:root {
+  --color-white: #fff;
+  --color-purple: #816bde;
+  --color-purple-dark: #5b47b0;
+  --color-gray: #666;
+  --color-black: #000;
+  --color-bg: #f6f2fe;
+  --border-radius: 0.8rem;
+}
+
+.course-section {
+  position: relative;
+  width: 100vw;
+  margin-top: 3rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 3rem 1rem;
+  text-align: center;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.course-section-content {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 4rem;
+  padding: 3rem 3rem;
+  border-radius: 2rem;
+  background: var(--color-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* Section heading */
+.course-heading {
+  font-size: 2.2rem;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+.course-heading span {
+  color: var(--color-purple-dark);
+}
+.course-sub-pera {
+  font-size: 1.25rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  color: var(--color-gray);
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+/* Horizontal scroll container */
+.courses-slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Hide scrollbar (optional) */
+.courses-slider::-webkit-scrollbar {
+  display: none;
+}
+.courses-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Each course card */
+.course-card {
+  min-width: 380px;
+  min-height: 500px;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Card header text */
+.course-card-header {
+  width: 100%;
+  height: 30%;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: url("../assets/icons/unigeek-card-img.jpg") center/cover no-repeat;
+  border-radius: 0.8rem;
+}
+
+.course-card-header {
+  position: relative;
+}
+.course-card-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.8rem;
+  z-index: 0;
+}
+.course-title,
+.course-subtitle {
+  position: relative;
+  z-index: 1;
+}
+
+.course-title-div {
+  width: 16rem;
+  height: 60%;
+}
+.course-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+.course-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* Card body */
+.course-body {
+  height: 55%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.course-subheading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+.course-badge-container {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 0.8rem;
+  /* border: 1px solid black; */
+}
+.badge1 {
+  background: rgba(15, 192, 21, 0.2);
+  color: #0c6b0f;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+}
+.badge2 {
+  background: rgba(91, 71, 176, 0.12);
+  color: var(--color-purple-dark);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+}
+.course-features {
+  list-style: circle;
+  line-height: 2;
+  padding: 0.5rem;
+}
+.course-features li {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  margin-bottom: 0.3rem;
+}
+
+/* Card footer */
+.course-footer {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-btns {
+  width: 100%;
+  height: 60%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 0.5rem;
+}
+.btn-secondary,
+.btn-primary {
+  width: 45%;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 1rem 1rem;
+  transition: background 0.2s ease;
+}
+.btn-secondary {
+  background: #fff;
+  color: var(--color-purple-dark);
+  border: 1px solid var(--color-purple-dark);
+}
+.btn-secondary:hover {
+  background: var(--color-purple-dark);
+  color: #fff;
+}
+.btn-primary {
+  background: var(--color-purple-dark);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-white);
+  color: var(--color-purple-dark);
+  border: 1px solid var(--color-purple-dark);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 1.8rem;
+}
+
+.right-arrow {
+  right: 1.8rem;
+}
+/* Responsive adjustments */
+
+@media only screen and (min-width: 96em) {
+  .course-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #fefefa;
+  }
+  .course-section-content {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 4rem;
+    padding: 3rem 3rem;
+    border-radius: 2rem;
+    background: var(--color-bg);
+  }
+  /* Section heading */
+  .course-heading {
+    font-size: 2.5rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+  .course-heading span {
+    color: var(--color-purple-dark);
+  }
+  /* Horizontal scroll container */
+  .courses-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Hide scrollbar (optional) */
+  .courses-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .courses-slider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Each course card */
+  .course-card {
+    min-width: 380px;
+    min-height: 500px;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  /* Card header text */
+  .course-card-header {
+    width: 100%;
+    height: 30%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: url("../assets/icons/unigeek-card-img.jpg") center/cover
+      no-repeat;
+    border-radius: 0.8rem;
+  }
+
+  .course-card-header {
+    position: relative;
+  }
+  .course-card-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.8rem;
+    z-index: 0;
+  }
+  .course-title,
+  .course-subtitle {
+    position: relative;
+    z-index: 1;
+  }
+
+  .course-title-div {
+    width: 16rem;
+    height: 60%;
+  }
+  .course-subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+  .course-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  /* Card body */
+  .course-body {
+    height: 55%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .course-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+  }
+  .course-badge-container {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 0.8rem;
+    /* border: 1px solid black; */
+  }
+  .badge1 {
+    background: rgba(15, 192, 21, 0.2);
+    color: #0c6b0f;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .badge2 {
+    background: rgba(91, 71, 176, 0.12);
+    color: var(--color-purple-dark);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .course-features {
+    list-style: circle;
+    line-height: 2;
+    padding: 0.5rem;
+  }
+  .course-features li {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    margin-bottom: 0.3rem;
+  }
+
+  /* Card footer */
+  .course-footer {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-btns {
+    width: 100%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 0.5rem;
+  }
+  .btn-secondary,
+  .btn-primary {
+    width: 45%;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    transition: background 0.2s ease;
+  }
+  .btn-secondary {
+    background: #fff;
+    color: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-dark);
+  }
+  .btn-secondary:hover {
+    background: var(--color-purple-dark);
+    color: #fff;
+  }
+  .btn-primary {
+    background: var(--color-purple-dark);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--color-white);
+    color: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-dark);
+  }
+  .slider-arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .left-arrow {
+    left: 2rem;
+  }
+
+  .right-arrow {
+    right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1366px) {
+  .course-section {
+    position: relative;
+    width: 100vw;
+    margin-top: 3rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 3rem 1rem;
+    text-align: center;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .course-section-content {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 4rem;
+    padding: 3rem 3rem;
+    border-radius: 2rem;
+    background: var(--color-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Section heading */
+  .course-heading {
+    font-size: 2.2rem;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+  .course-heading span {
+    color: var(--color-purple-dark);
+  }
+  .course-sub-pera {
+    font-size: 1.25rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    color: var(--color-gray);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+  /* Horizontal scroll container */
+  .courses-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Hide scrollbar (optional) */
+  .courses-slider::-webkit-scrollbar {
+    display: none;
+  }
+  .courses-slider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Each course card */
+  .course-card {
+    min-width: 380px;
+    min-height: 500px;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  /* Card header text */
+  .course-card-header {
+    width: 100%;
+    height: 30%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: url("../assets/icons/unigeek-card-img.jpg") center/cover
+      no-repeat;
+    border-radius: 0.8rem;
+  }
+
+  .course-card-header {
+    position: relative;
+  }
+  .course-card-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.8rem;
+    z-index: 0;
+  }
+  .course-title,
+  .course-subtitle {
+    position: relative;
+    z-index: 1;
+  }
+
+  .course-title-div {
+    width: 16rem;
+    height: 60%;
+  }
+  .course-subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+  .course-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  /* Card body */
+  .course-body {
+    height: 55%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .course-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+  }
+  .course-badge-container {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 0.8rem;
+    /* border: 1px solid black; */
+  }
+  .badge1 {
+    background: rgba(15, 192, 21, 0.2);
+    color: #0c6b0f;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .badge2 {
+    background: rgba(91, 71, 176, 0.12);
+    color: var(--color-purple-dark);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .course-features {
+    list-style: circle;
+    line-height: 2;
+    padding: 0.5rem;
+  }
+  .course-features li {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    margin-bottom: 0.3rem;
+  }
+
+  /* Card footer */
+  .course-footer {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-btns {
+    width: 100%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 0.5rem;
+  }
+  .btn-secondary,
+  .btn-primary {
+    width: 45%;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    transition: background 0.2s ease;
+  }
+  .btn-secondary {
+    background: #fff;
+    color: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-dark);
+  }
+  .btn-secondary:hover {
+    background: var(--color-purple-dark);
+    color: #fff;
+  }
+  .btn-primary {
+    background: var(--color-purple-dark);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--color-white);
+    color: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-dark);
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .left-arrow {
+    left: 1.8rem;
+  }
+
+  .right-arrow {
+    right: 1.8rem;
+  }
+}

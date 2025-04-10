@@ -5,7 +5,7 @@ import mock_inter from "../assets/icons/mock_inter.png";
 import linkedin_profile from "../assets/icons/linkedin_profile.png";
 import company_assign from "../assets/icons/company_assign.png";
 import referrals from "../assets/icons/referrals.png";
-import line from "../assets/icons/Line.png";
+
 
 const CareerServices = () => {
   return (

@@ -18,13 +18,14 @@
 .why-different {
   position: relative;
   width: 1280px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   height: 759px;
   padding: 4rem 3rem;
   background-color: var(--color-white);
   text-align: center;
   background-size: 30px 30px;
   margin-top: 7rem;
-  margin: auto;
 }
 
 .left-dotted-banner {
@@ -62,8 +63,8 @@
 .wd-subheading {
   font-size: 1.25rem;
   font-family: "Outfit", sans-serif;
-  font-weight: 300;
-  color: var(--color-gray);
+  font-weight: 400;
+  color: #666;
   max-width: 800px;
   margin: 0 auto 10rem;
 }
@@ -172,14 +173,15 @@
 @media only screen and (min-width: 96em) {
   .why-different {
     position: relative;
-    width: 1480px;
+    width: 1280px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     height: 759px;
-    padding: 2rem 3rem;
+    padding: 4rem 3rem;
     background-color: var(--color-white);
     text-align: center;
     background-size: 30px 30px;
-    margin-top: 5rem;
-    margin: auto;
+    margin-top: 7rem;
   }
 
   .left-dotted-banner {
@@ -221,8 +223,8 @@
   .wd-subheading {
     font-size: 1.4rem;
     font-family: "Outfit", sans-serif;
-    font-weight: 300;
-    color: var(--color-gray);
+    font-weight: 400;
+    color: #666;
     max-width: 1000px;
     margin: 0 auto 10rem;
   }
@@ -333,131 +335,17 @@
 }
 
 @media only screen and (width: 1024px) and (height: 1366px) {
-  /* .wd-heading {
-    font-size: 2.2rem;
-    font-family: "Outfit", sans-serif;
-    margin-bottom: 1.2rem;
-    font-weight: 600;
-    color: var(--color-gray-dark);
-  }
-  .wd-heading span {
-    color: var(--color-purple);
-  }
-  .wd-subheading {
-    font-size: 1.25rem;
-    font-family: "Outfit", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    color: #666;
-    max-width: 760px;
-    margin: 0 auto 10rem;
-  }
-  .stats-bannerWD {
-    width: 100vw;
-    height: 620px;
-    margin: 0 auto;
-    padding: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  .upper-div {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .wd-heading {
-    font-size: 2.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .lower-div {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: -3rem;
-  }
-  .stats-boxx {
-    width: 390px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex: wrap;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  .stats-icon01 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle1);
-  }
-  .stats-icon02 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle2);
-  }
-  .stats-icon03 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle3);
-  }
-  .stats-icon04 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle4);
-  }
-
-  .sicon01 {
-    width: 60%;
-  }
-  .sicon02 {
-    width: 60%;
-  }
-  .sicon03 {
-    width: 60%;
-  }
-  .sicon04 {
-    width: 60%;
-  }
-
-  .stats-info h2 {
-    font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .stats-info p {
-    font-size: 1rem;
-    font-weight: 500;
-  } */
   .why-different {
     position: relative;
     width: 920px;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     height: 669px;
     padding: 2rem 2rem;
     background-color: var(--color-white);
     text-align: center;
     background-size: 10px 10px;
     margin-top: 3rem;
-    margin: auto;
   }
 
   .left-dotted-banner {
@@ -501,8 +389,8 @@
   .wd-subheading {
     font-size: 1.25rem;
     font-family: "Outfit", sans-serif;
-    font-weight: 300;
-    color: var(--color-gray);
+    font-weight: 400;
+    color: #666;
     max-width: 800px;
     margin: 0 auto 10rem;
   }
@@ -622,7 +510,7 @@
   .wd-subheading {
     font-size: 1.25rem;
     font-family: "Outfit", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     color: #666;
     max-width: 760px;
@@ -631,7 +519,10 @@
   .stats-bannerWD {
     width: 100vw;
     height: 580px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     padding: 0;
     background-color: #fff;
     border-radius: 8px;
@@ -726,119 +617,88 @@
 }
 
 @media only screen and (min-width: 768px) and (max-height: 1200px) {
-  .wd-heading {
-    font-size: 2.2rem;
-    font-family: "Outfit", sans-serif;
-    margin-bottom: 1.2rem;
-    font-weight: 600;
-    color: var(--color-gray-dark);
-  }
-  .wd-heading span {
-    color: var(--color-purple);
-  }
-  .wd-subheading {
-    font-size: 1.25rem;
-    font-family: "Outfit", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    color: #666;
-    max-width: 760px;
-    margin: 0 auto 10rem;
-  }
-  .stats-bannerWD {
-    width: 100vw;
-    height: 580px;
-    margin: 0 auto;
-    padding: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  .upper-div {
-    width: 100%;
-    height: 30%;
+  .qualification-sec {
+    width: 660px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 3rem 6rem;
+    background-color: #fffbfb;
+    border-top-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.3);
   }
-  .wd-heading {
+  .mobile-heading {
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-  }
-  .lower-div {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .stats-boxx {
-    width: 300px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex: wrap;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  .stats-icon01 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle1);
-  }
-  .stats-icon02 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle2);
-  }
-  .stats-icon03 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle3);
-  }
-  .stats-icon04 {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-circle4);
+    text-align: center;
+    color: #000;
   }
 
-  .sicon01 {
-    width: 60%;
-  }
-  .sicon02 {
-    width: 60%;
-  }
-  .sicon03 {
-    width: 60%;
-  }
-  .sicon04 {
-    width: 60%;
+  .mobile-heading span {
+    color: #5b47b0;
   }
 
-  .stats-info h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
+  .mobile-subheading {
+    font-size: 1.2rem;
+    width: 25rem;
+    font-weight: 300;
+    text-align: center;
+    color: var(--color-gray-dark);
+    margin-bottom: 5rem;
+  }
+  .qualification__container {
+    max-width: 800px;
+    height: 60vh;
+    margin-left: 1.7rem;
+    margin-right: 1.7rem;
+  }
+
+  .qualification__tabs {
+    display: flex;
+    justify-content: center;
+  }
+
+  .qualification__section {
+    grid-template-columns: initial;
+  }
+
+  .qualification__data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 2.2rem;
+  }
+
+  .qualification__title {
+    font-size: 1.7rem;
+    color: var(--color-purple);
+    font-weight: 500;
     margin-bottom: 0.5rem;
   }
-  .stats-info p {
-    font-size: 0.7rem;
-    font-weight: 500;
+
+  .qualification__subtitle {
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .qualification__rounder {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--color-purple);
+    border-radius: 50%;
+  }
+
+  .qualification__line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #757575;
+    transform: translate(6px, -7px);
   }
 }
 

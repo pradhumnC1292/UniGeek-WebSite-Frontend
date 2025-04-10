@@ -1,0 +1,382 @@
+:root {
+  --color-bg-left: #b8a8f687;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-dark: #090909;
+  --color-gray: #666;
+  --color-gray-light: #6c6c6c;
+  --color-circle1: #b1e2c5;
+  --color-circle2: #feedb4;
+  --color-circle3: #fecbc5;
+  --color-circle4: #abb3fe;
+  --color-blue: #0b1998;
+  --color-purple: #5b47b0;
+  --color-bg-feature: #f7f7f7;
+}
+
+.AEJ-section {
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.titile-div {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.titile-div h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  max-width: 820px;
+  margin-bottom: 1.2rem;
+}
+
+.titile-div h2 span {
+  color: #5b47b0;
+}
+
+.titile-div p {
+  width: 800px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+.AEJ-grid-section {
+  width: 90vw;
+  height: 81vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+}
+
+#cssportal-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  width: 95%;
+  height: 90%;
+}
+
+#div1 {
+  grid-area: 1 / 1 / 4 / 2;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#div2 {
+  grid-area: 3 / 2 / 6 / 3;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#div3 {
+  grid-area: 1 / 3 / 4 / 4;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#div4 {
+  grid-area: 3 / 4 / 6 / 5;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#div5 {
+  grid-area: 1 / 5 / 4 / 6;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#div6 {
+  grid-area: 3 / 6 / 6 / 7;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.AEJ-step-div {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -0.7rem;
+  right: -0.7rem;
+  color: #000;
+  background-color: #f6f2fe;
+  border-radius: 50%;
+}
+
+.card-title-div {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-title-div p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #666;
+  margin-left: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.title-div-01,
+.title-div-02,
+.title-div-03 {
+  width: fit-content;
+  margin-left: 0.5rem;
+  border-bottom: 2px solid black;
+}
+
+.title-div-03 {
+  margin-bottom: 0.5rem;
+}
+
+.title-div-01 h3 {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.title-div-02 h3 {
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+.title-div-03 h3 {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 96em) {
+  .AEJ-section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .titile-div {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .titile-div h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    max-width: 820px;
+    margin-bottom: 1.2rem;
+  }
+  .titile-div h2 span {
+    color: #5b47b0;
+  }
+  .AEJ-grid-section {
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+  #cssportal-grid {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+    width: 90%;
+    height: 90%;
+  }
+  #div1 {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #div2 {
+    grid-area: 3 / 2 / 6 / 3;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #div3 {
+    grid-area: 1 / 3 / 4 / 4;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #div4 {
+    grid-area: 3 / 4 / 6 / 5;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #div5 {
+    grid-area: 1 / 5 / 4 / 6;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #div6 {
+    grid-area: 3 / 6 / 6 / 7;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .AEJ-step-div {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    border-radius: 50%;
+  }
+  .card-title-div {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card-title-div p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #666;
+    margin-left: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+  .title-div-01,
+  .title-div-02,
+  .title-div-03 {
+    width: fit-content;
+    margin-left: 0.5rem;
+    border-bottom: 2px solid black;
+  }
+  .title-div-03 {
+    margin-bottom: 0.5rem;
+  }
+  .title-div-01 h3 {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .title-div-02 h3 {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .title-div-03 h3 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}

@@ -1,60 +1,32 @@
-import React, { useRef, useEffect } from "react";
-import "locomotive-scroll/dist/locomotive-scroll.css"; // Import the CSS
-import Navbar from "./components/NavBar";
-// import EdtechNavbar from "./components/EdtechNavbar";
-import HeroSection from "./components/HeroSection";
-import StatsBanner from "./components/StatsBanner";
-import MentorBanner from "./components/MentorBanner";
-// import Different from "./components/Different";
-import WhyDifferent02 from "./components/WhyDifferent02";
-import CareerServices from "./components/CareerServices";
-import CourseSection from "./components/CourseSection";
-import HowToGetAdmission from "./components/HowToGetAdmission";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
-import ResponsiveComponent from "./components/responsiveComponents/ResponsiveComponent";
-import ResponsiveComponentOurMentors from "./components/responsiveComponents/ResponsiveComponentOurMentors";
-import CareerServicesResponsive from "./components/responsiveComponents/CareerServicesResponsive ";
-// import "./App.css"; // If you have any global styles
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./layouts/Layout";
+import ScrollToTop from "./layouts/ScrollToTop";
+import Home from "./pages/Home";
+import JavaCourse from "./pages/JavaCourse";
+import MernCourse from "./pages/MernCourse";
+import UiUxCourse from "./pages/UiUxCourse";
+import LevelupCourse from "./pages/LevelupCourse";
+import BecomeMentor from "./pages/BecomeMentor";
+import NotFound from "./pages/NotFound";
 
-export default function App() {
-  // const scrollRef = useRef(null); // Reference to the main scroll container
-
-  // useEffect(() => {
-  //   const scroll = new LocomotiveScroll({
-  //     el: document.querySelector("[data-scroll-container]"),
-  //     smooth: true,
-  //     lerp: 0.08,
-  //     multiplier: 1,
-  //   });
-  //   scroll.update();
-  //   // Cleanup on unmount
-  //   return () => {
-  //     if (scroll) scroll.destroy();
-  //   };
-  // }, []);
-
+const App = () => {
   return (
-    <div
-      className="app"
-      // data-scroll-container
-      // ref={scrollRef}
-      // ^ This is crucial for Locomotive Scroll to work
-    >
-      <Navbar />
-      {/* <EdtechNavbar /> */}
-      <HeroSection />
-      <StatsBanner />
-      <MentorBanner />
-      <ResponsiveComponentOurMentors />
-      <ResponsiveComponent />
-      {/* <Different /> */}
-      <WhyDifferent02 />
-      <CareerServicesResponsive />
-      <CourseSection />
-      <HowToGetAdmission />
-      <FAQ />
-      <Footer />
-    </div>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="java-course" element={<JavaCourse />} />
+          <Route path="mern-course" element={<MernCourse />} />
+          <Route path="uiux-course" element={<UiUxCourse />} />
+          <Route path="levelup-course" element={<LevelupCourse />} />
+          <Route path="become-a-mentor" element={<BecomeMentor />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </>
   );
-}
+};
+
+export default App;

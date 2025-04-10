@@ -4,14 +4,14 @@ import linkedin from "../assets/icons/linkedin02.svg";
 import "./OurMentors.css";
 
 const OurMentorsMobile = () => {
-  const [mentors, setMentors] = useState([]);
+  const [mentor, setMentor] = useState([]);
 
   useEffect(() => {
     const fetchMentors = async () => {
       try {
         const { data } = await axios.get("http://localhost:5000/api/mentors");
         console.log(data);
-        setMentors(data);
+        setMentor(data);
       } catch (error) {
         console.error("Error fetching mentors:", error);
       }
@@ -19,7 +19,7 @@ const OurMentorsMobile = () => {
     fetchMentors();
   }, []);
 
-  if (mentors.length === 0) {
+  if (mentor.length === 0) {
     return <p>Loading...</p>;
   }
 
@@ -40,7 +40,7 @@ const OurMentorsMobile = () => {
       </div>
       <div className="our-mentors-lowerDiv scrollable">
         <div className="mentor-sliderr">
-          {mentors.map((mentor, index) => (
+          {mentor.map((mentor, index) => (
             <div key={mentor._id || index} className="mentor-card">
               <div className="card-left-div">
                 <div className="tag-div">

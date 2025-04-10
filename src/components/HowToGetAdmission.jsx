@@ -93,9 +93,9 @@ const HowToGetAdmission = () => {
         </div>
         <div className="pera">
           <p>
-            By maintaining high admission standards, we guarantee that all
-            enrolled students are prepared and motivated, allowing us to deliver
-            a high-quality, hands-on learning experience for every participants.
+            By maintaining high admission standards, we ensure motivated
+            students and deliver a quality hands-on learning experience for all
+            participants.
           </p>
         </div>
       </div>

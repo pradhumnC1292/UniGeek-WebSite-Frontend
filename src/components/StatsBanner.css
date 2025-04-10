@@ -13,7 +13,9 @@
   justify-content: space-evenly;
   padding: 2rem;
   max-width: 1280px;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   flex-wrap: wrap;
 }
 .stats-box {
@@ -66,7 +68,9 @@
 }
 @media only screen and (min-width: 96em) {
   .stats-banner {
-    margin: 2rem auto;
+    margin-top: 2rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     background: var(--stats-bg);
     border-radius: 1.5rem;
     display: flex;
@@ -74,7 +78,7 @@
     justify-content: space-evenly;
     padding: 3rem;
     max-width: 1580px;
-    width: 100%;
+    width: 100vw;
     flex-wrap: wrap;
   }
   .stats-box {
@@ -314,7 +318,7 @@
 } */
 @media only screen and (max-width: 660px) {
   .stats-banner {
-    margin: 3rem auto;
+    margin-top: 3rem;
     background: #f6f2fe;
     border-top-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
@@ -323,6 +327,8 @@
     padding: 2rem;
     max-width: 1280px;
     width: 100%;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.3);
   }
   .stats-box {

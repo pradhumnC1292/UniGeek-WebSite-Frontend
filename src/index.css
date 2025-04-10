@@ -98,8 +98,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-
-  /* So Locomotive Scroll can manage vertical scrolling */
   overflow: hidden;
   position: relative;
   width: 100vw;

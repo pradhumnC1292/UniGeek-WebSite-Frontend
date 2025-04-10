@@ -1,0 +1,196 @@
+.BecomeMentorHeroSec {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.BecomeMentor-left-div {
+  width: 55%;
+  height: 100%;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 780px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-left-heading {
+  margin-bottom: 1.5rem;
+}
+
+.hero-left-heading h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.hero-left-heading h1 span {
+  color: #5b47b0;
+}
+
+.become-mentor-hero-subtext {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  padding-left: 0.5rem;
+  border-left: 3px solid #5b47b0;
+}
+
+.hero-cta {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #5b47b0;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.hero-cta:hover {
+  background-color: #4f39a0;
+  transform: translateY(-3px);
+}
+
+.BecomeMentor-right-div {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.right-image-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-image-left-div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right-image-right-div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right-img-left-upper {
+  width: 80%;
+  height: 50%;
+  background-color: #cac9c4;
+  border-radius: 6rem;
+}
+
+.right-img-left-lower {
+  width: 60%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 3rem;
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.right-img-left-lower-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ece5f9;
+}
+
+.right-img-left-lower h2 {
+  max-width: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.right-img-left-lower h4 {
+  max-width: 50%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.right-img-right-upper {
+  width: 60%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 3rem;
+  border: 1px solid #ccc;
+}
+.right-img-left-upper-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ece5f9;
+}
+
+.right-img-right-upper h2 {
+  max-width: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.right-img-right-upper h4 {
+  max-width: 50%;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.right-img-right-lower {
+  width: 80%;
+  height: 50%;
+  background-color: #9ba9ab;
+  border-radius: 6rem;
+}
+
+.BecomeMentor-imgs {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 3;
+}
+
+.badge02 {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  z-index: 3;
+}

@@ -1,0 +1,114 @@
+.curriculum-sec-mob {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f5fefd;
+}
+
+.curriculum-heading-mob {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.curriculum-title-mob {
+  font-size: 2rem;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.curriculum-title-mob span {
+  color: var(--color-purple);
+}
+
+.curriculum-sub-heading-mob {
+  font-size: 1.2rem;
+  font-family: "Outfit", sans-serif;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* Accordion Container */
+.curriculum-accordion-mob {
+  width: 100%;
+}
+
+/* Accordion Item */
+.accordion-item-mob {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.accordion-item-mob:hover {
+  border-bottom: 1px solid var(--color-purple);
+}
+
+/* Accordion Header */
+.accordion-header-mob {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s;
+  padding: 0.5rem;
+}
+
+.accordion-header-mob h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-weight: bold;
+}
+
+.accordion-header-mob p {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Accordion Content */
+.accordion-content-mob {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-left: 4px solid var(--color-purple);
+}
+
+/* Single-column container for all details */
+.curriculum-details-column-mob {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Each section (Summary, Subtopics, Outcome, Tools) */
+.curriculum-section-mob {
+  margin-bottom: 1rem;
+}
+
+.section-title-mob {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--color-purple);
+  padding-left: 0.5rem;
+}
+
+.curriculum-section-mob ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.curriculum-section-mob li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Duration highlight in the description */
+.duration-mob {
+  font-weight: 500;
+  color: var(--color-purple);
+}

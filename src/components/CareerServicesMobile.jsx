@@ -4,7 +4,7 @@ import mockIcon from "../assets/icons/mock_inter.png";
 import linkedInIcon from "../assets/icons/linkedin_profile.png";
 import companyIcon from "../assets/icons/company_assign.png";
 import referralsIcon from "../assets/icons/referrals.png";
-import "./CourseSection.css";
+import "./CareerServices.css";
 
 const CareerServicesMobile = () => {
   return (

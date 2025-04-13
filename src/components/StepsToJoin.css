@@ -80,3 +80,45 @@
   color: #666;
   line-height: 1.4;
 }
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  .steps-join-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  .steps-card {
+    background-color: var(--steps-card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .steps-card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1c1c1c;
+    border-bottom: 2px solid var(--steps-icon-color);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .steps-icon {
+    color: var(--steps-icon-color);
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .steps-card-description {
+    font-size: 1.25rem;
+    color: #666;
+    line-height: 1.4;
+  }
+}

@@ -9,6 +9,7 @@ import UiUxCourse from "./pages/UiUxCourse";
 import LevelupCourse from "./pages/LevelupCourse";
 import BecomeMentor from "./pages/BecomeMentor";
 import NotFound from "./pages/NotFound";
+import HiringPage from "./pages/HiringPage";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="uiux-course" element={<UiUxCourse />} />
           <Route path="levelup-course" element={<LevelupCourse />} />
           <Route path="become-a-mentor" element={<BecomeMentor />} />
+          <Route path="hire-from-us" element={<HiringPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -5,6 +5,7 @@ import BecomeMentorBanner from "../components/BecomeMentorBanner";
 import ContributeSection from "../components/ContributeSection";
 import StepsToJoin from "../components/StepsToJoin";
 import "./BecomeMentor.css";
+import FAQ from "../components/FAQ";
 
 const BecomeMentor = () => {
   return (
@@ -14,6 +15,7 @@ const BecomeMentor = () => {
       <BecomeMentorBanner />
       <StepsToJoin />
       <ContributeSection />
+      <FAQ />
     </section>
   );
 };

@@ -8,11 +8,11 @@ import BecomeMentorLeftHeading from "./BecomeMentorLeftHeading";
 
 const BecomeMentorHeroSec = () => {
   return (
-    <section className="BecomeMentorHeroSec">
-      <div className="BecomeMentor-left-div">
+    <section className="bm-BecomeMentorHeroSec">
+      <div className="bm-BecomeMentor-left-div">
         <BecomeMentorLeftHeading />
       </div>
-      <div className="BecomeMentor-right-div">
+      {/* <div className="BecomeMentor-right-div">
         <div className="right-image-container">
           <div className="right-image-left-div">
             <div className="right-img-left-upper">
@@ -44,6 +44,41 @@ const BecomeMentorHeroSec = () => {
               <img src={Hero_img02} alt="" className="BecomeMentor-imgs" />
             </div>
             <div className="badge02">✨</div>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="bm-BecomeMentor-right-div">
+        <div className="bm-right-image-container">
+          <div className="bm-right-image-left-div">
+            <div className="bm-right-img-left-upper">
+              <img src={Hero_img01} alt="" className="bm-BecomeMentor-imgs" />
+            </div>
+            <div className="bm-right-img-left-lower">
+              <div className="bm-right-img-left-lower-icon">
+                <HiOutlineVideoCamera />
+              </div>
+              <div className="bm-right-img-left-lower-title">
+                <h2>VIDEO</h2>
+                <h4>Lessons</h4>
+              </div>
+            </div>
+            {/* <div className="bm-badge">✨</div> */}
+          </div>
+          <div className="bm-right-image-right-div">
+            <div className="bm-right-img-right-upper">
+              <div className="bm-right-img-right-upper-icon">
+                <MdGroups2 />
+              </div>
+              <div className="bm-right-img-right-upper-title">
+                <h2>BEST</h2>
+                <h4>mentors</h4>
+              </div>
+            </div>
+            <div className="bm-right-img-right-lower">
+              <img src={Hero_img02} alt="" className="bm-BecomeMentor-imgs" />
+            </div>
+            {/* <div className="bm-badge02">✨</div> */}
           </div>
         </div>
       </div>

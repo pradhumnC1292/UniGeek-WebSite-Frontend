@@ -1,0 +1,600 @@
+:root {
+  --hire-bg: #f8f8fc;
+  --hire-heading-color: #2a2a2a;
+  --hire-subheading-color: #5a5a5a;
+  --hire-card-bg: #ffffff;
+  --hire-primary-color: #5b47b0;
+}
+
+.whyhire-container {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: var(--hire-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyhire-content {
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.whyhire-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--hire-heading-color);
+  margin-bottom: 1rem;
+}
+.whyhire-heading span {
+  color: #5b47b0;
+}
+.whyhire-subheading {
+  font-size: 1.2rem;
+  color: var(--hire-subheading-color);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whyhire-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.whyhire-card {
+  background-color: var(--hire-card-bg);
+  padding: 2rem;
+  border-radius: 50%;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.whyhire-icon {
+  color: var(--hire-primary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.whyhire-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.whyhire-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.whyhire-differentiators {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.differentiator-heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--hire-heading-color);
+}
+
+.differentiator-heading span {
+  color: #5b47b0;
+}
+
+.differentiator-grid {
+  max-width: 780px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.differentiator-card {
+  background-color: #ffffff;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.differentiator-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 0.8rem;
+}
+
+.differentiator-card p {
+  font-size: 1rem;
+  color: #5a5a5a;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  .whyhire-container {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--hire-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyhire-content {
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .whyhire-heading {
+    font-size: 2.5rem !important;
+    font-weight: 600;
+    color: var(--hire-heading-color);
+    margin-bottom: 1rem;
+  }
+  .whyhire-heading span {
+    color: #5b47b0;
+  }
+  .whyhire-subheading {
+    font-size: 1.25rem !important;
+    color: var(--hire-subheading-color);
+    margin-bottom: 3rem;
+    max-width: 800px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whyhire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 1rem;
+  }
+
+  .whyhire-card {
+    background-color: var(--hire-card-bg);
+    padding: 5rem !important;
+    border-radius: 50%;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .whyhire-icon {
+    color: var(--hire-primary-color);
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .whyhire-card h3 {
+    font-size: 1.6rem !important;
+    margin-bottom: 0.95rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .whyhire-card p {
+    font-size: 1.25rem !important;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .whyhire-differentiators {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .differentiator-heading {
+    font-size: 2.5rem !important;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--hire-heading-color);
+  }
+
+  .differentiator-heading span {
+    color: #5b47b0;
+  }
+
+  .differentiator-grid {
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+
+  .differentiator-card {
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+
+  .differentiator-card h3 {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin-bottom: 0.8rem;
+  }
+
+  .differentiator-card p {
+    font-size: 1.2rem !important;
+    color: #5a5a5a;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 820px) and (min-height: 1180px) {
+  .whyhire-container {
+    width: 100%;
+    padding: 4rem 2rem;
+    background-color: var(--hire-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyhire-content {
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .whyhire-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--hire-heading-color);
+    margin-bottom: 1rem;
+  }
+  .whyhire-heading span {
+    color: #5b47b0;
+  }
+  .whyhire-subheading {
+    font-size: 1.2rem;
+    color: var(--hire-subheading-color);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whyhire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .whyhire-card {
+    background-color: var(--hire-card-bg);
+    padding: 3.5rem;
+    border-radius: 50%;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+      rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .whyhire-icon {
+    color: var(--hire-primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .whyhire-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .whyhire-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .whyhire-differentiators {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .differentiator-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--hire-heading-color);
+  }
+
+  .differentiator-heading span {
+    color: #5b47b0;
+  }
+
+  .differentiator-grid {
+    max-width: 780px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+
+  .differentiator-card {
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+
+  .differentiator-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin-bottom: 0.8rem;
+  }
+
+  .differentiator-card p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .whyhire-container {
+    width: 100%;
+    height: fit-content !important;
+    padding: 4rem 2rem;
+    background-color: var(--hire-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyhire-content {
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .whyhire-heading {
+    font-size: 2.25rem !important;
+    font-weight: 600;
+    color: var(--hire-heading-color);
+    margin-bottom: 1rem;
+  }
+  .whyhire-heading span {
+    color: #5b47b0;
+  }
+  .whyhire-subheading {
+    font-size: 1.2rem;
+    color: var(--hire-subheading-color);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whyhire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .whyhire-card {
+    background-color: var(--hire-card-bg);
+    padding: 1.5rem !important;
+    border-radius: 2rem !important;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .whyhire-icon {
+    color: var(--hire-primary-color);
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .whyhire-card h3 {
+    font-size: 1.35rem !important;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .whyhire-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .whyhire-differentiators {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .differentiator-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--hire-heading-color);
+  }
+
+  .differentiator-heading span {
+    color: #5b47b0;
+  }
+
+  .differentiator-grid {
+    max-width: 380px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .differentiator-card {
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+
+  .differentiator-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin-bottom: 0.8rem;
+  }
+
+  .differentiator-card p {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .whyhire-container {
+    width: 100%;
+    height: fit-content !important;
+    padding: 4rem 2rem;
+    background-color: var(--hire-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyhire-content {
+    max-width: 1280px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .whyhire-heading {
+    font-size: 1.8rem !important;
+    font-weight: 600;
+    color: var(--hire-heading-color);
+    margin-bottom: 1rem;
+  }
+  .whyhire-heading span {
+    color: #5b47b0;
+  }
+  .whyhire-subheading {
+    font-size: 1rem;
+    color: var(--hire-subheading-color);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whyhire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .whyhire-card {
+    background-color: var(--hire-card-bg);
+    padding: 1.5rem !important;
+    border-radius: 2rem !important;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .whyhire-icon {
+    color: var(--hire-primary-color);
+    font-size: 2rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .whyhire-card h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .whyhire-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .whyhire-differentiators {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .differentiator-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--hire-heading-color);
+  }
+
+  .differentiator-heading span {
+    color: #5b47b0;
+  }
+
+  .differentiator-grid {
+    max-width: 380px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .differentiator-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+
+  .differentiator-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1c1c1c;
+    margin-bottom: 0.8rem;
+  }
+
+  .differentiator-card p {
+    font-size: 0.9rem;
+    color: #5a5a5a;
+    line-height: 1.5;
+  }
+}

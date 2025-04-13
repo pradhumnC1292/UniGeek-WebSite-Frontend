@@ -12,14 +12,14 @@ const BecomeMentorBanner = () => {
         <div className="content-left-div">
           <div className="img-grid-div">
             <div className="left-img-upper-div">
-              <img src={img01} alt="" />
+              <img src={img01} alt="" className="bm-banner-img" />
             </div>
             <div className="left-img-lower-div">
               <div className="left-lower-left-div">
-                <img src={img02} alt="" />
+                <img src={img02} alt="" className="bm-banner-img" />
               </div>
               <div className="left-lower-right-div">
-                <img src={img03} alt="" />
+                <img src={img03} alt="" className="bm-banner-img" />
               </div>
             </div>
           </div>

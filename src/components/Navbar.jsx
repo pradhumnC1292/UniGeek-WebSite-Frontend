@@ -265,7 +265,7 @@ const Navbar = () => {
               <NavLink to="/become-a-mentor">Become a mentor</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact">Hire from Us</NavLink>
+              <NavLink to="/hire-from-us">Hire from Us</NavLink>
             </li>
           </ul>
         </div>

@@ -567,6 +567,199 @@
   }
 }
 
+@media only screen and (min-width: 820px) and (min-height: 1180px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 6rem;
+    margin: auto;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navbar-container {
+    width: 100vw;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--purple-bg);
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 2rem;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--purple-bg);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-center-div {
+    width: 60%;
+    height: 70%;
+    border-radius: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+
+  .drop-icon {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 0.3rem;
+    vertical-align: middle;
+    color: var(--text-color);
+  }
+
+  .drop-icon:hover {
+    background: var(--purple-bg);
+    color: var(--white);
+    border-radius: 2rem;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: none;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-active {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .disabled-link {
+    color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+    /* Note: Do not disable pointer events here so the onClick event still fires */
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 2rem;
+    border: none;
+  }
+
+  .dropdown-toggle {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    border-radius: 2rem;
+    border: none;
+    background: var(--white);
+  }
+
+  .nav-item a:hover,
+  .dropdown-toggle:hover {
+    background: var(--purple-bg);
+    color: var(--white);
+    border-radius: 2rem;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    color: var(--dropdown-text);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.2rem;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .dropdown-menu li a:hover {
+    background: var(--purple-bg);
+    color: var(--dropdown-hover-text);
+    transition-timing-function: ease-out;
+  }
+
+  .dropdown-menu {
+    width: 280px;
+    margin-right: 2rem;
+    display: none;
+    position: absolute;
+    left: -4rem;
+  }
+  .show {
+    width: 280px;
+    margin-right: 2rem;
+    display: block;
+    position: absolute;
+    left: -4rem;
+  }
+  .call-btn {
+    color: var(--white);
+    display: none;
+    background: var(--purple-bg);
+    padding: 0.85rem 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+  }
+
+  .call-btn:hover {
+    background: var(--purple-hover);
+    color: var(--white);
+  }
+}
+
 @media only screen and (max-width: 660px) {
   .navbar {
     position: fixed;

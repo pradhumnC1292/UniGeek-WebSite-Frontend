@@ -284,7 +284,8 @@ const HeroSection = () => {
       <div className="hero-left">
         <HeroLeftHeading />
         <p className="hero-subtext01">
-          Getting Quality Education is Now <span>More Easy</span>
+          Geekskul is the next-gen <span>Gurukul </span> for passionate tech
+          learners.
         </p>
         <p className="hero-subtext">
           Learn anytime, anywhere — say goodbye to the daily commute and rigid
@@ -366,8 +367,8 @@ const HeroSection = () => {
             </button>
             <div className="agreement">
               By submitting, you agree to the{" "}
-              <a href="#terms">Unigeek's Terms</a> &{" "}
-              <a href="#privacy">Privacy Policy</a>
+              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="privacy-policy">Privacy Policy</a>
             </div>
           </form>
 

@@ -10,6 +10,8 @@ import LevelupCourse from "./pages/LevelupCourse";
 import BecomeMentor from "./pages/BecomeMentor";
 import NotFound from "./pages/NotFound";
 import HiringPage from "./pages/HiringPage";
+import TermsAndConditions from "./components/TermsAndConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
           <Route path="levelup-course" element={<LevelupCourse />} />
           <Route path="become-a-mentor" element={<BecomeMentor />} />
           <Route path="hire-from-us" element={<HiringPage />} />
+          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

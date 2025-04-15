@@ -67,14 +67,19 @@
   animation: slide 20s linear infinite;
 }
 
+.mentor-slider.paused {
+  animation-play-state: paused;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
+
 .mentor-card {
   min-width: 350px;
   height: 180px;
@@ -243,12 +248,16 @@
     animation: slide 30s linear infinite;
   }
 
+  .mentor-slider.paused {
+    animation-play-state: paused;
+  }
+
   @keyframes slide {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-200%);
     }
   }
 
@@ -402,15 +411,17 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    animation: slide 30s linear infinite;
+    animation: slide 20s linear infinite;
   }
-
+  .mentor-slider.paused {
+    animation-play-state: paused;
+  }
   @keyframes slide {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-400%);
     }
   }
 
@@ -563,12 +574,16 @@
     animation: slide 20s linear infinite;
   }
 
+  .mentor-slider.paused {
+    animation-play-state: paused;
+  }
+
   @keyframes slide {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-400%);
     }
   }
 
@@ -721,13 +736,16 @@
     gap: 2rem;
     animation: slide 20s linear infinite;
   }
+  .mentor-slider.paused {
+    animation-play-state: paused;
+  }
 
   @keyframes slide {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-200%);
     }
   }
 

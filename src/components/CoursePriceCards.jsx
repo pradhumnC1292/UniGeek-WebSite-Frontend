@@ -12,8 +12,8 @@ const CoursePriceCards = ({ data }) => {
           Launch your dream <span>career</span> today.
         </h2>
         <p>
-          Experience the first 10 lectures risk-free — get a full refund if
-          you're not satisfied!
+          Experience the first 14 days risk-free — get a full refund if you're
+          not satisfied!
         </p>
       </div>
 

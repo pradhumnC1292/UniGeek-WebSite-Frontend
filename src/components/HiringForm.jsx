@@ -107,8 +107,9 @@ const HiringForm = ({ onClose, onSuccess }) => {
           </button>
         </form>
         <p className="hiringform-tnc">
-          By continuing, you agree to our <a href="#terms">Terms</a> and{" "}
-          <a href="#privacy">Privacy Policy</a>
+          By continuing, you agree to our{" "}
+          <a href="terms-and-conditions">Terms</a> and{" "}
+          <a href="privacy-policy">Privacy Policy</a>
         </p>
       </div>
     </div>

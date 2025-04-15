@@ -5,12 +5,13 @@ import "./OurMentors.css";
 
 const OurMentors = () => {
   const [mentors, setMentors] = useState([]);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const fetchMentors = async () => {
       try {
         const { data } = await axios.get("http://localhost:5000/api/mentors");
-        setMentors(data);
+        setMentors(data.data ? data.data : data);
       } catch (error) {
         console.error("Error fetching mentors:", error);
       }
@@ -18,7 +19,6 @@ const OurMentors = () => {
     fetchMentors();
   }, []);
 
-  // Duplicate mentors array for infinite loop sliding, if desired.
   const mentorsToDisplay = [...mentors, ...mentors];
 
   return (
@@ -37,7 +37,11 @@ const OurMentors = () => {
         </div>
       </div>
       <div className="our-mentors-lowerDiv">
-        <div className="mentor-slider">
+        <div
+          className={`mentor-slider ${isPaused ? "paused" : ""}`}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           {mentorsToDisplay.map((mentor, index) => (
             <div key={mentor._id || index} className="mentor-card">
               <div className="card-left-div">

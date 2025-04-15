@@ -14,7 +14,7 @@ const UiUxCourse = () => {
   const courseData = {
     cardImg: uiuxCardImg,
     title: "UI/UX Design Programm",
-    price: "₹4,999",
+    price: "₹9,999",
     totalFees: "INR 49,999*",
     features: [
       "80+ Live Classes led by Industry Experts with 6+ Years Experience.",

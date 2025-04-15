@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
-// import x from "../assets/icons/X.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,86 +12,83 @@ const Footer = () => {
   return (
     <footer className="footer-container" data-scroll-section>
       <div className="footer-sect">
-        {/* Left Side */}
         <div className="footer-left">
-          <h2 className="footer-brand">UNIGEEK</h2>
+          <h2 className="footer-brand">GEEKSKUL</h2>
           <div className="line"></div>
           <p className="footer-description">
             Empowering ambitious students with skills and guidance to launch
             successful careers in top tech companies.
           </p>
           <div className="footer-socials">
-            <a href="#facebook">
+            <Link to="/">
               <FaFacebookF />
-            </a>
-            <a href="#instagram">
+            </Link>
+            <Link to="/">
               <FaInstagram />
-            </a>
-            <a href="#twitter">
+            </Link>
+            <Link to="/">
               <FaTwitter />
-              {/* <img src={x} alt="" className="footer-icon" /> */}
-            </a>
+            </Link>
           </div>
         </div>
-
-        {/* Right Side */}
         <div className="footer-right">
-          {/* Column 1 */}
           <div className="footer-column">
             <h3>ABOUT US</h3>
             <ul>
               <li>
-                <a href="#home">Home</a>
+                <Link to="/">Home</Link>
+              </li>
+              {/* <li>
+                <Link to="/contact-us">Contact Us</Link>
+              </li> */}
+              <li>
+                <Link to="/">FAQ</Link>
               </li>
               <li>
-                <a href="#contact">Contact Us</a>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <a href="#faq">FAQ</a>
-              </li>
-              <li>
-                <a href="#privacy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#terms">Terms Of Services</a>
+                <Link to="/terms-and-conditions">Terms Of Services</Link>
               </li>
             </ul>
           </div>
-
-          {/* Column 2 */}
           <div className="footer-column">
             <h3>COURSES</h3>
             <ul>
               <li>
-                <a href="#javafullstack">Java Full Stack</a>
+                <Link to="/java-course">Java Full Stack</Link>
               </li>
               <li>
-                <a href="#mern">MERN Full Stack</a>
+                <Link to="/mern-course">MERN Full Stack</Link>
               </li>
               <li>
-                <a href="#learnuiux">Learn UI/UX</a>
+                <Link to="/uiux-course">Learn UI/UX</Link>
               </li>
               <li>
-                <a href="#learnuiux">Learn DevOps</a>
+                <Link to="/devops-course" className="disabled-link">
+                  Learn DevOps
+                </Link>
               </li>
               <li>
-                <a href="#learnuiux">Learn Data analysis</a>
+                <Link to="/data-analysis-course" className="disabled-link">
+                  Learn Data Analysis
+                </Link>
               </li>
               <li>
-                <a href="#levelupprogram">Level-Up Program</a>
+                <Link to="/levelup-course" className="disabled-link">
+                  Level-Up Program
+                </Link>
               </li>
             </ul>
           </div>
-
-          {/* Column 3 */}
           <div className="footer-column">
             <h3>USEFUL LINKS</h3>
             <ul>
               <li>
-                <a href="#becomeamentor">Become a mentor</a>
+                <Link to="/become-a-mentor">Become a mentor</Link>
               </li>
               <li>
-                <a href="#hirefromus">Hire from Us</a>
+                <Link to="/hire-from-us">Hire from Us</Link>
               </li>
             </ul>
           </div>
@@ -99,8 +96,8 @@ const Footer = () => {
       </div>
       <div className="copy-write-div">
         <p>
-          <FaRegCopyright id="copy-icon" /> 2025 UniGeek Software Services Pvt.
-          Ltd. All rights reserved.
+          <FaRegCopyright id="copy-icon" /> 2025 Pluto Technologies Pvt. Ltd.
+          All rights reserved.
         </p>
       </div>
     </footer>

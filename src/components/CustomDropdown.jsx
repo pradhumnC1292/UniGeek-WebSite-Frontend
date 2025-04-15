@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./CustomDropdown.css"; // We'll add some basic styles
+import "./CustomDropdown.css";
 
 function CustomDropdown({ selectedOption, onSelect }) {
   const [open, setOpen] = useState(false);
@@ -15,17 +15,19 @@ function CustomDropdown({ selectedOption, onSelect }) {
     "LevelUp Programs",
   ];
 
+  // Options to disable
+  const disabledOptions = ["DevOps", "Data Analysis", "LevelUp Programs"];
+
   const handleToggle = () => {
     setOpen(!open);
   };
 
   const handleSelect = (option) => {
-    // Pass the selected option back up to the parent
+    if (disabledOptions.includes(option)) return;
     onSelect(option);
     setOpen(false);
   };
 
-  // Close dropdown if click is outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -42,7 +44,7 @@ function CustomDropdown({ selectedOption, onSelect }) {
     <div className="custom-dropdown contact__form-div" ref={dropdownRef}>
       <label className="contact__form-tag">Courses</label>
       <div
-        className="dropdown-header .contact__form-input"
+        className="dropdown-header contact__form-input"
         onClick={handleToggle}
       >
         {selectedOption || "Select Course"}
@@ -52,7 +54,9 @@ function CustomDropdown({ selectedOption, onSelect }) {
           {options.map((option) => (
             <li
               key={option}
-              className="dropdown-list-item"
+              className={`dropdown-list-item ${
+                disabledOptions.includes(option) ? "disabled" : ""
+              }`}
               onClick={() => handleSelect(option)}
             >
               {option}

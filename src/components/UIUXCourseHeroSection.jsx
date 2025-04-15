@@ -174,8 +174,8 @@ const UIUXCourseHeroSection = () => {
             </button>
             <div className="agreement">
               By submitting, you agree to the{" "}
-              <a href="#terms">Unigeek's Terms</a> &{" "}
-              <a href="#privacy">Privacy Policy</a>
+              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="privacy-policy">Privacy Policy</a>
             </div>
           </form>
           {message && <p className="form-message">{message}</p>}

@@ -9,6 +9,23 @@
   --border-radius: 0.8rem;
 }
 
+.course-card.disabled {
+  position: relative;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.course-card.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
 .course-section {
   position: relative;
   width: 100vw;
@@ -242,6 +259,23 @@
 /* Responsive adjustments */
 
 @media only screen and (min-width: 96em) {
+  .course-card.disabled {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .course-card.disabled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
   .course-section {
     position: relative;
     width: 100vw;
@@ -475,6 +509,23 @@
 }
 
 @media only screen and (min-width: 820px) and (max-width: 1024px) and (min-height: 1180px) and (max-height: 1366px) {
+  .course-card.disabled {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .course-card.disabled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
   .course-section {
     position: relative;
     width: 100vw;
@@ -709,6 +760,23 @@
 }
 
 @media only screen and (width: 768px) and (height: 1024px) {
+  .course-card.disabled {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .course-card.disabled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
   .course-section {
     position: relative;
     width: 100vw;
@@ -948,6 +1016,22 @@
 }
 
 @media only screen and (max-width: 620px) {
+  .course-card.disabled {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .course-card.disabled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
   .course-section {
     position: relative;
     width: 100vw;
@@ -1187,6 +1271,22 @@
 }
 
 @media only screen and (max-width: 400px) {
+  .course-card.disabled {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .course-card.disabled::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
   .course-section {
     position: relative;
     width: 100vw;

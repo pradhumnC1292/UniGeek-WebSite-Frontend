@@ -96,7 +96,7 @@ const JavaCourseHeroSection = () => {
         </p>
         <p className="course-hero-subtext">
           Build real-world projects like Online Banking System, Job Portal, and
-          Hospital Management Platform
+          Hospital Management Platform with AI integration.
         </p>
         <button className="course-hero-cta" onClick={handleCtaClick}>
           Enroll Now

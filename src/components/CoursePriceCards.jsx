@@ -1,10 +1,11 @@
 import React from "react";
 import "./CoursePriceCards.css";
-// import cardImg from "../assets/images/website-price-card-image.png";
 
 const CoursePriceCards = ({ data }) => {
-  // data is an object with the dynamic fields:
-  // title, price, totalFees, features (array), recommended (boolean), buttonText (optional)
+  const handleEnrollClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className="price-card-section">
       <div className="title-div">
@@ -28,8 +29,9 @@ const CoursePriceCards = ({ data }) => {
 
         <div className="right-section">
           <div className="price-card">
-            <div className="price-card-bubble"></div>
-            <div className="blue-line-div">RECOMMENDED</div>
+            {data.recommended && (
+              <div className="blue-line-div">RECOMMENDED</div>
+            )}
             <div className="price-card-title-div">
               <h2>{data.title}</h2>
             </div>
@@ -38,7 +40,7 @@ const CoursePriceCards = ({ data }) => {
                 {data.price} <span>/month</span>
               </h1>
               <p className="total-fee">Total Fees {data.totalFees}</p>
-              <button className="enroll-button">
+              <button className="enroll-button" onClick={handleEnrollClick}>
                 {data.buttonText || "Enroll Now"}
               </button>
             </div>

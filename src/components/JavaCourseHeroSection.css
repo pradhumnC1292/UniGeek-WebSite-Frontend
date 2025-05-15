@@ -23,7 +23,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 1rem;
 }
 
 .course-hero-left {
@@ -36,11 +36,11 @@
 }
 
 .course-hero-left-heading {
-  font-size: 2.1rem;
-  line-height: 1.3;
+  font-size: 2.3rem;
+  line-height: 1.5;
   color: var(--color-gray-dark);
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  margin-bottom: 1rem;
+  font-family: "outfit";
   text-align: left;
 }
 
@@ -49,12 +49,13 @@
 }
 
 .course-hero-subtext {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-gray);
-  margin-top: 0.6rem;
-  border-left: 2px solid var(--color-purple);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+  line-height: 1.5;
   padding-left: 0.5rem;
+  border-left: 3px solid #5b47b0;
 }
 .course-hero-cta {
   width: 192px;

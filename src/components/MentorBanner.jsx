@@ -5,6 +5,9 @@ import groupImg from "../assets/icons/group-img.png";
 import "./MentorBanner.css";
 
 const MentorBanner = () => {
+  const handleEnrollClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <section data-scroll-section>
       <div className="mentor-banner">
@@ -32,7 +35,9 @@ const MentorBanner = () => {
             Join interactive courses, learn from top instructors, and achieve
             your goals at your own pace.
           </p>
-          <button className="mentor-cta">Get Started</button>
+          <button className="mentor-cta" onClick={handleEnrollClick}>
+            Get Started
+          </button>
         </div>
 
         <img src={Vector} alt="Vector decoration" className="vector-img" />

@@ -163,7 +163,6 @@ const UIUXCourseHeroSection = () => {
                 required
               />
             </div>
-
             <CustomDropdown
               selectedOption={formData.course}
               onSelect={handleSelectCourse}

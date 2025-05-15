@@ -27,7 +27,7 @@
 }
 .hero-left {
   flex: 1;
-  margin: 3rem 2rem 8rem 2rem;
+  margin: 1rem 1rem 8rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -37,7 +37,7 @@
   font-size: 4rem;
   line-height: 1;
   color: var(--color-gray-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   text-align: left;
 }
@@ -48,22 +48,15 @@
   color: var(--color-purple);
 }
 .hero-subtext01 {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-gray);
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  font-family: "outfit", sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0.7rem 0;
+  line-height: 1.5;
   padding-left: 0.5rem;
-  border-left: 2px solid var(--color-purple);
+  border-left: 3px solid #5b47b0;
 }
-.hero-subtext {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-gray);
-  margin-bottom: 2rem;
-  padding-left: 0.5rem;
-  border-left: 2px solid var(--color-purple);
-}
+
 .hero-cta {
   width: 192px;
   height: 52px;
@@ -75,6 +68,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9rem;
+  margin-top: 2rem;
   transition: background 0.3s ease;
 }
 .hero-cta:hover {
@@ -130,7 +124,7 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-input-border) !important;
   background: none;
   color: hsl(0, 0%, 46%);
   outline: none;
@@ -139,14 +133,18 @@
   margin-bottom: -2rem;
 }
 
+.contact__form-input:hover {
+  border-color: var(--color-input-focus) !important;
+}
+
 .contact__form-input-phone {
   width: calc(100% - 75px);
   position: absolute;
   top: 0;
   left: 80px;
   z-index: 1;
-  width: 72%;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  width: 71% !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   background: none;
   color: hsl(0, 0%, 46%);
   outline: none;
@@ -258,13 +256,27 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  margin-bottom: 0.5rem;
   transition: background 0.3s ease;
 }
 .submit-btn:hover {
   background-color: var(--color-cta-hover);
 }
+.already-user-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.already-user-div h3 {
+  color: var(--color-gray-dark) !important;
+}
+
+.already-user-div h3 span {
+  color: #5b47b0;
+}
+
 .agreement {
-  margin-top: 1rem;
   font-size: 0.6rem;
   color: var(--color-agreement);
 }
@@ -281,8 +293,6 @@
 .agreement a:hover {
   text-decoration: underline;
 }
-
-/* Your existing CSS remains unchanged */
 
 @keyframes shake {
   0% {
@@ -309,12 +319,8 @@
   animation: shake 0.5s;
 }
 
-/* ================= MEDIA QUERIES ================= */
-
-/* ==== DESKTOPS (1367px and above) ==== */
 @media only screen and (min-width: 96em) {
   .hero-container {
-    /* border: 2px solid rgb(255, 0, 0); */
     margin-top: 5rem;
     width: 100vw;
     height: 100vh;
@@ -328,7 +334,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* border: 1px solid black; */
     position: relative;
   }
   .hero-left-heading h1 {
@@ -338,16 +343,13 @@
   }
 
   .hero-subtext01 {
+    font-family: "outfit", sans-serif;
     font-size: 1.1rem;
-    font-weight: 400;
+    color: #666;
+    margin: 0.7rem 0;
+    line-height: 1.5;
     padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
-  }
-  .hero-subtext {
-    font-size: 1.1rem;
-    font-weight: 400;
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
+    border-left: 3px solid #5b47b0;
   }
   .hero-cta {
     width: 192px;
@@ -372,7 +374,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    /* border: 1px solid blue; */
   }
   .hero-bubble {
     position: absolute;
@@ -434,7 +435,7 @@
     left: 80px;
     z-index: 1;
     width: 76%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
@@ -458,6 +459,20 @@
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
+  .already-user-div {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .already-user-div h3 {
+    color: var(--color-gray-dark) !important;
+  }
+
+  .already-user-div h3 span {
+    color: #5b47b0;
+  }
   .agreement {
     margin-top: 1rem;
     font-size: 0.8rem;
@@ -473,7 +488,6 @@
   }
 }
 
-/* ==== LAPTOPS (991px to 1366px) ==== */
 @media only screen and (min-width: 991px) and(max-width: 1024px) and (min-height: 1180px) and (max-width: 1366px) {
   .hero-container {
     width: 100vw;
@@ -597,7 +611,7 @@
     left: 80px;
     z-index: 1;
     width: 72%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
@@ -624,13 +638,7 @@
     text-align: center;
     margin-bottom: 0.6rem;
   }
-  /* .form-heading {
-    font-size: 1rem;
-    color: var(--color-purple);
-    margin-bottom: 1rem;
-    font-weight: 600;
-    text-align: center;
-  } */
+
   .form-card form {
     display: flex;
     flex-direction: column;
@@ -685,6 +693,20 @@
   .submit-btn:hover {
     background-color: var(--color-cta-hover);
   }
+  .already-user-div {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .already-user-div h3 {
+    color: var(--color-gray-dark) !important;
+  }
+
+  .already-user-div h3 span {
+    color: #5b47b0;
+  }
   .agreement {
     margin-top: 1rem;
     font-size: 0.6rem;
@@ -703,8 +725,6 @@
   .agreement a:hover {
     text-decoration: underline;
   }
-
-  /* Your existing CSS remains unchanged */
 
   @keyframes shake {
     0% {
@@ -732,11 +752,9 @@
   }
 }
 
-/* ==== LARGE TABLETS (769px to 990px) ==== */
 @media only screen and (min-width: 820px) and (min-height: 1180px) {
   .hero-container {
     width: 100vw;
-    /* height: 620px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -747,10 +765,11 @@
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     background-color: var(--color-white);
+    border: 1px solid black;
   }
   .hero-left {
     flex: 1;
-    margin: 3rem 2rem 8rem;
+    margin: 3rem 1rem 8rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -772,20 +791,13 @@
   }
 
   .hero-subtext01 {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--color-gray);
-    margin-top: 1rem;
+    font-family: "outfit", sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0.7rem 0;
+    line-height: 1.5;
     padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
-  }
-  .hero-subtext {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--color-gray);
-    margin-bottom: 2rem;
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
+    border-left: 3px solid #5b47b0;
   }
   .hero-cta {
     width: 152px;
@@ -846,13 +858,12 @@
     left: 80px;
     z-index: 1;
     width: 72%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
     border-radius: 0.75rem;
     padding: 1rem;
-    /* margin-bottom: 2rem; */
   }
   #select-opts {
     max-width: 200px;
@@ -898,29 +909,6 @@
     border-color: var(--color-input-focus);
   }
 
-  /* .form-card form select {
-    margin-top: 0.5rem;
-    margin-bottom: 0.7rem;
-    padding: 0.7rem;
-    border-radius: 6px;
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-input-border);
-    font-size: 0.9rem;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9IiNjY2NjY2MiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDAuNTg3NTA4TDEwIDUuMDg3NTFMMS44OTk5OSA1LjA4NzUxTDAuNTg3NTE2IDMuNzQ1MDNMMS4yNzY3MSAzLjA0ODU0TDEwLjAwMDAxIDMuMDQ4NTRMMTAgMC41ODc1MDhaIi8+PC9zdmc+");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 16px 16px;
-    cursor: pointer;
-  } */
-
-  /* .form-card form select option {
-    color: var(--color-gray-dark);
-  } */
-
   .submit-btn {
     background-color: var(--color-purple);
     color: var(--color-white);
@@ -933,6 +921,20 @@
   }
   .submit-btn:hover {
     background-color: var(--color-cta-hover);
+  }
+
+  .already-user-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .already-user-div h3 {
+    color: var(--color-gray-dark) !important;
+  }
+
+  .already-user-div h3 span {
+    color: #5b47b0;
   }
   .agreement {
     margin-top: 0.78rem;
@@ -952,7 +954,6 @@
   .agreement a:hover {
     text-decoration: underline;
   }
-  /* Your existing CSS remains unchanged */
 
   @keyframes shake {
     0% {
@@ -1016,11 +1017,13 @@
     color: var(--color-purple);
   }
   .hero-subtext01 {
+    font-family: "outfit", sans-serif;
     font-size: 1rem;
-    font-weight: 500;
-    color: var(--color-gray);
+    color: #666;
+    margin: 0.7rem 0;
+    line-height: 1.5;
     padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
+    border-left: 3px solid #5b47b0;
   }
   .hero-subtext {
     font-size: 1rem;
@@ -1089,12 +1092,7 @@
     padding: 1rem 1rem 1rem 1rem;
     margin-top: 2rem;
   }
-  /* #form-input {
-    font-size: 0.6rem;
-    text-align: left;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.5rem;
-  } */
+
   .country-code-div {
     display: flex;
     gap: 0.5rem;
@@ -1112,7 +1110,7 @@
     left: 80px;
     z-index: 1;
     width: 75.5%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
@@ -1196,6 +1194,19 @@
   .submit-btn:hover {
     background-color: var(--color-cta-hover);
   }
+  .already-user-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .already-user-div h3 {
+    color: var(--color-gray-dark) !important;
+  }
+
+  .already-user-div h3 span {
+    color: #5b47b0;
+  }
   .agreement {
     margin-top: 0.78rem;
     font-size: 0.8rem;
@@ -1214,8 +1225,6 @@
   .agreement a:hover {
     text-decoration: underline;
   }
-
-  /* Your existing CSS remains unchanged */
 
   @keyframes shake {
     0% {
@@ -1242,7 +1251,7 @@
     animation: shake 0.5s;
   }
 }
-/* ==== SMALLER TABLETS (481px to 768px) ==== */
+
 @media only screen and (width: 768px) and (height: 1024px) {
   .hero-container {
     width: 100vw;
@@ -1279,20 +1288,13 @@
     color: var(--color-purple);
   }
   .hero-subtext01 {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--color-gray);
+    font-family: "outfit", sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0.7rem 0;
+    line-height: 1.5;
     padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
-  }
-  .hero-subtext {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--color-gray);
-    margin-top: -0rem !important;
-    margin-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
+    border-left: 3px solid #5b47b0;
   }
 
   .hero-cta {
@@ -1335,12 +1337,7 @@
     padding: 1rem 0.5rem;
     margin-top: 2rem;
   }
-  /* #form-input {
-    font-size: 0.6rem;
-    text-align: left;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.5rem;
-  } */
+
   .country-code-div {
     display: flex;
     gap: 0.5rem;
@@ -1358,7 +1355,7 @@
     left: 80px;
     z-index: 1;
     width: 70%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
@@ -1440,6 +1437,20 @@
   .submit-btn:hover {
     background-color: var(--color-cta-hover);
   }
+
+  .already-user-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .already-user-div h3 {
+    color: var(--color-gray-dark) !important;
+  }
+
+  .already-user-div h3 span {
+    color: #5b47b0;
+  }
   .agreement {
     margin-top: 0.78rem;
     font-size: 0.5rem;
@@ -1458,8 +1469,6 @@
   .agreement a:hover {
     text-decoration: underline;
   }
-
-  /* Your existing CSS remains unchanged */
 
   @keyframes shake {
     0% {
@@ -1487,7 +1496,6 @@
   }
 }
 
-/* ==== CELLPHONES (480px and below) ==== */
 @media only screen and (max-width: 660px) {
   .hero-container {
     flex-direction: column;
@@ -1511,16 +1519,13 @@
   }
 
   .hero-subtext01 {
+    font-family: "outfit", sans-serif;
     font-size: 0.85rem;
-    text-align: left;
+    color: #666;
+    margin: 0.7rem 0;
+    line-height: 1.5;
     padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
-  }
-  .hero-subtext {
-    font-size: 0.85rem;
-    text-align: left;
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
+    border-left: 3px solid #5b47b0;
   }
   .hero-cta {
     display: none;
@@ -1573,7 +1578,6 @@
   }
   .contact__form-div {
     position: relative;
-    margin-bottom: 0.3rem;
     height: 2rem;
   }
 
@@ -1583,13 +1587,13 @@
     left: 0;
     z-index: 1;
     width: 100%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
     border-radius: 0.75rem;
-    padding: 1rem;
-    margin-bottom: -3rem;
+    padding: 0.85rem !important;
+    margin-bottom: -3rem !important;
   }
 
   .contact__form-tag {
@@ -1623,7 +1627,7 @@
   .form-card form input,
   .form-card form select {
     margin-bottom: 0.7rem;
-    padding: 0.7rem;
+    padding: 0.85rem !important;
     border-radius: 6px;
     color: var(--color-text-secondary);
     border: 1px solid var(--color-input-border);
@@ -1679,7 +1683,7 @@
     left: 80px;
     z-index: 1;
     width: 71%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
@@ -1708,17 +1712,13 @@
     text-align: left;
   }
   .hero-subtext01 {
+    font-family: "outfit", sans-serif;
     font-size: 0.85rem;
-    text-align: left;
+    color: #666;
+    margin: 0.7rem 0;
+    line-height: 1.5;
     padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
-  }
-
-  .hero-subtext {
-    font-size: 0.85rem;
-    text-align: left;
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--color-purple);
+    border-left: 3px solid #5b47b0;
   }
   .hero-cta {
     display: none;
@@ -1780,7 +1780,7 @@
     left: 0;
     z-index: 1;
     width: 100%;
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--color-input-border);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
@@ -1884,5 +1884,18 @@
   }
   .agreement a:hover {
     text-decoration: underline;
+  }
+  .already-user-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .already-user-div h3 {
+    color: var(--color-gray-dark) !important;
+  }
+
+  .already-user-div h3 span {
+    color: #5b47b0;
   }
 }

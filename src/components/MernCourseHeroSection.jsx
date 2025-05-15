@@ -96,7 +96,7 @@ const MernCourseHeroSection = () => {
         </p>
         <p className="course-hero-subtext">
           Build real-world projects like E-commerce Platforms, Social Media
-          Apps, and RESTful APIs.
+          Apps, and RESTful APIs with AI integration.
         </p>
         <button className="course-hero-cta" onClick={handleCtaClick}>
           Enroll Now

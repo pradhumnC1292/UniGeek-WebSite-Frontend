@@ -1,0 +1,144 @@
+.HowToGetAdmissionMob {
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+  font-family: "Outfit", sans-serif;
+  color: #1a1a1a;
+}
+
+.title-div {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admission-title-mob {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.admission-title-mob span {
+  color: #6a4eff;
+}
+
+.sub-heading-mob {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Common card styling */
+.card,
+.card-02,
+.card-03,
+.card-04,
+.card-05 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin-bottom: 1.2rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Left and right for odd-numbered cards */
+.left-div,
+.left-div-03,
+.left-div-05 {
+  width: 75%;
+}
+
+.right-div,
+.right-div-03,
+.right-div-05 {
+  width: 25%;
+  text-align: right;
+}
+
+/* Left and right for even-numbered cards */
+.left-div-02,
+.left-div-04 {
+  width: 25%;
+  text-align: left;
+}
+
+.right-div-02,
+.right-div-04 {
+  width: 75%;
+}
+
+/* Titles */
+.card-title,
+.card-title-02,
+.card-title-03,
+.card-title-04,
+.card-title-05 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #6a4eff;
+}
+
+/* Paragraphs */
+.card-pera,
+.card-pera-02,
+.card-pera-03,
+.card-pera-04,
+.card-pera-05 {
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+  color: #1a1a1a;
+  margin-top: 0.5rem;
+}
+
+/* Card numbers */
+.card-number,
+.card-number-02,
+.card-number-03,
+.card-number-04,
+.card-number-05 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card,
+  .card-02,
+  .card-03,
+  .card-04,
+  .card-05 {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 0.8rem;
+  }
+
+  .admission-title-mob {
+    font-size: 1.4rem;
+  }
+
+  .card-title,
+  .card-title-02,
+  .card-title-03,
+  .card-title-04,
+  .card-title-05 {
+    font-size: 1rem;
+  }
+
+  .card-number,
+  .card-number-02,
+  .card-number-03,
+  .card-number-04,
+  .card-number-05 {
+    font-size: 1.5rem;
+  }
+
+  .card-pera,
+  .card-pera-02,
+  .card-pera-03,
+  .card-pera-04,
+  .card-pera-05 {
+    font-size: 0.9rem;
+  }
+}

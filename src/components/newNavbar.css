@@ -1,0 +1,246 @@
+.nn-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+}
+
+.nn-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.nn-brand a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nn-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nn-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nn-links a {
+  text-decoration: none;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+
+.nn-links a:hover {
+  color: #5b47b0;
+}
+
+.nn-dropdown {
+  position: relative;
+}
+.nn-drop-toggle {
+  background: transparent;
+  border: none;
+  color: #3d3d3d;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.nn-chev {
+  transition: transform 0.18s ease;
+}
+.nn-dropdown.open .nn-chev {
+  transform: rotate(180deg);
+}
+
+.nn-menu {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+  min-width: 300px;
+  display: none;
+  z-index: 1200;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.nn-dropdown.open .nn-menu {
+  display: block;
+}
+.nn-menu li a,
+.nn-menu li button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.2rem;
+  border: 0;
+  background: transparent;
+  color: #333;
+  font-weight: 600;
+  list-style: none;
+}
+.nn-menu li a:hover,
+.nn-menu li button:hover {
+  background-color: #5b47b0;
+  color: rgb(255, 255, 255);
+  border-radius: 2rem;
+}
+.nn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nn-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #5b47b0;
+  color: #fff;
+  border: 0;
+  border-radius: 30px;
+  padding: 0.8rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nn-cta:hover {
+  background: #5727c9;
+}
+.nn-icon {
+  background: transparent;
+  border: 0;
+  font-size: 1.2rem;
+  display: none;
+}
+
+/* Mobile sheet */
+.nn-sheet {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2000; /* higher than .nn-navbar (1100) */
+  background: transparent; /* default */
+  transition: background 0.2s ease;
+}
+.nn-sheet.open {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.35); /* <— backdrop to hide the underlying logo */
+}
+.nn-panel {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 70%;
+  max-width: 360px;
+  height: 100%;
+  background: #fff;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 2100;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+}
+.nn-sheet.open .nn-panel {
+  transform: translateX(0);
+}
+.nn-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nn-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.nn-link {
+  padding: 0.9rem 0;
+  text-decoration: none;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+.nn-link--accordion {
+  background: transparent;
+  border: 0;
+  text-align: left;
+  padding: 0.9rem 0;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+.nn-accordion {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  display: grid;
+  gap: 0.25rem;
+}
+.nn-accordion.open {
+  max-height: 420px;
+}
+.nn-sublink {
+  padding: 0.6rem 0;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+.nn-panel-cta {
+  margin: 1rem;
+  justify-content: center;
+  display: inline-flex !important; /* ensure panel CTA stays visible */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nn-center {
+    display: none;
+  }
+  .nn-icon {
+    display: inline-flex;
+  }
+  /* Hide only on tablet and mobile */
+  .nn-right .nn-cta {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-logo {
+    height: 34px;
+  }
+}

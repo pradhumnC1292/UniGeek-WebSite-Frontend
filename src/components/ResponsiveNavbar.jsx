@@ -1,6 +1,7 @@
 // ResponsiveNavbar.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import brandLogo from "../assets/icons/Logo_Design_WBG.png";
 import { FaBars, FaTimes, FaAngleDown, FaPhoneAlt } from "react-icons/fa";
 import ReactGA from "react-ga4";
 import "./responsive-navbar.css";
@@ -57,8 +58,8 @@ const DesktopNavbar = () => {
     <header className="nav nav--desktop">
       <div className="nav__wrap container">
         <div className="nav__brand">
-          <NavLink to="/" className="brand">
-            GEEKSKUL
+          <NavLink to="/" className="brand" aria-label="Geekskul Home">
+            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
           </NavLink>
         </div>
 
@@ -217,8 +218,8 @@ const TabletNavbar = () => {
     <header className="nav nav--tablet">
       <div className="nav__wrap container">
         <div className="nav__brand">
-          <NavLink to="/" className="brand">
-            GEEKSKUL
+          <NavLink to="/" className="brand" aria-label="Geekskul Home">
+            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
           </NavLink>
         </div>
 
@@ -396,8 +397,8 @@ const MobileNavbar = () => {
     <header className="nav nav--mobile">
       <div className="nav__wrap container">
         <div className="nav__brand">
-          <NavLink to="/" className="brand">
-            GEEKSKUL
+          <NavLink to="/" className="brand" aria-label="Geekskul Home">
+            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
           </NavLink>
         </div>
 
@@ -421,7 +422,9 @@ const MobileNavbar = () => {
             aria-modal="true"
           >
             <div className="sheet__header">
-              <span className="brand">GEEKSKUL</span>
+              <span className="brand">
+                <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+              </span>
               <button
                 className="icon-btn"
                 aria-label="Close menu"

@@ -20,7 +20,13 @@ const CurriculumOverviewMob = () => {
           params: { program },
         });
         console.log("Fetched curriculums:", res.data);
-        setCurriculums(res.data);
+        // Normalize API response to always be an array
+        const list = Array.isArray(res.data)
+          ? res.data
+          : Array.isArray(res.data?.data)
+          ? res.data.data
+          : [];
+        setCurriculums(list);
       } catch (error) {
         console.error("Error fetching curriculums:", error);
       }
@@ -64,74 +70,75 @@ const CurriculumOverviewMob = () => {
       </div>
 
       <div className="curriculum-accordion-mob">
-        {curriculums.map((curriculum) => (
-          <div key={curriculum._id} className="accordion-item-mob">
-            {/* Accordion Header */}
-            <div
-              className="accordion-header-mob"
-              onClick={() => toggleModule(curriculum._id)}
-            >
-              <h4 className="module-title-mob">{curriculum.title}</h4>
-              <p className="module-description-mob">
-                {formatDescription(curriculum.description)}
-              </p>
-            </div>
-
-            {/* Accordion Content */}
-            {activeModuleId === curriculum._id && (
-              <div className="accordion-content-mob">
-                {/* Single-column container for all details */}
-                <div className="curriculum-details-column-mob">
-                  {/* Summary Section */}
-                  <div className="curriculum-section-mob">
-                    <h4 className="section-title-mob">Summary</h4>
-                    <ul>
-                      {curriculum.details.summary.map((item, idx) => (
-                        <li key={idx}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Subtopics */}
-                  {curriculum.details.subtopics.map((topic, idx) => (
-                    <div key={idx} className="curriculum-section-mob">
-                      <h4 className="section-title-mob">{topic.heading}</h4>
-                      <ul>
-                        {topic.points.map((point, pIdx) => (
-                          <li key={pIdx}>{point}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-
-                  {/* Outcome */}
-                  {curriculum.details.outcome && (
-                    <div className="curriculum-section-mob">
-                      <h4 className="section-title-mob">Outcome</h4>
-                      <ul>
-                        {curriculum.details.outcome.map((out, outIdx) => (
-                          <li key={outIdx}>{out}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Tools */}
-                  {curriculum.details.tools && (
-                    <div className="curriculum-section-mob">
-                      <h4 className="section-title-mob">Tools</h4>
-                      <ul>
-                        {curriculum.details.tools.map((tool, tIdx) => (
-                          <li key={tIdx}>{tool}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
+        {Array.isArray(curriculums) &&
+          curriculums.map((curriculum) => (
+            <div key={curriculum._id} className="accordion-item-mob">
+              {/* Accordion Header */}
+              <div
+                className="accordion-header-mob"
+                onClick={() => toggleModule(curriculum._id)}
+              >
+                <h4 className="module-title-mob">{curriculum.title}</h4>
+                <p className="module-description-mob">
+                  {formatDescription(curriculum.description)}
+                </p>
               </div>
-            )}
-          </div>
-        ))}
+
+              {/* Accordion Content */}
+              {activeModuleId === curriculum._id && (
+                <div className="accordion-content-mob">
+                  {/* Single-column container for all details */}
+                  <div className="curriculum-details-column-mob">
+                    {/* Summary Section */}
+                    <div className="curriculum-section-mob">
+                      <h4 className="section-title-mob">Summary</h4>
+                      <ul>
+                        {curriculum.details?.summary?.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Subtopics */}
+                    {curriculum.details?.subtopics?.map((topic, idx) => (
+                      <div key={idx} className="curriculum-section-mob">
+                        <h4 className="section-title-mob">{topic.heading}</h4>
+                        <ul>
+                          {topic.points?.map((point, pIdx) => (
+                            <li key={pIdx}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+
+                    {/* Outcome */}
+                    {curriculum.details?.outcome && (
+                      <div className="curriculum-section-mob">
+                        <h4 className="section-title-mob">Outcome</h4>
+                        <ul>
+                          {curriculum.details.outcome.map((out, outIdx) => (
+                            <li key={outIdx}>{out}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Tools */}
+                    {curriculum.details?.tools && (
+                      <div className="curriculum-section-mob">
+                        <h4 className="section-title-mob">Tools</h4>
+                        <ul>
+                          {curriculum.details.tools.map((tool, tIdx) => (
+                            <li key={tIdx}>{tool}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
       </div>
     </section>
   );

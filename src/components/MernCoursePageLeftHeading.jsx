@@ -42,10 +42,11 @@ const MernCoursePageLeftHeading = () => {
     >
       <h1>We are the</h1>
       <h1>
-        <AnimatedText text="MERN Developers" /> Who
+        <AnimatedText text="MERN Developers" />
       </h1>
+      <h1> Who turn you into a</h1>
       <h1>
-        turn you into a <AnimatedText text="Top 1% MERN Developer" />
+        <AnimatedText text="Top 1% MERN Developer" />
       </h1>
     </motion.div>
   );

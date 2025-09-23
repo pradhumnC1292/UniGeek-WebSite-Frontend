@@ -35,13 +35,19 @@
 }
 
 .logo {
-  font-size: 2rem;
-  color: var(--purple-bg);
-  font-family: "Pridi";
+  display: flex;
+  align-items: center;
 }
 .logo a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Shared brand logo sizing */
+.brand-logo {
+  display: block;
+  height: 40px;
+  width: auto;
 }
 
 .hamburger {
@@ -209,9 +215,8 @@
   }
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--purple-bg);
+    display: flex;
+    align-items: center;
   }
 
   .hamburger {
@@ -387,9 +392,8 @@
   }
 
   .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--purple-bg);
+    display: flex;
+    align-items: center;
   }
 
   .hamburger {
@@ -581,9 +585,8 @@
   }
 
   .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--purple-bg);
+    display: flex;
+    align-items: center;
   }
 
   .hamburger {

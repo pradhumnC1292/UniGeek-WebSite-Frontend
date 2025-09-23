@@ -42,10 +42,11 @@ const UIUXCoursePageLeftHeading = () => {
     >
       <h1>We are the</h1>
       <h1>
-        <AnimatedText text="UI/UX Designers" /> Who
+        <AnimatedText text="UI/UX Designers" />
       </h1>
+      <h1>Who turn you into a</h1>
       <h1>
-        turn you into a <AnimatedText text="Top 1% UI/UX Professional" />
+        <AnimatedText text="Top 1% UI/UX Professional" />
       </h1>
     </motion.div>
   );

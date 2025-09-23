@@ -10,8 +10,13 @@ const OurMentorsMobile = () => {
     const fetchMentors = async () => {
       try {
         const { data } = await axios.get("http://localhost:5000/api/mentors");
-        console.log(data);
-        setMentor(data);
+        // Normalize API response to always be an array
+        const list = Array.isArray(data)
+          ? data
+          : Array.isArray(data?.data)
+          ? data.data
+          : [];
+        setMentor(list);
       } catch (error) {
         console.error("Error fetching mentors:", error);
       }
@@ -19,7 +24,7 @@ const OurMentorsMobile = () => {
     fetchMentors();
   }, []);
 
-  if (mentor.length === 0) {
+  if (!Array.isArray(mentor) || mentor.length === 0) {
     return <p>Loading...</p>;
   }
 
@@ -40,49 +45,54 @@ const OurMentorsMobile = () => {
       </div>
       <div className="our-mentors-lowerDiv scrollable">
         <div className="mentor-sliderr">
-          {mentor.map((mentor, index) => (
-            <div key={mentor._id || index} className="mentor-card">
-              <div className="card-left-div">
-                <div className="tag-div">
-                  <p id="tag">{mentor.tag}</p>
+          {Array.isArray(mentor) &&
+            mentor.map((mentor, index) => (
+              <div key={mentor._id || index} className="mentor-card">
+                <div className="card-left-div">
+                  <div className="tag-div">
+                    <p id="tag">{mentor.tag}</p>
+                  </div>
+                  <div className="name-info-div">
+                    <h5 id="name">{mentor.name}</h5>
+                    <p id="position">
+                      {mentor.position},{" "}
+                      <span id="company">{mentor.company}</span>
+                    </p>
+                    <p id="experience">Experience: {mentor.experience}</p>
+                  </div>
+                  <div className="social-link-div">
+                    <a
+                      href={mentor.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      id="linkedin"
+                    >
+                      <img src={linkedin} alt="LinkedIn" className="card-img" />
+                    </a>
+                    <a
+                      href={mentor.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      id="linkedin"
+                    >
+                      <img
+                        src={linkedin}
+                        alt="LinkedIn"
+                        className="card-img02"
+                      />
+                    </a>
+                  </div>
                 </div>
-                <div className="name-info-div">
-                  <h5 id="name">{mentor.name}</h5>
-                  <p id="position">
-                    {mentor.position},{" "}
-                    <span id="company">{mentor.company}</span>
-                  </p>
-                  <p id="experience">Experience: {mentor.experience}</p>
-                </div>
-                <div className="social-link-div">
-                  <a
-                    href={mentor.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    id="linkedin"
-                  >
-                    <img src={linkedin} alt="LinkedIn" className="card-img" />
-                  </a>
-                  <a
-                    href={mentor.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    id="linkedin"
-                  >
-                    <img src={linkedin} alt="LinkedIn" className="card-img02" />
-                  </a>
+                <div className="card-right-div">
+                  <img
+                    src={mentor.image}
+                    alt={mentor.name}
+                    className="mentor-card-img"
+                    id="image"
+                  />
                 </div>
               </div>
-              <div className="card-right-div">
-                <img
-                  src={mentor.image}
-                  alt={mentor.name}
-                  className="mentor-card-img"
-                  id="image"
-                />
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>

@@ -42,10 +42,11 @@ const CoursePageLeftHeading = () => {
     >
       <h1>We are the</h1>
       <h1>
-        <AnimatedText text="Java Developers" /> Who
+        <AnimatedText text="Java Developers" />
       </h1>
+      <h1>Who turn you into a</h1>
       <h1>
-        turn you into a <AnimatedText text="Top 1% Java Developer" />
+        <AnimatedText text="Top 1% Java Developer" />
       </h1>
     </motion.div>
   );

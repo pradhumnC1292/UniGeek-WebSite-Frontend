@@ -82,7 +82,7 @@
 /* 3. Use Outfit as the default font */
 html,
 body {
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   background-color: #ffffff;
   color: #000;
   margin: 0;

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import brandLogo from "../assets/icons/Logo_Design_WBG.png";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,7 +45,9 @@ const Navbar = () => {
       <div className="navbar-container" ref={menuRef}>
         <div className="logo">
           {/* Make the logo clickable */}
-          <NavLink to="/">GEEKSKUL</NavLink>
+          <NavLink to="/" aria-label="Geekskul Home">
+            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+          </NavLink>
         </div>
         <button
           className={`hamburger ${mobileMenuOpen ? "open" : ""}`}

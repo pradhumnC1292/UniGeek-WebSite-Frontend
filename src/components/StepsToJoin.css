@@ -122,3 +122,39 @@
     line-height: 1.4;
   }
 }
+
+@media (max-width: 820px) {
+  .steps-join-heading {
+    font-size: 1.8rem;
+  }
+  .steps-join-subheading {
+    font-size: 1rem;
+  }
+  .steps-card-title {
+    font-size: 1.8rem;
+  }
+  .steps-card-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .steps-join-container {
+    padding: 2rem 1rem;
+  }
+  .steps-join-heading {
+    font-size: 1.8rem;
+  }
+  .steps-join-subheading {
+    font-size: 1rem;
+  }
+  .steps-card-title {
+    font-size: 1.2rem;
+  }
+  .steps-icon {
+    font-size: 1.2rem;
+  }
+  .steps-card-description {
+    font-size: 0.9rem;
+  }
+}

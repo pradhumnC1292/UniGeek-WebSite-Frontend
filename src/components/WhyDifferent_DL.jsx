@@ -16,7 +16,7 @@ const WhyDifferent_DL = () => {
       <div className="right-dotted-banner"></div>
 
       <h2 className="wd-heading" data-scroll data-scroll-speed="2">
-        “Why We Are <span>Different</span> From Others ?”
+        “Why We Are <span>Different</span> from Others ?”
       </h2>
       <p className="wd-subheading" data-scroll data-scroll-speed="2">
         We have highly professional mentors around the globe. We have great

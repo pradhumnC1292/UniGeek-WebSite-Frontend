@@ -6,7 +6,7 @@ import ResponsiveComponentOurMentors from "../components/responsiveComponents/Re
 import CoursePriceCards from "../components/CoursePriceCards";
 import FAQ from "../components/FAQ";
 import "./CoursePages.css";
-import cardImg from "../assets/images/java-price-img.png";
+import cardImg from "../assets/images/priceCard-img.png";
 import ResponsiveComponentCurriculumOverview from "../components/responsiveComponents/ResponsiveComponentCurriculumOverview";
 import ResponsiveAfterEnrollingJourney from "./../components/responsiveComponents/ResponsiveAfterEnrollingJourney";
 

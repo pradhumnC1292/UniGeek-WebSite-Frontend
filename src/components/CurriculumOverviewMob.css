@@ -1,114 +1,188 @@
 .curriculum-sec-mob {
   width: 100%;
-  margin-bottom: 2rem;
+  margin: 0 auto 2.5rem;
   padding: 1rem;
-  background-color: #f5fefd;
+  background: #f7faf9;
+}
+
+@media (min-width: 600px) {
+  .curriculum-sec-mob {
+    max-width: 920px;
+    border-radius: 16px;
+    padding: 1.25rem 1rem 2rem;
+  }
 }
 
 .curriculum-heading-mob {
   text-align: center;
   margin-bottom: 2rem;
+  padding: 0 0.5rem;
+  max-width: 780px;
 }
 
 .curriculum-title-mob {
-  font-size: 2rem;
   font-family: "Outfit", sans-serif;
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #0b0b0b;
+  letter-spacing: 0.2px;
 }
 
 .curriculum-title-mob span {
   color: var(--color-purple);
+  background: linear-gradient(
+    90deg,
+    rgba(91, 71, 176, 0.12),
+    rgba(91, 71, 176, 0)
+  );
+  padding: 0 0.25rem;
+  border-radius: 8px;
 }
 
 .curriculum-sub-heading-mob {
-  font-size: 1.2rem;
   font-family: "Outfit", sans-serif;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto 2rem;
+  font-size: clamp(0.98rem, 2.6vw, 1.15rem);
+  color: #616161;
+  margin: 0.25rem auto 1.25rem;
+  line-height: 1.55;
+  padding: 0 0.25rem;
 }
 
-/* Accordion Container */
 .curriculum-accordion-mob {
   width: 100%;
+  display: grid;
+  gap: 0.9rem;
 }
 
-/* Accordion Item */
 .accordion-item-mob {
-  border-bottom: 1px solid #ddd;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 14px;
+  padding: 0;
+  transition: box-shadow 180ms ease, border-color 180ms ease,
+    transform 120ms ease;
 }
 
 .accordion-item-mob:hover {
-  border-bottom: 1px solid var(--color-purple);
+  border-color: rgba(91, 71, 176, 0.25);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  transform: translateY(-1px);
 }
 
-/* Accordion Header */
 .accordion-header-mob {
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  transition: background-color 0.3s;
-  padding: 0.5rem;
+  position: relative;
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.95rem 1rem 1rem 1rem;
+  border-radius: 14px;
 }
 
 .accordion-header-mob h4 {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  font-weight: bold;
+  font-size: clamp(1rem, 2.8vw, 1.1rem);
+  font-weight: 500;
+  color: #101010;
 }
 
 .accordion-header-mob p {
-  margin: 0.75rem 0 0;
-  font-size: 0.95rem;
-  color: #666;
+  margin: 0.25rem 0 0;
+  font-size: clamp(0.9rem, 2.6vw, 0.98rem);
+  color: #676767;
+  line-height: 1.45;
 }
 
-/* Accordion Content */
+.duration-mob {
+  font-weight: 600;
+  color: var(--color-purple);
+  background: rgba(91, 71, 176, 0.08);
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+}
+
+.accordion-header-mob::after {
+  content: "›";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #9a9a9a;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.accordion-item-mob:hover .accordion-header-mob::after {
+  color: var(--color-purple);
+}
+
+.accordion-header-mob:has(+ .accordion-content-mob)::after {
+  transform: translateY(-50%) rotate(270deg);
+  color: var(--color-purple);
+}
+
 .accordion-content-mob {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #fff;
-  border-left: 4px solid var(--color-purple);
+  margin: 0;
+  padding: 0.75rem 1rem 1rem 1rem;
+  background: #fff;
+  border-top: 1px dashed #eaeaea;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  animation: fadeSlide 220ms ease both;
 }
 
-/* Single-column container for all details */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .curriculum-details-column-mob {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  gap: 1rem;
 }
 
-/* Each section (Summary, Subtopics, Outcome, Tools) */
 .curriculum-section-mob {
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .section-title-mob {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.5rem;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  font-weight: 700;
+  color: #2b2b2b;
+  margin: 0 0 0.5rem;
+  padding-left: 0.6rem;
   border-left: 4px solid var(--color-purple);
-  padding-left: 0.5rem;
 }
 
 .curriculum-section-mob ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
+  padding: 0 0 0 1.15rem;
+  margin: 0;
 }
 
 .curriculum-section-mob li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  color: #555;
+  color: #4f4f4f;
+  font-size: clamp(0.92rem, 2.5vw, 0.98rem);
+  line-height: 1.6;
+  margin: 0.35rem 0;
 }
 
-/* Duration highlight in the description */
-.duration-mob {
-  font-weight: 500;
+.curriculum-section-mob li::marker {
   color: var(--color-purple);
+}
+
+@media (max-width: 400px) {
+  .accordion-header-mob {
+    padding: 0.85rem 0.9rem 0.95rem 0.9rem;
+  }
+  .accordion-content-mob {
+    padding: 0.7rem 0.9rem 0.95rem;
+  }
 }

@@ -147,73 +147,75 @@ const CourseSection = () => {
   const sliderRef = useRef(null);
   const navigate = useNavigate();
 
-  // ✅ Static JSON for courses
   const courses = [
     {
       title: "MERN Full Stack Development",
-      courseSubheading:
-        "Build scalable full stack apps with AI-powered workflows",
+      courseSubheading: "Build full stack apps with React, Node, and MongoDB.",
       batchSize: "50 Students",
       duration: "10 Months",
       features: [
-        "React 19 with AI-assisted components",
-        "Node.js & Express.js with AI-enhanced debugging",
-        "MongoDB with AI query optimization",
-        "Integration of AI-driven search and recommendations",
+        "Data Structures & Algorithms (DSA) with problem-solving",
+        "React 19 with modern patterns & components",
+        "Node.js & Express.js with API design",
+        "MongoDB schema design & performance tuning",
+        "Cloud deploys with AWS/Vercel & CI/CD pipeline",
       ],
       disabled: false,
     },
     {
       title: "Java Full Stack Development",
       courseSubheading:
-        "Master Java backend and frontend with AI-driven solutions",
+        "Learn Spring Boot backend with modern frontend skills.",
       batchSize: "50 Students",
       duration: "10 Months",
       features: [
-        "Spring Boot with AI-powered error detection",
-        "SQL & NoSQL databases optimized with AI",
-        "Frontend with React + AI code suggestions",
-        "Deploying intelligent APIs with AI/ML support",
+        "Data Structures & Algorithms (DSA) with efficiency focus",
+        "Core Java & concurrency essentials",
+        "Spring Boot microservices & REST APIs",
+        "SQL & NoSQL integration with optimization",
+        "Dockerization & CI/CD best practices",
       ],
       disabled: false,
     },
     {
       title: "UI/UX Design",
-      courseSubheading: "Create user experiences enhanced with AI tools",
+      courseSubheading: "Design modern, user-centered digital experiences.",
       batchSize: "50 Students",
       duration: "4 Months",
       features: [
-        "AI-powered wireframing and prototyping with Figma plugins",
-        "User research using AI sentiment analysis",
-        "AI-based accessibility and color contrast tools",
-        "Automated design testing with AI analytics",
+        "Figma mastery & design systems",
+        "User research & usability testing",
+        "Cognitive load & color psychology",
+        "Gestalt principles & layout clarity",
+        "Designing AI tool interfaces & workflows",
       ],
       disabled: false,
     },
     {
       title: "DevOps",
-      courseSubheading: "Streamline deployments with AI-driven automation",
+      courseSubheading: "Automate, deploy, and scale apps with DevOps tools.",
       batchSize: "50 Students",
       duration: "10 Months",
       features: [
-        "CI/CD pipelines with AI monitoring",
-        "Container orchestration (Docker, Kubernetes) with AI scaling",
-        "AI-driven system health and anomaly detection",
-        "Automated security testing using AI tools",
+        "Data Structures & Algorithms (DSA) for scripting",
+        "Linux, shell & Git workflows",
+        "Docker & Kubernetes orchestration",
+        "Infrastructure as Code with Terraform",
+        "Observability with logs, metrics & tracing",
       ],
       disabled: true,
     },
     {
       title: "AI/ML",
-      courseSubheading:
-        "Deep dive into artificial intelligence and machine learning",
+      courseSubheading: "Learn AI, ML, and deep learning with real projects.",
       batchSize: "50 Students",
       duration: "12 Months",
       features: [
-        "Supervised & unsupervised learning",
+        "Data Structures & Algorithms (DSA) for ML coding",
+        "Math for ML: linear algebra & probability",
+        "Classical ML models & feature engineering",
         "Deep learning with TensorFlow & PyTorch",
-        "AI-powered applications in NLP and Computer Vision",
-        "Generative AI and LLMs integration",
+        "LLMs, GenAI & model deployment practices",
       ],
       disabled: true,
     },
@@ -235,6 +237,17 @@ const CourseSection = () => {
     return title.toLowerCase().replace(/\s+/g, "-");
   };
 
+  const getCourseRoute = (title) => {
+    const routeMap = {
+      "Java Full Stack Development": "/java-course",
+      "MERN Full Stack Development": "/mern-course",
+      "UI/UX Design": "/uiux-course",
+      DevOps: "/devops-course",
+      "AI/ML": "/learn-ai-ml-course",
+    };
+    return routeMap[title] || "/";
+  };
+
   const handleDownloadBrochure = (course) => {
     const fileName =
       course.brochureFileName && course.brochureFileName.trim() !== ""
@@ -250,7 +263,8 @@ const CourseSection = () => {
   };
 
   const handleLearnMore = (course) => {
-    navigate(`/courses/${generateSlug(course.title)}`);
+    const route = getCourseRoute(course.title);
+    navigate(route);
   };
 
   return (

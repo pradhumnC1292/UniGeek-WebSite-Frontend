@@ -14,7 +14,7 @@ const HowToGetAdmissionMob = () => {
       <div className="lower-div">
         <div className="card">
           <div className="left-div">
-            <h3 className="card-title">Our Focus on Quality</h3>
+            <h3 className="card-title-01">Our Focus on Quality</h3>
             <p className="card-pera">
               We intentionally keep our batch size to just 50 students, ensuring
               each learner receives focused, personalized attention.

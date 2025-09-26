@@ -721,3 +721,165 @@
     color: var(--color-dark);
   }
 }
+
+/* ---- MOBILE ONLY (component is designed for <= 660px) ---- */
+.cs-mobile {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 2.25rem 1rem 2.5rem;
+  background: radial-gradient(
+      1200px 300px at 110% -20%,
+      #f6f2fe 0%,
+      transparent 60%
+    ),
+    radial-gradient(900px 240px at -10% 100%, #f6f2fe 0%, transparent 62%),
+    #fffbfb;
+  border-radius: 3rem 3rem 0 0;
+  border-bottom: 1px solid #f1f1f1;
+  box-shadow: inset 0 -10px 25px rgba(0, 0, 0, 0.04),
+    inset 0 12px 24px rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+
+/* Header */
+.cs-head {
+  max-width: 640px;
+  margin: 0 auto 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.cs-pill {
+  display: inline-block;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(129, 107, 222, 0.12);
+  color: var(--color-primary);
+  font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cs-title {
+  margin: 0.6rem 0 0.4rem;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--color-dark);
+  letter-spacing: -0.02em;
+}
+
+.cs-sub {
+  margin: 0 auto;
+  width: min(82vw, 28rem);
+  color: var(--color-gray);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+/* Carousel Rail */
+.cs-rail {
+  margin-top: 1.4rem;
+  overflow: hidden; /* wraps the snap-scroller */
+}
+
+.cs-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 82%;
+  gap: 1.25rem;
+  padding: 0.75rem 0.5rem 0.75rem 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.cs-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.cs-card {
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(167, 167, 167, 0.35);
+  box-shadow: var(--shadow-1);
+}
+
+.cs-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #ffffff, #f7f5ff);
+  box-shadow: var(--shadow-2);
+}
+.cs-icon img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.cs-body {
+  text-align: left;
+}
+
+.cs-card-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.cs-card-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #222; /* better contrast than #000 for long copy */
+}
+
+/* Swipe hint */
+.cs-hint {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-gray);
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .cs-title {
+    font-size: 1.85rem;
+  }
+  .cs-track {
+    grid-auto-columns: 88%;
+  }
+  .cs-card {
+    grid-template-columns: 76px 1fr;
+    padding: 0.9rem;
+  }
+  .cs-icon {
+    width: 76px;
+    height: 76px;
+  }
+  .cs-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .cs-card-title {
+    font-size: 1.05rem;
+  }
+  .cs-card-text {
+    font-size: 0.93rem;
+  }
+}

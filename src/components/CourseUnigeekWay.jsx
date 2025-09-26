@@ -7,89 +7,89 @@ const CourseUnigeekWay = () => {
     <section className="course-unigeek-way-container">
       <div className="course-unigeek-way-content">
         <h2 className="course-unigeek-heading">
-          “Why do you choose us”{" "}
+          “Why Choose Us”{" "}
           <span role="img" aria-label="">
             ✨
           </span>
         </h2>
         <p className="course-unigeek-subheading">
-          Choose Unigeek because we’re dedicated to empowering you with
-          practical, industry-driven education that goes beyond theory.
+          At Geekskul, we focus on real skills, real projects, and real growth—
+          so you can step into the industry with confidence.
         </p>
 
         <div className="course-unigeek-features">
           {/* Feature 1 */}
           <div className="course-feature-card">
-            <h3 className="course-feature-title">Code Every Day</h3>
+            <h3 className="course-feature-title">Daily Coding Practice</h3>
             <ul className="course-feature-list">
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Live sessions by experts
+                Live expert-led classes
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Fast-paced practice drills
+                Hands-on coding drills
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Daily doubt help
+                Instant doubt-solving
               </li>
             </ul>
           </div>
 
           {/* Feature 2 */}
           <div className="course-feature-card">
-            <h3 className="course-feature-title">Personal Skill Tests</h3>
+            <h3 className="course-feature-title">Personal Growth Tracking</h3>
             <ul className="course-feature-list">
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Weekly tests
+                Weekly progress tests
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                One-on-one coaching
+                One-on-one mentoring
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Soft skill sessions
+                Communication & soft skills
               </li>
             </ul>
           </div>
 
           {/* Feature 3 */}
           <div className="course-feature-card">
-            <h3 className="course-feature-title">Monthly Interview Prep</h3>
+            <h3 className="course-feature-title">Interview-Ready Training</h3>
             <ul className="course-feature-list">
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Practice mock interviews
+                Mock interview sessions
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Coding contests
+                Coding hackathons
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Real project work
+                Real-world project exposure
               </li>
             </ul>
           </div>
 
           {/* Feature 4 */}
           <div className="course-feature-card">
-            <h3 className="course-feature-title">Strong Career Help</h3>
+            <h3 className="course-feature-title">Career Support That Lasts</h3>
             <ul className="course-feature-list">
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Build your resume
+                Resume & portfolio building
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Interview training
+                Practical interview coaching
               </li>
               <li>
                 <FaCheckCircle className="course-feature-icon" />
-                Job referrals
+                Trusted job referrals
               </li>
             </ul>
           </div>

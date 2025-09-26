@@ -35,7 +35,7 @@ const FAQ = () => {
         <h2 className="faq-title">
           Frequently Asked <span>Questions</span>
         </h2>
-        <p>These are the most commonly asked questions about UniGeek.</p>
+        <p>These are the most commonly asked questions about Geekskul.</p>
       </div>
       {/* Category Tabs */}
       <div className="faq-tabs">

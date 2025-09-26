@@ -508,7 +508,7 @@
   }
 }
 
-@media only screen and (max-width: 820px) {
+/* @media only screen and (max-width: 820px) {
   .HowToGetAdmissionMob {
     width: 100vw;
     height: 110vh;
@@ -1111,7 +1111,7 @@
     height: 100%;
     position: relative;
     margin-top: 3rem;
-    /* margin-bottom: 2rem; */
+  
   }
   .card {
     width: 95%;
@@ -1346,5 +1346,172 @@
   }
   .card-number-05 {
     font-size: 3rem;
+  }
+} */
+
+@media only screen and (max-width: 820px) {
+  .HowToGetAdmissionMob {
+    width: 100%;
+    height: fit-content !important;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-div {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .admission-title-mob {
+    font-size: 2rem;
+  }
+
+  .sub-heading-mob {
+    font-size: 1.2rem;
+    margin-bottom: 2rem !important;
+  }
+
+  .lower-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card,
+  .card-02,
+  .card-03,
+  .card-04,
+  .card-05 {
+    /* position: static; */
+    width: 90%;
+    min-height: 160px;
+    display: flex;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .left-div,
+  .left-div-03,
+  .left-div-05,
+  .right-div-02,
+  .right-div-04 {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .right-div,
+  .right-div-03,
+  .right-div-05,
+  .left-div-02,
+  .left-div-04 {
+    flex: 0 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5fe;
+  }
+
+  .card-title-01,
+  .card-title-02,
+  .card-title-03,
+  .card-title-04,
+  .card-title-05 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #5b47b0;
+  }
+
+  .card-pera,
+  .card-pera-02,
+  .card-pera-03,
+  .card-pera-04,
+  .card-pera-05 {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #444;
+  }
+
+  .card-number,
+  .card-number-02,
+  .card-number-03,
+  .card-number-04,
+  .card-number-05 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5b47b0;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .admission-title-mob {
+    font-size: 1.6rem;
+  }
+
+  .sub-heading-mob {
+    font-size: 1.1rem !important;
+  }
+
+  .card-title-01,
+  .card-title-02,
+  .card-title-03,
+  .card-title-04,
+  .card-title-05 {
+    font-size: 1.05rem;
+  }
+
+  .card-pera,
+  .card-pera-02,
+  .card-pera-03,
+  .card-pera-04,
+  .card-pera-05 {
+    font-size: 0.9rem;
+  }
+
+  .card-number,
+  .card-number-02,
+  .card-number-03,
+  .card-number-04,
+  .card-number-05 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .admission-title-mob {
+    font-size: 1.4rem;
+  }
+
+  .sub-heading-mob {
+    font-size: 1rem !important;
+  }
+
+  .card-title-01,
+  .card-title-02,
+  .card-title-03,
+  .card-title-04,
+  .card-title-05 {
+    font-size: 1rem;
+  }
+
+  .card-pera,
+  .card-pera-02,
+  .card-pera-03,
+  .card-pera-04,
+  .card-pera-05 {
+    font-size: 0.85rem;
+  }
+
+  .card-number,
+  .card-number-02,
+  .card-number-03,
+  .card-number-04,
+  .card-number-05 {
+    font-size: 1.5rem;
   }
 }

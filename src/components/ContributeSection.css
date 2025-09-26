@@ -1,4 +1,4 @@
-.contribute-section {
+/* .contribute-section {
   width: 100%;
   max-width: 1200px;
   margin: 1.5rem auto;
@@ -9,7 +9,7 @@
 .contribute-title {
   font-size: 2.3rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contribute-title span {
@@ -281,5 +281,190 @@
     gap: 1.5rem;
     justify-content: center;
     margin-top: 5rem;
+  }
+} */
+
+:root {
+  --c-bg: #fff;
+  --c-text: #1c1c1c;
+  --c-muted: #555;
+  --c-accent: #5b47b0;
+  --c-accent-2: #4f39a0;
+  --c-border: rgba(0, 0, 0, 0.06);
+  --c-shadow: 0 8px 30px rgba(17, 17, 17, 0.08);
+  --radius: 16px;
+}
+
+.contribute-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.contribute-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--c-text);
+  margin-bottom: 0.75rem;
+}
+
+.contribute-title span {
+  color: var(--c-accent);
+  border-bottom: 2px solid var(--c-accent);
+}
+
+.contribute-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 3vw, 1.75rem);
+  align-items: stretch;
+  justify-items: center;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.contribute-card {
+  width: 100%;
+  max-width: 340px;
+  min-height: 420px;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  box-shadow: var(--c-shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.contribute-card:hover {
+  box-shadow: 0 12px 34px rgba(17, 17, 17, 0.12);
+  border-color: rgba(91, 71, 176, 0.25);
+}
+
+.card-title {
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-title svg {
+  flex: 0 0 auto;
+}
+
+.card-list {
+  margin: 0 0 1rem;
+  padding-left: 0;
+  list-style: none;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+  color: var(--c-muted);
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--c-accent);
+  box-shadow: 0 0 0 6px rgba(91, 71, 176, 0.12);
+}
+
+.apply-btn {
+  align-self: flex-start;
+  background: linear-gradient(
+    180deg,
+    var(--c-accent) 0%,
+    var(--c-accent-2) 100%
+  );
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-size: clamp(0.95rem, 1.8vw, 1rem);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.apply-btn:active {
+  transform: translateY(0);
+}
+
+.arrow-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 96em) {
+  .contribute-section {
+    max-width: 1380px;
+  }
+  .contribute-cards-container {
+    gap: 2rem;
+  }
+  .contribute-card {
+    max-width: 360px;
+    min-height: 440px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  .contribute-cards-container {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .contribute-card {
+    min-height: 500px;
+    padding: 1.25rem 1.1rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .card-list {
+    font-size: 1.1rem;
+  }
+  .card-list li {
+    line-height: 1.6;
+  }
+  .apply-btn {
+    padding: 0.9rem 1.8rem;
+  }
+  .arrow-icon {
+    width: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 820px) and (min-height: 1024px) {
+  .contribute-cards-container {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
   }
 }

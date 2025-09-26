@@ -1,114 +1,120 @@
-.hire-profiles-section {
-  width: 100vw;
-  height: fit-content;
-  background-color: white;
-  padding: 2rem 2rem;
-  text-align: center;
+:root {
+  --hp-bg: #ffffff;
+  --hp-text: #0f1222;
+  --hp-muted: #666;
+  --hp-accent: #5b47b0;
+  --hp-chip-bg: #f5f6fb;
+  --hp-chip-border: #e8e9f1;
+  --hp-chip-hover: #efeffa;
+  --hp-shadow: 0 6px 16px rgba(15, 18, 34, 0.06);
+}
+
+.hp-section {
+  width: 100%;
+  background: var(--hp-bg);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hire-profiles-heading {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 4rem;
-}
-
-.hire-profiles-heading span {
-  color: #5b47b0;
-}
-
-.hire-profiles-tags {
-  max-width: 800px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  padding: clamp(2rem, 6vw, 4rem) 1rem;
 }
 
-.hire-profile-tag {
-  background-color: #1c1f26;
-  color: #ffffff;
-  padding: 1rem 1.8rem;
-  border-radius: 12px;
-  font-size: 1rem;
+.hp-wrap {
+  width: 100%;
+  max-width: 960px;
+  text-align: center;
+}
+
+.hp-heading {
+  color: var(--hp-text);
   font-weight: 500;
-  transition: background 0.3s ease;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.hp-heading span {
+  color: var(--hp-accent);
+}
+
+.hp-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(0.6rem, 1.8vw, 1rem);
+  align-items: start;
+  justify-items: center;
+}
+
+.hp-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  width: 100%;
+
+  background: linear-gradient(180deg, var(--hp-chip-bg), #fff);
+  border: 1px solid var(--hp-chip-border);
+  color: var(--hp-text);
+  border-radius: 999px;
+
+  font-size: clamp(0.92rem, 1.8vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.1px;
+
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--hp-shadow);
+  -webkit-user-select: none;
+  user-select: none;
   cursor: default;
 }
 
-.hire-profile-tag:hover {
-  background-color: #2c2f38;
+.hp-tag:hover {
+  background: var(--hp-chip-hover);
+  transform: translateY(-1px);
+  border-color: #ddd9f6;
 }
 
-@media only screen and (min-width: 96em) {
-  .hire-profiles-section {
-    width: 100vw;
-    height: fit-content;
-    background-color: white;
-    padding: 2rem 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .hire-profiles-heading {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 4rem;
+.hp-tag:focus {
+  outline: none;
+  border-color: var(--hp-accent);
+  box-shadow: 0 0 0 4px rgba(91, 71, 176, 0.12), var(--hp-shadow);
+}
+
+@media (max-width: 660px) {
+  .hp-wrap {
+    max-width: 680px;
   }
 
-  .hire-profiles-heading span {
-    color: #5b47b0;
+  .hp-heading {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .hp-tags {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .hp-heading {
+    margin-bottom: 2rem;
+    font-weight: 600;
   }
 }
 
-@media only screen and (max-width: 660px) {
-  .hire-profiles-section {
-    width: 100vw;
-    height: fit-content;
-    background-color: white;
-    padding: 2rem 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+@media (max-width: 420px) {
+  .hp-tags {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 
-  .hire-profiles-heading {
-    font-size: 2rem;
+  .hp-tag {
+    padding: 0.7rem 0.9rem;
+    min-height: 42px;
+  }
+  .hp-heading {
+    margin-bottom: 2rem;
     font-weight: 600;
-    margin-bottom: 4rem;
-  }
-
-  .hire-profiles-heading span {
-    color: #5b47b0;
-  }
-
-  .hire-profiles-tags {
-    max-width: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .hire-profile-tag {
-    background-color: #1c1f26;
-    color: #ffffff;
-    padding: 1rem 1.8rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background 0.3s ease;
-    cursor: default;
-  }
-
-  .hire-profile-tag:hover {
-    background-color: #2c2f38;
   }
 }

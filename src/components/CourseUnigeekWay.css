@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --course-unigeek-bg: var(--color-purple);
   --course-unigeek-card-bg: var(--color-cta-bg);
   --course-unigeek-heading-color: var(--color-gray-dark);
@@ -88,16 +88,6 @@
 }
 
 @media only screen and (min-width: 96em) {
-  /* .course-unigeek-way-container {
-    width: 100%;
-    background-color: var(--color-purple);
-    padding: 4rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-  } */
-
   .course-unigeek-way-container {
     position: relative;
     width: 100%;
@@ -427,5 +417,264 @@
     color: var(--course-unigeek-accent-color);
     margin-right: 0.75rem;
     font-size: 1.2rem;
+  }
+} */
+
+:root {
+  --course-unigeek-bg: var(--color-purple);
+  --course-unigeek-card-bg: var(--color-cta-bg);
+  --course-unigeek-heading-color: var(--color-gray-dark);
+  --course-unigeek-subheading-color: var(--color-text-secondary);
+  --course-unigeek-card-text: var(--color-white);
+  --course-unigeek-accent-color: var(--color-cta-hover);
+}
+
+.course-unigeek-way-container {
+  width: 100%;
+  background-color: var(--color-purple);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* Wrap */
+.course-unigeek-way-content {
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Heading */
+.course-unigeek-heading {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600; /* +weight for crisper headline */
+  font-size: clamp(1.6rem, 4.2vw, 2.5rem); /* responsive scale */
+  line-height: 1.18; /* tighter, readable */
+  margin-bottom: 1rem; /* slightly reduced for mobile rhythm */
+  color: var(--color-white);
+}
+
+/* Subheading */
+.course-unigeek-subheading {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.55;
+  font-weight: 400;
+  margin-bottom: 2.25rem; /* better vertical rhythm under heading */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e5e5e5;
+}
+
+/* Grid */
+.course-unigeek-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
+  gap: 2rem;
+}
+
+/* Card */
+.course-feature-card {
+  height: 100%;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card title */
+.course-feature-title {
+  font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+  line-height: 1.25;
+  font-weight: 700; /* more presence */
+  border-bottom: 2px solid #5b47b0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* List */
+.course-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: none;
+  overflow: visible;
+  opacity: 1;
+}
+
+.course-feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.65rem; /* a touch tighter */
+  font-size: clamp(0.95rem, 2.3vw, 1rem);
+  line-height: 1.45;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Icon */
+.course-feature-icon {
+  color: var(--course-unigeek-accent-color);
+  margin-right: 0.65rem;
+  font-size: 1.15rem;
+}
+
+/* >= 1536px (96em) large screens */
+@media only screen and (min-width: 96em) {
+  .course-unigeek-way-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-purple);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .course-unigeek-way-content {
+    max-width: 1300px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .course-unigeek-heading {
+    font-size: clamp(2.2rem, 2.5vw, 3rem);
+    line-height: 1.15;
+    font-weight: 600;
+  }
+
+  .course-unigeek-subheading {
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 1000px;
+  }
+
+  .course-unigeek-features {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .course-feature-title {
+    font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+    line-height: 1.25;
+  }
+
+  .course-feature-list li {
+    font-size: clamp(1rem, 1.1vw, 1.05rem);
+    line-height: 1.5;
+  }
+
+  .course-feature-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1024x1366 (iPad Pro portrait) */
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  .course-unigeek-heading {
+    font-size: clamp(2rem, 2.3vw, 2.5rem);
+    line-height: 1.18;
+  }
+  .course-unigeek-subheading {
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 880px;
+  }
+
+  .course-unigeek-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .course-feature-title {
+    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+    line-height: 1.25;
+  }
+  .course-feature-list li {
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.5;
+  }
+}
+
+/* <= 820px (tablets & large phones) */
+@media only screen and (max-width: 820px) {
+  .course-unigeek-heading {
+    font-size: clamp(1.6rem, 4.6vw, 2.3rem);
+    line-height: 1.2;
+  }
+
+  .course-unigeek-subheading {
+    font-size: clamp(0.98rem, 2.4vw, 1.2rem);
+    line-height: 1.55;
+    max-width: 700px;
+    margin-bottom: 2.25rem;
+  }
+
+  .course-unigeek-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .course-feature-title {
+    font-size: clamp(1.05rem, 2.8vw, 1.4rem);
+    line-height: 1.25;
+  }
+
+  .course-feature-list li {
+    font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+    line-height: 1.45;
+  }
+}
+
+/* <= 660px (phones) */
+@media only screen and (max-width: 660px) {
+  .course-unigeek-way-container {
+    padding: 2rem 1.25rem;
+  }
+
+  .course-unigeek-heading {
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
+    line-height: 1.22;
+  }
+
+  .course-unigeek-subheading {
+    font-size: clamp(0.95rem, 2.9vw, 1.1rem);
+    line-height: 1.55;
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .course-unigeek-features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .course-feature-card {
+    padding: 1.5rem;
+  }
+
+  .course-feature-title {
+    font-size: clamp(1rem, 3.2vw, 1.25rem);
+    line-height: 1.22;
+    margin-bottom: 0.7rem;
+  }
+
+  .course-feature-list li {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    line-height: 1.45;
+    margin-bottom: 0.6rem;
+  }
+
+  .course-feature-icon {
+    font-size: 1.1rem;
   }
 }

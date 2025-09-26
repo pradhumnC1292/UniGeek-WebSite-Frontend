@@ -7,7 +7,7 @@ import ResponsiveUiUxAfterEnrollingJourney from "../components/responsiveCompone
 import CoursePriceCards from "../components/CoursePriceCards";
 import FAQ from "../components/FAQ";
 import "./CoursePages.css";
-import uiuxCardImg from "../assets/images/uiux-price-card-img.jpg";
+import cardImg from "../assets/images/priceCard-img.png";
 import ResponsiveComponentCurriculumOverview from "../components/responsiveComponents/ResponsiveComponentCurriculumOverview";
 
 const UiUxCourse = () => {

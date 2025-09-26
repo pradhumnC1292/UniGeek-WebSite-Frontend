@@ -9,7 +9,7 @@ import ResponsiveAfterEnrollingJourney from "./../components/responsiveComponent
 import FAQ from "../components/FAQ";
 import CoursePriceCards from "../components/CoursePriceCards";
 import "./CoursePages.css";
-import cardImg from "../assets/images/mern-price-img.png";
+import cardImg from "../assets/images/priceCard-img.png";
 const MernCourse = () => {
   const courseData = {
     cardImg: cardImg,

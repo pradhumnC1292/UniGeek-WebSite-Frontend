@@ -9,7 +9,9 @@ import CourseSection from "../components/CourseSection";
 import HowToGetAdmissionResponsiveComponent from "../components/responsiveComponents/HowToGetAdmissionResponsiveComponent";
 import FAQ from "../components/FAQ";
 import "./Home.css";
-import ResponsiveComponentWhyDifferentMob02 from "../components/responsiveComponents/ResponsiveComponentWhyDifferentMob02";
+// import ResponsiveComponentWhyDifferentMob02 from "../components/responsiveComponents/ResponsiveComponentWhyDifferentMob02";
+import WhyWerDiffrent from "../components/WhyWerDiffrent";
+
 
 const Home = () => {
   return (
@@ -19,7 +21,9 @@ const Home = () => {
       <MentorBanner />
       <ResponsiveComponentOurMentors />
       <ResponsiveComponent />
-      <ResponsiveComponentWhyDifferentMob02 />
+      <WhyWerDiffrent />
+      {/* <WhyWerDiffrentResponsive /> */}
+      {/* <ResponsiveComponentWhyDifferentMob02 /> */}
       <CareerServicesResponsive />
       <CourseSection />
       <HowToGetAdmissionResponsiveComponent />

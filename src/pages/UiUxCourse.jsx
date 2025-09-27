@@ -12,7 +12,7 @@ import ResponsiveComponentCurriculumOverview from "../components/responsiveCompo
 
 const UiUxCourse = () => {
   const courseData = {
-    cardImg: uiuxCardImg,
+    cardImg: cardImg,
     title: "UI/UX Design Programm",
     price: "₹9,999",
     totalFees: "INR 49,999*",

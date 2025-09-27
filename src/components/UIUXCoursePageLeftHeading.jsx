@@ -40,13 +40,14 @@ const UIUXCoursePageLeftHeading = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.1, ease: "easeOut" }}
     >
-      <h1>We are the</h1>
       <h1>
-        <AnimatedText text="UI/UX Designers" />
+        Design with <AnimatedText text="Creativity..." />
       </h1>
-      <h1>Who turn you into a</h1>
       <h1>
-        <AnimatedText text="Top 1% UI/UX Professional" />
+        Craft with <AnimatedText text="Figma.." />
+      </h1>
+      <h1>
+        Inspire with <AnimatedText text="User Experience." />
       </h1>
     </motion.div>
   );

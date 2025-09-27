@@ -40,13 +40,14 @@ const MernCoursePageLeftHeading = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.1, ease: "easeOut" }}
     >
-      <h1>We are the</h1>
       <h1>
-        <AnimatedText text="MERN Developers" />
+        Build with <AnimatedText text="JavaScript..." />
       </h1>
-      <h1> Who turn you into a</h1>
       <h1>
-        <AnimatedText text="Top 1% MERN Developer" />
+        Scale with <AnimatedText text="MongoDB & Node.js.." />
+      </h1>
+      <h1>
+        Craft with <AnimatedText text="React." />
       </h1>
     </motion.div>
   );

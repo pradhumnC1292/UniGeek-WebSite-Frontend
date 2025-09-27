@@ -24,7 +24,7 @@ const BecomeMentorHeroSec = () => {
                 <HiOutlineVideoCamera />
               </div>
               <div className="bm-right-img-left-lower-title">
-                <h2>VIDEO</h2>
+                <h2>LIVE</h2>
                 <h4>Lessons</h4>
               </div>
             </div>

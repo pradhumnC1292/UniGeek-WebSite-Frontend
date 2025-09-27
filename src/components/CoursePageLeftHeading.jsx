@@ -40,13 +40,14 @@ const CoursePageLeftHeading = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.1, ease: "easeOut" }}
     >
-      <h1>We are the</h1>
       <h1>
-        <AnimatedText text="Java Developers" />
+        Build with <AnimatedText text="Java..." />
       </h1>
-      <h1>Who turn you into a</h1>
       <h1>
-        <AnimatedText text="Top 1% Java Developer" />
+        Ship with <AnimatedText text="Spring Boot.." />
+      </h1>
+      <h1>
+        Scale with <AnimatedText text="System Design." />
       </h1>
     </motion.div>
   );

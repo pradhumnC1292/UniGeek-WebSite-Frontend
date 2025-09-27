@@ -20,21 +20,18 @@
   margin-right: calc(50% - 50vw);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem 2.5rem;
+  padding: 2.5rem 3rem;
   background-color: var(--color-white);
 }
 .hero-left {
   flex: 1;
-  margin: 1rem 1rem 8rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
 }
 .hero-left-heading h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1;
   color: var(--color-gray-dark);
   margin-bottom: 1rem;
@@ -49,31 +46,27 @@
 }
 .hero-subtext01 {
   font-family: "outfit", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #666;
-  margin: 0.7rem 0;
+  margin: 0.5rem 0;
   line-height: 1.5;
   padding-left: 0.5rem;
   border-left: 3px solid #5b47b0;
 }
 
 .hero-cta {
-  width: 192px;
-  height: 52px;
-  background-color: var(--color-purple);
+  background: #5b47b0;
   color: var(--color-white);
-  padding: 1rem 1.6rem;
+  padding: 1rem 1.2rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.9rem;
   margin-top: 2rem;
   transition: background 0.3s ease;
 }
 .hero-cta:hover {
-  background-color: var(--color-cta-hover);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: #5727c9;
 }
 .hero-right {
   flex: 1;
@@ -321,30 +314,32 @@
 
 @media only screen and (min-width: 96em) {
   .hero-container {
-    margin-top: 5rem;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    padding: 2rem 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 7rem;
+    background-color: var(--color-white);
   }
   .hero-left {
+    height: fit-content;
     flex: 1;
-    margin: -5rem 2rem 8rem 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
   }
   .hero-left-heading h1 {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     text-align: left;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .hero-subtext01 {
     font-family: "outfit", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #666;
     margin: 0.7rem 0;
     line-height: 1.5;
@@ -354,14 +349,13 @@
   .hero-cta {
     width: 192px;
     height: 52px;
-    background-color: var(--color-cta-bg);
+    background-color: var(--color-purple);
     color: var(--color-white);
     padding: 1rem 1.6rem;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: 550;
-    font-size: 0.9rem;
+    font-weight: 600;
     transition: background 0.3s ease;
     margin-top: 2rem;
   }
@@ -369,9 +363,8 @@
     background-color: var(--color-cta-hover);
   }
   .hero-right {
+    height: fit-content;
     flex: 1;
-    margin-top: -10rem;
-    position: relative;
     display: flex;
     justify-content: center;
   }
@@ -399,9 +392,9 @@
     position: relative;
     z-index: 2;
     width: 400px;
-    height: 560px;
+    height: fit-content !important;
     background: var(--color-white);
-    border-radius: 10px;
+    border-radius: 1rem !important;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     padding: 1rem 2rem;
   }
@@ -457,10 +450,9 @@
   }
   .form-card h3 {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem !important;
   }
   .already-user-div {
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -474,7 +466,7 @@
     color: #5b47b0;
   }
   .agreement {
-    margin-top: 1rem;
+    margin-top: 0rem !important;
     font-size: 0.8rem;
     color: var(--color-agreement);
   }
@@ -497,7 +489,6 @@
     margin: auto;
     align-items: center;
     padding: 2.5rem 2.5rem;
-    margin-top: 5rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     background-color: var(--color-white);
@@ -694,7 +685,6 @@
     background-color: var(--color-cta-hover);
   }
   .already-user-div {
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -761,11 +751,9 @@
     margin: auto;
     align-items: center;
     padding: 2rem 2rem;
-    margin-top: 5rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     background-color: var(--color-white);
-    border: 1px solid black;
   }
   .hero-left {
     flex: 1;
@@ -849,7 +837,6 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
     padding: 1rem 1rem 1rem 1rem;
-    margin-top: 2rem;
   }
   .contact__form-input-phone {
     width: calc(100% - 75px);
@@ -990,7 +977,6 @@
     margin: auto;
     align-items: center;
     padding: 1.5rem 1.5rem;
-    margin-top: 7rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
   }
@@ -1090,7 +1076,6 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
     padding: 1rem 1rem 1rem 1rem;
-    margin-top: 2rem;
   }
 
   .country-code-div {
@@ -1117,7 +1102,6 @@
     border-radius: 0.75rem;
     padding: 1rem;
     margin-bottom: -2rem;
-    border: 1px solid red;
   }
   .form-card h2 {
     font-size: 1.9rem;
@@ -1260,7 +1244,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1.5rem;
-    margin-top: 5rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     background-color: var(--color-white);
@@ -1318,7 +1301,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
   }
   .hero-bubble {
     display: none;
@@ -1335,7 +1317,6 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
     padding: 1rem 0.5rem;
-    margin-top: 2rem;
   }
 
   .country-code-div {
@@ -1527,9 +1508,7 @@
     padding-left: 0.5rem;
     border-left: 3px solid #5b47b0;
   }
-  .hero-cta {
-    display: none;
-  }
+
   .hero-right {
     flex: 1;
     position: relative;
@@ -1720,9 +1699,7 @@
     padding-left: 0.5rem;
     border-left: 3px solid #5b47b0;
   }
-  .hero-cta {
-    display: none;
-  }
+
   .hero-right {
     flex: 1;
     position: relative;

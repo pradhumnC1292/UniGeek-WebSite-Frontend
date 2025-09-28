@@ -208,7 +208,7 @@ const TermsAndConditions = () => {
         <p className="terms-contact">
           <strong>Email:</strong> hello@geekskul.com
           <br />
-          <strong>Note:</strong> Geekskul is a product of Pluto Technologies
+          <strong>Note:</strong> Geekskul is a product of Pultox Technologies
           Pvt. Ltd.
         </p>
       </div>

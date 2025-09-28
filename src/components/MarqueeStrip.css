@@ -75,7 +75,7 @@
 
 @media (max-width: 480px) {
   .marquee-container {
-    height: 32px;
+    height: 2rem;
   }
 
   .marquee-item {

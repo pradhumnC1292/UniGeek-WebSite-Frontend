@@ -60,9 +60,9 @@ const HowToGetAdmission = () => {
         </div>
         <div className="pera">
           <p>
-            To join our program, you must clear our Pre-Admission Test, designed
-            to assess your readiness and ensure you can thrive in our advanced
-            courses.
+            Entry is selective. You’ll complete a Pre-Admission Test followed by
+            a personal interview, ensuring only prepared, motivated learners
+            advance into our high-impact program.
           </p>
         </div>
       </div>
@@ -104,17 +104,3 @@ const HowToGetAdmission = () => {
 };
 
 export default HowToGetAdmission;
-
-// import React from "react";
-// import line52 from "../assets/icons/line 52.png";
-// import "./HowToGetAdmission.css";
-
-// const HowToGetAdmission = () => {
-//   return (
-//     <section className="admission-container">
-//       <h2 className="admission-title">How to get Admission</h2>
-//     </section>
-//   );
-// };
-
-// export default HowToGetAdmission;

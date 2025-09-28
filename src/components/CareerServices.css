@@ -37,7 +37,7 @@
 }
 
 .career-services-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   color: #666;
@@ -113,7 +113,7 @@
 
 @media only screen and (min-width: 96em) {
   .career-services-section {
-    min-width: 90vw;
+    max-width: 80vw;
     min-height: 80vh;
     background-color: var(--color-white);
     border-radius: 2rem;
@@ -141,7 +141,7 @@
   }
 
   .career-services-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     color: #666;
@@ -247,7 +247,7 @@
   }
 
   .career-services-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     color: #666;
@@ -350,7 +350,7 @@
   }
 
   .career-services-subtitle {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     color: #666;
@@ -454,7 +454,7 @@
   }
 
   .career-services-subtitle {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     color: #666;
@@ -722,7 +722,6 @@
   }
 }
 
-/* ---- MOBILE ONLY (component is designed for <= 660px) ---- */
 .cs-mobile {
   width: 100vw;
   margin-left: calc(50% - 50vw);

@@ -269,15 +269,16 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .nn-navbar {
     top: 32px;
+    width: 100vw;
+    height: 4rem;
   }
   .brand-logo {
     height: 34px;
   }
 
-  /* Ensure consistent mobile navigation sizing */
   .nn-link,
   .nn-link--accordion {
     font-size: 0.95rem;

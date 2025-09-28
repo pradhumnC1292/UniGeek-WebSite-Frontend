@@ -40,8 +40,8 @@ const HowToGetAdmissionMob = () => {
           <div className="left-div-03">
             <h3 className="card-title-03">Pre-Admission Test Requirement</h3>
             <p className="card-pera-03">
-              To join our program, you must clear our Pre-Admission Test,
-              assessing your readiness for advanced courses.
+              Admission is earned. Clear the Pre-Admission Test and personal
+              interview to begin your journey with us.
             </p>
           </div>
           <div className="right-div-03">

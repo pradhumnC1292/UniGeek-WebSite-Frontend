@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
 
       <div className="privacy-section">
         <p className="privacy-paragraph">
-          Geekskul ("we," "us," or "our") is a product of Pluto Technologies
+          Geekskul ("we," "us," or "our") is a product of Pultox Technologies
           Pvt. Ltd., a company registered in the Republic of India. This Privacy
           Policy outlines how we collect, use, share, and safeguard your
           information when you interact with our platform. By using Geekskul’s
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
         </ul>
         <p className="privacy-paragraph">
           We do not collect or store sensitive payment data directly.
-          Payment-related information is handled securely by Razorpay.
+          Payment-related information is handled securely by Paytm.
         </p>
       </div>
 
@@ -74,9 +74,9 @@ const PrivacyPolicy = () => {
         </p>
         <ul className="privacy-list">
           <li>
-            <strong>Razorpay:</strong> Used for secure payment processing.
-            Razorpay may collect payment information under its own policies. We
-            do not access your card or bank details.
+            <strong>Paytm:</strong> Used for secure payment processing. Paytm
+            may collect payment information under its own policies. We do not
+            access your card or bank details.
           </li>
           <li>
             <strong>Google Analytics:</strong> Helps us track website usage
@@ -84,7 +84,7 @@ const PrivacyPolicy = () => {
             improve UX.
           </li>
           <li>
-            <strong>Zoom:</strong> Used to conduct online classes, mentorship
+            <strong>Fermion:</strong> Used to conduct online classes, mentorship
             sessions, and live workshops. Participation may require name and
             email submission to access the virtual room.
           </li>
@@ -195,7 +195,7 @@ const PrivacyPolicy = () => {
         </p>
         <p className="privacy-paragraph">📧 hello@geekskul.com</p>
         <p className="privacy-paragraph">
-          📝 Geekskul is a product of Pluto Technologies Pvt. Ltd.
+          📝 Geekskul is a product of Pultox Technologies Pvt. Ltd.
         </p>
       </div>
     </div>

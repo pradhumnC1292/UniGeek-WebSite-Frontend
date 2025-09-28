@@ -10,7 +10,7 @@ const WhyDifferent_TM = () => {
     <section className="stats-bannerWD" data-scroll-section>
       <div className="upper-div">
         <h2 className="wd-heading" data-scroll data-scroll-speed="2">
-          “Why We Are <span>Different_TM</span> From Others ?”
+          “Why We Are <span>Different</span> From Others ?”
         </h2>
         <p className="wd-subheading" data-scroll data-scroll-speed="2">
           We have highly professional mentors around the globe. We have great

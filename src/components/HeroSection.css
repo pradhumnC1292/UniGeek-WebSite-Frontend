@@ -22,6 +22,8 @@
   flex-wrap: wrap;
   padding: 2.5rem 3rem;
   background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
 }
 .hero-left {
   flex: 1;
@@ -29,6 +31,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  z-index: 2;
 }
 .hero-left-heading h1 {
   font-size: 3.5rem;
@@ -73,6 +76,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 .hero-bubble {
   position: absolute;
@@ -485,8 +489,6 @@
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
     align-items: center;
     padding: 2.5rem 2.5rem;
     margin-left: calc(50% - 50vw);
@@ -1933,5 +1935,60 @@
 
   .already-user-div h3 span {
     color: #5b47b0;
+  }
+}
+
+/* Animated Grid Pattern Background Styles */
+.hero-grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.hero-grid-pattern .agp-svg {
+  fill: rgba(91, 71, 176, 0.35);
+  stroke: rgba(91, 71, 176, 0.35);
+}
+
+.hero-grid-pattern .agp-animated-rect {
+  color: rgba(91, 71, 176, 0.7);
+}
+
+/* Ensure content is above the grid pattern */
+.hero-left,
+.hero-right {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile adjustments for grid pattern */
+@media (max-width: 768px) {
+  .hero-grid-pattern {
+    opacity: 0.3;
+  }
+
+  .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.4);
+    stroke: rgba(91, 71, 176, 0.4);
+  }
+
+  .hero-grid-pattern .agp-animated-rect {
+    color: rgba(91, 71, 176, 0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-grid-pattern {
+    opacity: 0.25;
+  }
+
+  .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.38);
+    stroke: rgba(91, 71, 176, 0.38);
   }
 }

@@ -1,15 +1,23 @@
 .main-content {
-  padding-top: 120px;
+  padding-top: calc(5rem + 44px); /* Navbar height + MarqueeStrip height */
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding-top: calc(
+      5rem + 40px
+    ); /* Navbar height + MarqueeStrip height on mobile */
+  }
 }
 
 @media (max-width: 1024px) {
   .main-content {
-    padding-top: 116px;
+    padding-top: calc(5rem + 44px);
   }
 }
 
 @media (max-width: 420px) {
   .main-content {
-    padding-top: 112px;
+    padding-top: calc(5rem + 40px);
   }
 }

@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./BecomeMentorHeroSec.css";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 import { MdGroups2 } from "react-icons/md";
 import Hero_img01 from "../assets/images/bm-hero.png";
 import Hero_img02 from "../assets/images/bm-hero-02.png";
 import BecomeMentorLeftHeading from "./BecomeMentorLeftHeading";
+import { AnimatedGridPattern } from "./AnimatedGridPattern";
 
 const BecomeMentorHeroSec = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <section className="bm-BecomeMentorHeroSec">
+      {/* Animated Grid Pattern Background */}
+      <div className="hero-grid-pattern">
+        <AnimatedGridPattern
+          numSquares={isMobile ? 20 : 40}
+          maxOpacity={isMobile ? 0.6 : 0.5}
+          duration={isMobile ? 4 : 3}
+          repeatDelay={isMobile ? 2 : 1}
+          width={isMobile ? 50 : 50}
+          height={isMobile ? 50 : 50}
+        />
+      </div>
       <div className="bm-BecomeMentor-left-div">
         <BecomeMentorLeftHeading />
       </div>

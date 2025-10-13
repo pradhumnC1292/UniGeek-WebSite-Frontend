@@ -1,0 +1,73 @@
+.gradient-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.gradient-shape {
+  position: absolute;
+  animation: background-gradient var(--background-gradient-speed, 15s) infinite
+    linear;
+}
+
+.blur-light {
+  filter: blur(20px);
+}
+.blur-medium {
+  filter: blur(40px);
+}
+.blur-heavy {
+  filter: blur(100px);
+}
+
+@keyframes background-gradient {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, 20px);
+  }
+  50% {
+    transform: translate(-50px, 40px);
+  }
+  75% {
+    transform: translate(30px, -30px);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .blur-light {
+    filter: blur(15px);
+  }
+  .blur-medium {
+    filter: blur(30px);
+  }
+  .blur-heavy {
+    filter: blur(70px);
+  }
+
+  @keyframes background-gradient {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(30px, 15px);
+    }
+    50% {
+      transform: translate(-30px, 25px);
+    }
+    75% {
+      transform: translate(20px, -20px);
+    }
+  }
+}

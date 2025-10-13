@@ -1,4 +1,5 @@
 import React from "react";
+import { RetroGrid } from "./RetroGrid";
 import "./WhyWerDiffrent.css";
 
 const cards = [
@@ -31,6 +32,8 @@ const cards = [
 export default function WhyWerDiffrent() {
   return (
     <section className="wd-section" aria-labelledby="wd-title">
+      {/* Retro Grid Background */}
+      <RetroGrid angle={65} />
       <div className="wd-shell">
         <header className="wd-head">
           {/* <h2 id="wd-title" className="wd-title">

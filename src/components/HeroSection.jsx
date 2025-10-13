@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import HeroLeftHeading from "./HeroLeftHeading";
 import CustomDropdown from "./CustomDropdown";
+import { AnimatedGridPattern } from "./AnimatedGridPattern";
 import "./HeroSection.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -19,6 +20,17 @@ const HeroSection = () => {
   const [shakeForm, setShakeForm] = useState(false);
   const [availableCourses, setAvailableCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Fetch courses from database on component mount
   useEffect(() => {
@@ -190,6 +202,17 @@ const HeroSection = () => {
   return (
     <section className="hero-container" data-scroll-section>
       <ToastContainer />
+      {/* Animated Grid Pattern Background */}
+      <div className="hero-grid-pattern">
+        <AnimatedGridPattern
+          numSquares={isMobile ? 20 : 40}
+          maxOpacity={isMobile ? 0.6 : 0.5}
+          duration={isMobile ? 4 : 3}
+          repeatDelay={isMobile ? 2 : 1}
+          width={isMobile ? 50 : 50}
+          height={isMobile ? 50 : 50}
+        />
+      </div>
       <div className="hero-left">
         <HeroLeftHeading />
         <p className="hero-subtext01">
@@ -282,7 +305,14 @@ const HeroSection = () => {
             </button>
             <div className="already-user-div">
               <h3>
-                Already a user : <span>SignIn</span>
+                Already a user :{" "}
+                <a
+                  href="http://localhost:5173/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>SignIn</span>
+                </a>
               </h3>
             </div>
             <div className="agreement">

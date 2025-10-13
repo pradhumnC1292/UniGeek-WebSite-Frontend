@@ -1,6 +1,6 @@
 .nn-navbar {
   position: fixed;
-  top: 40px;
+  top: 44px;
   left: 0;
   width: 100vw;
   height: 5rem;
@@ -62,14 +62,11 @@
   background: transparent;
   border: none;
   color: #3d3d3d;
-  font-family: "Outfit", sans-serif;
   font-weight: 600;
-  font-size: inherit;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  padding: 0;
 }
 .nn-chev {
   transition: transform 0.18s ease;
@@ -202,14 +199,7 @@
   text-align: left;
   padding: 0.9rem 0;
   color: #3d3d3d;
-  font-family: "Outfit", sans-serif;
   font-weight: 600;
-  font-size: inherit;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
 }
 .nn-accordion {
   max-height: 0;
@@ -227,7 +217,6 @@
   border: 0;
   background: transparent;
   color: #3d3d3d;
-  font-family: "Outfit", sans-serif;
   font-weight: 600;
 }
 .nn-panel-cta {
@@ -238,9 +227,6 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .nn-navbar {
-    top: 36px;
-  }
   .nn-center {
     display: none;
   }
@@ -251,42 +237,20 @@
   .nn-right .nn-cta {
     display: none !important;
   }
-
-  /* Ensure mobile navigation links are consistent */
-  .nn-link,
-  .nn-link--accordion {
-    font-size: 1rem;
-    padding: 0.9rem 0;
-  }
 }
 
-/* Tablet specific styling */
-@media (max-width: 768px) {
-  .nn-link,
-  .nn-link--accordion {
-    font-size: 0.98rem;
-    padding: 0.85rem 0;
-  }
-}
-
-@media (max-width: 430px) {
-  .nn-navbar {
-    top: 32px;
-    width: 100vw;
-    height: 4rem;
-  }
+@media (max-width: 420px) {
   .brand-logo {
     height: 34px;
   }
-
-  .nn-link,
-  .nn-link--accordion {
-    font-size: 0.95rem;
-    padding: 0.8rem 0;
+  .nn-navbar {
+    top: 40px; /* Position below MarqueeStrip on mobile */
   }
+}
 
-  .nn-sublink {
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
+/* Adjust navbar position for mobile when MarqueeStrip is present */
+@media (max-width: 640px) {
+  .nn-navbar {
+    top: 40px;
   }
 }

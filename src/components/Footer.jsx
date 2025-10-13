@@ -237,7 +237,7 @@ export default function Footer() {
       <div className="ft__bottom">
         <p className="ft__copy">
           <FaRegCopyright className="ft__copy-icon" />
-          {` 2025 Pultox Technologies Pvt. Ltd. All rights reserved.`}
+          {` 2025 Geekskul EdTech, All rights reserved.`}
         </p>
       </div>
     </footer>

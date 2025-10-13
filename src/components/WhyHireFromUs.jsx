@@ -61,7 +61,7 @@ const WhyHireFromUs = () => {
           <div className="differentiator-card">
             <h3>Skilled with Industry-level Expertise</h3>
             <p>
-              All our learners are trained by experts with 6+ years of
+              All our learners are trained by experts with 5+ years of
               experience from top tech companies or by IIT/NIT alumni, ensuring
               deep technical knowledge and real-world expertise.
             </p>

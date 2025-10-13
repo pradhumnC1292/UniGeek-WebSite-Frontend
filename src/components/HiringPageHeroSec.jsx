@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HiringPageHeroSec.css";
 import { FaRocket, FaBook, FaMoneyBillWave } from "react-icons/fa";
 import { RiTimeLine } from "react-icons/ri";
@@ -6,11 +6,23 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import Hpimg03 from "../assets/images/hp-img03.png";
 import Hpimg04 from "../assets/images/hp-img04.png";
 import HiringForm from "./HiringForm";
+import { AnimatedGridPattern } from "./AnimatedGridPattern";
 import { toast, ToastContainer } from "react-toastify";
 
 const HiringPageHeroSec = () => {
   // State to control modal visibility
   const [openModal, setOpenModal] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // When "Hire Now" is clicked, show the modal
   const handleHireNow = () => {
@@ -38,6 +50,17 @@ const HiringPageHeroSec = () => {
 
   return (
     <section className="hiring-hero-sec" data-scroll-section>
+      {/* Animated Grid Pattern Background */}
+      <div className="hero-grid-pattern">
+        <AnimatedGridPattern
+          numSquares={isMobile ? 20 : 40}
+          maxOpacity={isMobile ? 0.6 : 0.5}
+          duration={isMobile ? 4 : 3}
+          repeatDelay={isMobile ? 2 : 1}
+          width={isMobile ? 50 : 50}
+          height={isMobile ? 50 : 50}
+        />
+      </div>
       {/* Left Side: Text Content */}
       <ToastContainer />
       <div className="hiring-hero-left-div">

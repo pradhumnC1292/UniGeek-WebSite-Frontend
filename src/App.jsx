@@ -12,11 +12,13 @@ import NotFound from "./pages/NotFound";
 import HiringPage from "./pages/HiringPage";
 import TermsAndConditions from "./components/TermsAndConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import MarqueeStrip from "./components/MarqueeStrip";
 
 const App = () => {
   return (
     <>
       <ScrollToTop />
+      <MarqueeStrip />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

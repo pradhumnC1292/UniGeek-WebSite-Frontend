@@ -60,7 +60,7 @@ const OurMentorsMobile = () => {
                     </p>
                     <p id="experience">Experience: {mentor.experience}</p>
                   </div>
-                  <div className="social-link-div">
+                  {/* <div className="social-link-div">
                     <a
                       href={mentor.linkedin}
                       target="_blank"
@@ -81,7 +81,7 @@ const OurMentorsMobile = () => {
                         className="card-img02"
                       />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="card-right-div">
                   <img

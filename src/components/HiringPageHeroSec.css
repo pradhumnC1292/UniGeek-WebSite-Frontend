@@ -18,6 +18,8 @@
   background-color: var(--color-white);
   padding: 0rem 1rem;
   margin-left: calc(50% - 50vw);
+  position: relative;
+  overflow: hidden;
 }
 
 .hiring-hero-left-div {
@@ -27,6 +29,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hiring-hero-heading {
@@ -103,6 +107,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hiring-right-image-container {
@@ -1347,5 +1353,52 @@
     align-items: center;
     justify-content: left;
     display: none !important;
+  }
+}
+
+/* Animated Grid Pattern Background Styles */
+.hiring-hero-sec .hero-grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.hiring-hero-sec .hero-grid-pattern .agp-svg {
+  fill: rgba(91, 71, 176, 0.35);
+  stroke: rgba(91, 71, 176, 0.35);
+}
+
+.hiring-hero-sec .hero-grid-pattern .agp-animated-rect {
+  color: rgba(91, 71, 176, 0.7);
+}
+
+@media (max-width: 768px) {
+  .hiring-hero-sec .hero-grid-pattern {
+    opacity: 0.3;
+  }
+
+  .hiring-hero-sec .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.4);
+    stroke: rgba(91, 71, 176, 0.4);
+  }
+
+  .hiring-hero-sec .hero-grid-pattern .agp-animated-rect {
+    color: rgba(91, 71, 176, 0.75);
+  }
+}
+
+@media (max-width: 480px) {
+  .hiring-hero-sec .hero-grid-pattern {
+    opacity: 0.25;
+  }
+
+  .hiring-hero-sec .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.38);
+    stroke: rgba(91, 71, 176, 0.38);
   }
 }

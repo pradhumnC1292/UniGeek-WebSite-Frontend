@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomDropdown from "./CustomDropdown";
 import CoursePageLeftHeading from "./CoursePageLeftHeading";
+import { AnimatedGridPattern } from "./AnimatedGridPattern";
 import "./JavaCourseHeroSection.css";
 
 const JavaCourseHeroSection = () => {
@@ -18,6 +19,17 @@ const JavaCourseHeroSection = () => {
   const [shakeForm, setShakeForm] = useState(false);
   const [availableCourses, setAvailableCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Fetch courses from database on component mount
   useEffect(() => {
@@ -189,6 +201,17 @@ const JavaCourseHeroSection = () => {
   return (
     <section className="course-hero-container" data-scroll-section>
       <ToastContainer />
+      {/* Animated Grid Pattern Background */}
+      <div className="hero-grid-pattern">
+        <AnimatedGridPattern
+          numSquares={isMobile ? 20 : 40}
+          maxOpacity={isMobile ? 0.6 : 0.5}
+          duration={isMobile ? 4 : 3}
+          repeatDelay={isMobile ? 2 : 1}
+          width={isMobile ? 50 : 50}
+          height={isMobile ? 50 : 50}
+        />
+      </div>
       <div className="course-hero-left">
         <CoursePageLeftHeading />
         <p className="course-hero-subtext">

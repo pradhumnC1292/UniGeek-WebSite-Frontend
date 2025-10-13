@@ -12,13 +12,13 @@ const StatsBanner = () => {
           <img src={BookIcon} alt="Book Icon" className="stats-book-icon" />
         </div>
         <div className="stats-info">
-          <h2>04+</h2>
+          <h2>05+</h2>
           <p>Total Courses</p>
         </div>
       </div>
       <div className="stats-box">
         <div className="stats-icon">
-          <FaUsers size={40} color="#6a33f8" />
+          <FaUsers size={40} color="#5b47b0" />
         </div>
         <div className="stats-info">
           <h2>100%</h2>
@@ -36,7 +36,7 @@ const StatsBanner = () => {
       </div>
       <div className="stats-box">
         <div className="stats-icon">
-          <FaUsers size={40} color="#6a33f8" />
+          <FaUsers size={40} color="#5b47b0" />
         </div>
         <div className="stats-info">
           <h2>50</h2>

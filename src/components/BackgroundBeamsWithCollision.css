@@ -1,0 +1,92 @@
+/* Container */
+.bbc-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Beams */
+.bbc-beam {
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  margin: auto;
+  width: 2px;
+  height: 3.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(to top, #5b47b0, #7843fc, transparent);
+  opacity: 0.6;
+}
+
+.beam-small {
+  height: 1.5rem;
+}
+.beam-medium {
+  height: 3rem;
+}
+.beam-large {
+  height: 5rem;
+}
+
+/* Floor */
+.bbc-floor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Explosion */
+.bbc-explosion {
+  position: absolute;
+  z-index: 50;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+}
+
+.bbc-flash {
+  position: absolute;
+  left: -40px;
+  right: -40px;
+  top: 0;
+  margin: auto;
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, transparent, #5b47b0, transparent);
+  filter: blur(4px);
+}
+
+.bbc-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(to bottom, #5b47b0, #7843fc);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .bbc-beam {
+    opacity: 0.4;
+    height: 2.5rem;
+  }
+
+  .beam-small {
+    height: 1rem;
+  }
+  .beam-medium {
+    height: 2rem;
+  }
+  .beam-large {
+    height: 3.5rem;
+  }
+}

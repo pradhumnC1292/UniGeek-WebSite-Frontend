@@ -1,0 +1,130 @@
+/* Animated Grid Pattern Styles */
+
+/* The SVG root: replaces Tailwind absolute/inset/fill/stroke classes */
+.agp-svg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* Tailwind's fill-gray-400/30 & stroke-gray-400/30 approximations: */
+  fill: rgba(156, 163, 175, 0.3);
+  stroke: rgba(156, 163, 175, 0.3);
+  /* Performance optimizations */
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Replaces "overflow-visible" */
+.agp-overflow-visible {
+  overflow: visible;
+}
+
+/* Animated squares fill color (currentColor = inherit from SVG) */
+.agp-animated-rect {
+  fill: currentColor;
+  stroke-width: 0;
+  color: rgba(0, 0, 0, 0.7); /* slightly dark; adjust as desired */
+}
+
+/* Mask + transform utilities (Tailwind → CSS) */
+.agp-mask {
+  /* mask-image: radial-gradient(500px_circle_at_center, white, transparent) */
+  -webkit-mask-image: radial-gradient(
+    500px circle at center,
+    #fff,
+    transparent
+  );
+  mask-image: radial-gradient(500px circle at center, #fff, transparent);
+}
+
+.agp-stretch {
+  /* "inset-x-0 inset-y-[-30%] h-[200%]" equivalent */
+  inset: 0;
+  height: 200%;
+  top: -30%;
+  bottom: -30%;
+  position: absolute;
+}
+
+.agp-skew {
+  transform: skewY(12deg);
+  transform-origin: center;
+}
+
+/* Hero section specific grid pattern styles */
+.hero-grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.35;
+  pointer-events: none;
+  /* Performance optimizations for scrolling */
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+.hero-grid-pattern .agp-svg {
+  fill: rgba(91, 71, 176, 0.35); /* Purple theme to match your design */
+  stroke: rgba(91, 71, 176, 0.35);
+}
+
+.hero-grid-pattern .agp-animated-rect {
+  color: rgba(91, 71, 176, 0.7); /* Purple theme */
+}
+
+/* Light/dark theming hooks (optional) */
+@media (prefers-color-scheme: dark) {
+  .agp-svg {
+    fill: rgba(148, 163, 184, 0.25);
+    stroke: rgba(148, 163, 184, 0.25);
+  }
+  .agp-animated-rect {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.2);
+    stroke: rgba(91, 71, 176, 0.2);
+  }
+
+  .hero-grid-pattern .agp-animated-rect {
+    color: rgba(91, 71, 176, 0.4);
+  }
+}
+
+/* Make sure it scales nicely */
+@media (max-width: 768px) {
+  .hero-grid-pattern {
+    opacity: 0.3; /* Increased visibility on mobile */
+  }
+
+  .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.4); /* More visible on mobile */
+    stroke: rgba(91, 71, 176, 0.4);
+    /* Reduce quality on mobile for better performance */
+    shape-rendering: optimizeSpeed;
+  }
+
+  .hero-grid-pattern .agp-animated-rect {
+    color: rgba(91, 71, 176, 0.75); /* More visible animated squares */
+    /* Disable will-change on mobile to reduce memory usage */
+    will-change: auto !important;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .hero-grid-pattern {
+    opacity: 0.25; /* Slightly reduced but still visible */
+  }
+
+  .hero-grid-pattern .agp-svg {
+    fill: rgba(91, 71, 176, 0.38);
+    stroke: rgba(91, 71, 176, 0.38);
+  }
+}

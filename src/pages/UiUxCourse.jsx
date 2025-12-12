@@ -9,6 +9,7 @@ import FAQ from "../components/FAQ";
 import "./CoursePages.css";
 import cardImg from "../assets/images/priceCard-img.png";
 import ResponsiveComponentCurriculumOverview from "../components/responsiveComponents/ResponsiveComponentCurriculumOverview";
+import CircularTestimonialsSection from "../components/CircularTestimonialsSection";
 
 const UiUxCourse = () => {
   const courseData = {
@@ -31,7 +32,8 @@ const UiUxCourse = () => {
       <UIUXCourseHeroSection />
       <StatsBanner />
       <UIUXCourseUnigeekWay />
-      <ResponsiveComponentOurMentors />
+      {/* <ResponsiveComponentOurMentors /> */}
+      <CircularTestimonialsSection />
       <ResponsiveComponentCurriculumOverview />
       <ResponsiveUiUxAfterEnrollingJourney />
       <CoursePriceCards data={courseData} />

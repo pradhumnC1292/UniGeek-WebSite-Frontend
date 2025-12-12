@@ -1198,9 +1198,11 @@
   }
 
   .hiring-hero-heading {
-    font-size: 2.8rem !important;
-    font-weight: 500;
-    margin-bottom: 0.7rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #000;
   }
 
   .hiring-hero-heading span {
@@ -1208,11 +1210,13 @@
   }
 
   .hiring-hero-subheading {
-    font-size: 1rem;
-    color: var(--color-gray);
+    font-size: 0.95rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    color: #666;
+    max-width: 100%;
+    margin: 0 auto;
     margin-bottom: 2rem;
-    line-height: 1.5;
-    max-width: 660px;
   }
 
   .hiring-features {
@@ -1278,9 +1282,11 @@
 
 @media screen and (max-width: 380px) {
   .hiring-hero-heading {
-    font-size: 2.6rem !important;
-    font-weight: 500;
-    margin-bottom: 0.7rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #000;
   }
 
   .hiring-hero-heading span {
@@ -1288,11 +1294,13 @@
   }
 
   .hiring-hero-subheading {
-    font-size: 1rem;
-    color: var(--color-gray);
+    font-size: 0.95rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    color: #666;
+    max-width: 100%;
+    margin: 0 auto;
     margin-bottom: 2rem;
-    line-height: 1.5;
-    max-width: 660px;
   }
 
   .hiring-features {

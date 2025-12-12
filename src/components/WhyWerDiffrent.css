@@ -101,6 +101,12 @@
   box-shadow: 0 2px 10px rgba(88, 63, 191, 0.12) inset,
     0 1px 4px rgba(0, 0, 0, 0.04);
   font-size: 1.1rem;
+  color: #5b47b0;
+}
+
+.wd-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .wd-card-title {

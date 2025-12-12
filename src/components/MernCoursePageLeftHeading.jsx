@@ -41,13 +41,13 @@ const MernCoursePageLeftHeading = () => {
       transition={{ duration: 0.1, ease: "easeOut" }}
     >
       <h1>
-        Build with <AnimatedText text="JavaScript..." />
+        Built on <AnimatedText text="JavaScript..." />
       </h1>
       <h1>
-        Scale with <AnimatedText text="MongoDB & Node.js.." />
+        Backed by <AnimatedText text="Node & MongoDB.." />
       </h1>
       <h1>
-        Craft with <AnimatedText text="React." />
+        Driven by <AnimatedText text="React." />
       </h1>
     </motion.div>
   );

@@ -178,17 +178,21 @@ const UIUXCourseHeroSection = () => {
       <div className="course-hero-left">
         <UIUXCoursePageLeftHeading />
         <p className="course-hero-subtext">
-          Become a job-ready UI/UX Designer by mastering user research,
-          wireframing, prototyping, visual design, and design systems.
+          Become a job-ready UI/UX Designer by mastering research, wireframes,
+          prototypes, visual design, and design systems.
         </p>
+
         <p className="course-hero-subtext">
-          Learn industry tools like Figma and FigJam with workflows used at top
-          product companies.
+          Learn Figma, FigJam, and AI-assisted design tools to speed up
+          ideation, UX copywriting, and usability analysis.
         </p>
+
         <p className="course-hero-subtext">
-          Build a portfolio with real case studies: mobile apps, dashboards, and
-          end-to-end product flows.
+          Build a professional portfolio with real case studies—apps,
+          dashboards, and product journeys enhanced with AI-generated insights
+          and assets.
         </p>
+
         <button className="course-hero-cta" onClick={handleCtaClick}>
           Enroll Now
         </button>

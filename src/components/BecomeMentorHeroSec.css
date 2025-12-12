@@ -64,8 +64,9 @@
 }
 
 .become-mentor-hero-subtext {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-family: "outline", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: var(--text-secondary);
   margin: 0.5rem 0;
   line-height: 1.5;

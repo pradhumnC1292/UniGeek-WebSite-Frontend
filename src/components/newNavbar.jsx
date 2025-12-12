@@ -2,11 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaAngleDown, FaPhoneAlt } from "react-icons/fa";
 import brandLogo from "../assets/icons/Logo_Design_WBG.png";
+import CallbackModal from "./CallbackModal";
 import "./newNavbar.css";
 
 const NewNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const [callbackModalOpen, setCallbackModalOpen] = useState(false);
   const panelRef = useRef(null);
   const dropdownRef = useRef(null);
 
@@ -44,6 +46,9 @@ const NewNavbar = () => {
   }, [coursesOpen, menuOpen]);
 
   const handleRequestCallback = () => {
+    // Open the callback modal instead of dispatching event
+    setCallbackModalOpen(true);
+    // Still dispatch for backward compatibility with hero sections
     window.dispatchEvent(new Event("requestCallback"));
   };
 
@@ -271,6 +276,12 @@ const NewNavbar = () => {
           <div className="nn-scrim" onClick={() => setMenuOpen(false)} />
         </div>
       </div>
+
+      {/* Callback Modal */}
+      <CallbackModal
+        isOpen={callbackModalOpen}
+        onClose={() => setCallbackModalOpen(false)}
+      />
     </header>
   );
 };

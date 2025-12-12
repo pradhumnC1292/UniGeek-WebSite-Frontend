@@ -48,7 +48,7 @@
   color: var(--color-purple);
 }
 .hero-subtext01 {
-  font-family: "outfit", sans-serif;
+  font-family: "outfit";
   font-size: 1rem;
   color: #666;
   margin: 0.5rem 0;

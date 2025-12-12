@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaTimes } from "react-icons/fa";
 import CustomDropdown from "./CustomDropdown";
-import CoursePageLeftHeading from "./CoursePageLeftHeading";
-import { AnimatedGridPattern } from "./AnimatedGridPattern";
-import "./JavaCourseHeroSection.css";
+import "./CustomDropdown.css";
+import "./CallbackModal.css";
 
-const JavaCourseHeroSection = () => {
+const CallbackModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,44 +15,20 @@ const JavaCourseHeroSection = () => {
     phone: "",
     course: "",
   });
-  const [message, setMessage] = useState("");
-  const [shakeForm, setShakeForm] = useState(false);
   const [availableCourses, setAvailableCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Detect mobile device
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  // Fetch courses from database on component mount
+  // Fetch courses from database
   useEffect(() => {
     const loadCourses = async () => {
       try {
         setCoursesLoading(true);
-
-        console.log("Fetching courses from database...");
-
-        // Direct API call to fetch courses from database
         const response = await axios.get("http://localhost:5000/api/courses", {
           validateStatus: (status) => status < 500,
         });
 
-        console.log(
-          "Course API response:",
-          response.status,
-          response.data?.length,
-          "courses"
-        );
-
         if (response.status === 200 && Array.isArray(response.data)) {
-          // Filter out disabled courses and map to frontend format
           const activeCourses = response.data
             .filter((course) => !course.disabled)
             .map((course) => ({
@@ -62,19 +38,14 @@ const JavaCourseHeroSection = () => {
             }));
 
           setAvailableCourses(activeCourses);
-          console.log("Loaded active courses:", activeCourses.length);
+          console.log("Loaded courses from database:", activeCourses.length);
         } else {
-          console.error(
-            "Failed to fetch courses:",
-            response.status,
-            response.data
-          );
           setAvailableCourses([]);
         }
       } catch (error) {
         if (error.code === "ECONNREFUSED") {
           console.error(
-            "Backend server is not running at http://localhost:5000"
+            "Backend server is not running. Please start the server at http://localhost:5000"
           );
         } else {
           console.error("Failed to load courses:", error.message);
@@ -85,8 +56,33 @@ const JavaCourseHeroSection = () => {
       }
     };
 
-    loadCourses();
-  }, []);
+    if (isOpen) {
+      loadCourses();
+    }
+  }, [isOpen]);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen, onClose]);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   // Helper function to find course ID by title
   const findCourseIdByTitle = (courses, title) => {
@@ -104,7 +100,10 @@ const JavaCourseHeroSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
     try {
+      setIsSubmitting(true);
       // Format phone number correctly for Indian validation
       const phoneNumber = formData.phone.replace(/\D/g, ""); // Remove all non-digits
 
@@ -113,6 +112,7 @@ const JavaCourseHeroSection = () => {
         toast.error(
           "Please enter a valid 10-digit Indian phone number starting with 6-9"
         );
+        setIsSubmitting(false);
         return;
       }
 
@@ -121,6 +121,7 @@ const JavaCourseHeroSection = () => {
 
       if (!courseId) {
         toast.error("Please select a valid course");
+        setIsSubmitting(false);
         return;
       }
 
@@ -146,7 +147,7 @@ const JavaCourseHeroSection = () => {
       console.log("Enquiry response:", res.status, res.data);
 
       if (res.status === 201) {
-        toast.success("Form submitted successfully!");
+        toast.success("Form submitted successfully! We'll contact you soon.");
         setFormData({
           name: "",
           email: "",
@@ -154,8 +155,12 @@ const JavaCourseHeroSection = () => {
           phone: "",
           course: "",
         });
+        // Close modal after successful submission
+        setTimeout(() => {
+          onClose();
+        }, 1500);
       } else if (res.status === 409) {
-        toast.success("You have already submitted the form.");
+        toast.success("You have already submitted the form. We'll contact you soon.");
         setFormData({
           name: "",
           email: "",
@@ -163,7 +168,11 @@ const JavaCourseHeroSection = () => {
           phone: "",
           course: "",
         });
+        setTimeout(() => {
+          onClose();
+        }, 1500);
       } else {
+        // Show detailed error message
         const errorMessage =
           res.data?.message || res.data?.error || "Submission failed";
         console.error("Submission error:", res.status, res.data);
@@ -172,81 +181,37 @@ const JavaCourseHeroSection = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Submission error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const handleCtaClick = () => {
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.phone ||
-      !formData.course
-    ) {
-      setShakeForm(true);
-      setTimeout(() => setShakeForm(false), 500);
-    }
-  };
-
-  useEffect(() => {
-    const handleRequestCallback = () => {
-      setShakeForm(true);
-      setTimeout(() => setShakeForm(false), 500);
-    };
-    window.addEventListener("requestCallback", handleRequestCallback);
-    return () => {
-      window.removeEventListener("requestCallback", handleRequestCallback);
-    };
-  }, []);
+  if (!isOpen) return null;
 
   return (
-    <section className="course-hero-container" data-scroll-section>
+    <>
       <ToastContainer />
-      {/* Animated Grid Pattern Background */}
-      <div className="hero-grid-pattern">
-        <AnimatedGridPattern
-          numSquares={isMobile ? 20 : 40}
-          maxOpacity={isMobile ? 0.6 : 0.5}
-          duration={isMobile ? 4 : 3}
-          repeatDelay={isMobile ? 2 : 1}
-          width={isMobile ? 50 : 50}
-          height={isMobile ? 50 : 50}
-        />
-      </div>
-      <div className="course-hero-left">
-        <CoursePageLeftHeading />
-        <p className="course-hero-subtext">
-          Master Java, Spring Boot, React, SQL, and System Design to become a
-          high-performance full stack developer.
-        </p>
+      <div className="callback-modal-overlay" onClick={onClose}>
+        <div
+          className="callback-modal-content"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            className="callback-modal-close"
+            onClick={onClose}
+            aria-label="Close modal"
+          >
+            <FaTimes />
+          </button>
 
-        <p className="course-hero-subtext">
-          Learn from industry professionals with hands-on experience in scalable
-          backend systems and applied AI.
-        </p>
+          <div className="callback-modal-header">
+            <h2>Request Callback</h2>
+            <p className="callback-modal-subtitle">
+              Fill out this form and we'll get back to you as soon as possible.
+            </p>
+          </div>
 
-        <p className="course-hero-subtext">
-          Build real projects—Banking System, Job Portal, Hospital
-          Platform—enhanced with AI features like chatbots, smart search, and
-          automation.
-        </p>
-
-        <button className="course-hero-cta" onClick={handleCtaClick}>
-          Enroll Now
-        </button>
-      </div>
-
-      <div className="course-hero-right" data-scroll data-scroll-speed="2">
-        <div className="course-hero-bubble"></div>
-        <div className="course-hero-bubble2"></div>
-
-        <div className={`form-card ${shakeForm ? "shake" : ""}`}>
-          <h2>Get in touch</h2>
-          <p className="form-subtitle">
-            We'd love to hear from you. Please fill out this form.
-          </p>
-          <h3>Contact US</h3>
-
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="callback-modal-form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
@@ -306,20 +271,25 @@ const JavaCourseHeroSection = () => {
               loading={coursesLoading}
             />
 
-            <button type="submit" className="submit-btn">
-              Submit
+            <button
+              type="submit"
+              className="callback-modal-submit-btn"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
-            <div className="agreement">
+
+            <div className="callback-modal-agreement">
               By submitting, you agree to the{" "}
-              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
-              <a href="privacy-policy">Privacy Policy</a>
+              <a href="/terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </form>
-          {message && <p className="form-message">{message}</p>}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default JavaCourseHeroSection;
+export default CallbackModal;
+

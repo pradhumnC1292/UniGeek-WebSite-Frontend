@@ -10,6 +10,7 @@ import FAQ from "../components/FAQ";
 import CoursePriceCards from "../components/CoursePriceCards";
 import "./CoursePages.css";
 import cardImg from "../assets/images/priceCard-img.png";
+import CircularTestimonialsSection from "../components/CircularTestimonialsSection";
 const MernCourse = () => {
   const courseData = {
     cardImg: cardImg,
@@ -31,7 +32,8 @@ const MernCourse = () => {
       <MernCourseHeroSection />
       <StatsBanner />
       <CourseUnigeekWay />
-      <ResponsiveComponentOurMentors />
+      {/* <ResponsiveComponentOurMentors /> */}
+      <CircularTestimonialsSection />
       <ResponsiveComponentCurriculumOverview />
       <ResponsiveAfterEnrollingJourney />
       <CoursePriceCards data={courseData} />

@@ -1,31 +1,37 @@
 import React from "react";
 import { RetroGrid } from "./RetroGrid";
+import {
+  IoLocateOutline,
+  IoGlobeOutline,
+  IoShieldCheckmarkOutline,
+} from "react-icons/io5";
+import { PiHandshakeFill } from "react-icons/pi";
 import "./WhyWerDiffrent.css";
 
 const cards = [
   {
     id: "specialized",
-    icon: "🎯",
+    icon: IoLocateOutline,
     title: "Hyper-Specialized",
     body: "Not broad, generic coding courses. We focus on niche, high-demand roles like Cloud-Native Backend, Data Engineering for BFSI/Healthcare, and AI/ML Ops with GenAI tools.",
   },
   {
     id: "employer",
-    icon: "🤝",
+    icon: PiHandshakeFill,
     title: "Employer-Backed",
     body: "Curriculum co-created with hiring partners. Every module aligns with real job descriptions and industry needs—making you job-ready from day one.",
   },
   {
     id: "ecosystem",
-    icon: "🌐",
+    icon: IoGlobeOutline,
     title: "Career Ecosystem",
     body: "We go beyond placements. Alumni job board, paid micro-courses, peer projects, and hackathons build lifelong career growth.",
   },
   {
     id: "trust",
-    icon: "✅",
+    icon: IoShieldCheckmarkOutline,
     title: "Trust First",
-    body: "No fake promises. We don’t sell placement guarantees—we provide real interview opportunities with top employers. With the right skills and our support, you’ll be confident to crack interviews and secure the job.",
+    body: "No fake promises. We don't sell placement guarantees—we provide real interview opportunities with top employers. With the right skills and our support, you'll be confident to crack interviews and secure the job.",
   },
 ];
 
@@ -47,15 +53,18 @@ export default function WhyWerDiffrent() {
         </header>
 
         <ul className="wd-grid" role="list">
-          {cards.map((c) => (
-            <li key={c.id} className="wd-card">
-              <span className="wd-icon" aria-hidden="true">
-                {c.icon}
-              </span>
-              <h3 className="wd-card-title">{c.title}</h3>
-              <p className="wd-card-body">{c.body}</p>
-            </li>
-          ))}
+          {cards.map((c) => {
+            const IconComponent = c.icon;
+            return (
+              <li key={c.id} className="wd-card">
+                <span className="wd-icon" aria-hidden="true">
+                  <IconComponent />
+                </span>
+                <h3 className="wd-card-title">{c.title}</h3>
+                <p className="wd-card-body">{c.body}</p>
+              </li>
+            );
+          })}
         </ul>
       </div>
 

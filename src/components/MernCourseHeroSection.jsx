@@ -180,17 +180,21 @@ const MernCourseHeroSection = () => {
       <div className="course-hero-left">
         <MernCoursePageLeftHeading />
         <p className="course-hero-subtext">
-          Become a MERN Full Stack Developer by mastering MongoDB, Express.js,
-          React.js, and Node.js.
+          Become a MERN Full Stack Developer and build production-ready apps
+          using MongoDB, Express.js, React.js, Node.js and System Design.
         </p>
+
         <p className="course-hero-subtext">
-          Learn from industry professionals with 6+ years of experience building
-          scalable applications.
+          Learn from industry experts with real-world experience in AI, cloud,
+          and scalable application development.
         </p>
+
         <p className="course-hero-subtext">
-          Work on real-world projects like E-Commerce Platforms, Social Media
-          Apps, and EdTech Dashboards.
+          Build modern projects like AI chatbots, realtime collaboration tools,
+          e-commerce apps and master AI technologies such as OpenAI APIs, vector
+          search, embeddings, and voice-enabled assistants.
         </p>
+
         <button className="course-hero-cta" onClick={handleCtaClick}>
           Enroll Now
         </button>

@@ -134,8 +134,9 @@
   }
 
   .career-services-title {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
     color: var(--color-dark);
     margin-bottom: 1rem;
   }
@@ -145,7 +146,7 @@
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     color: #666;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto 7rem;
   }
 

@@ -216,8 +216,8 @@ const HeroSection = () => {
       <div className="hero-left">
         <HeroLeftHeading />
         <p className="hero-subtext01">
-          Geekskul is the next-gen <span>Gurukul </span> for passionate tech
-          learners.
+          No AI hype. No fake promises. Just the <span>true EdTech</span> where
+          real humans teach what they built.
         </p>
         <p className="hero-subtext01">
           Learn anytime, anywhere — say goodbye to the daily commute and rigid

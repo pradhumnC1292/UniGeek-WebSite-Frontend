@@ -15,20 +15,18 @@
 
 .course-hero-container {
   width: 100vw;
-  /* height: 100vh; */
-  margin-top: 0rem;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 
 .course-hero-left {
   width: 55%;
-  margin: 3rem 0rem 8rem 2rem;
+  margin: 0rem 1rem 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -43,12 +41,11 @@
 }
 
 .course-hero-left-heading h1 {
-  font-size: 4rem;
-  line-height: 1.15;
-  margin: 0;
+  font-size: 3.5rem;
+  line-height: 1;
   color: var(--color-gray-dark);
-  font-family: "outfit";
-  font-weight: 500 !important;
+  margin-bottom: 1rem;
+  font-weight: 500;
   text-align: left;
 }
 
@@ -57,7 +54,7 @@
 }
 
 .course-hero-subtext {
-  font-family: "outfit", sans-serif;
+  font-family: "outfit";
   font-size: 1rem;
   color: #666;
   margin: 0.5rem 0;
@@ -287,7 +284,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin-top: 0rem !important;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     padding: 2rem 7rem;
@@ -303,11 +300,11 @@
   }
 
   .course-hero-left-heading h1 {
-    font-size: 2.2rem;
+    font-size: 3.3rem;
     line-height: 1.3;
     color: var(--color-gray-dark);
     margin-bottom: 0.5rem;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     text-align: left;
   }
 
@@ -316,7 +313,7 @@
   }
 
   .course-hero-subtext {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--color-gray);
     margin-top: 0.6rem;
@@ -1580,7 +1577,7 @@
     justify-content: center !important;
     padding: 1rem;
     width: 100vw;
-    margin-top: 3rem;
+    margin-top: 0rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     margin-bottom: 2rem;
@@ -1628,7 +1625,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: -1rem;
+    margin-top: 5rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
   }
@@ -1831,7 +1828,7 @@
     justify-content: center !important;
     padding: 1rem 2rem;
     width: 100vw;
-    margin-top: 3rem;
+    margin-top: 0rem;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     margin-bottom: 2rem;
@@ -1840,8 +1837,6 @@
   .course-hero-left {
     width: 100%;
     margin-top: 1rem;
-    /* margin-left: calc(55% - 60vw);
-    margin-right: calc(55% - 60vw); */
     padding: 0.8rem;
   }
 
@@ -1874,7 +1869,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: -1rem;
+    margin-top: 4rem;
   }
   .course-hero-bubble {
     position: absolute;

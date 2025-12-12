@@ -181,7 +181,7 @@ const CourseSection = () => {
       title: "UI/UX Design",
       courseSubheading: "Design modern, user-centered digital experiences.",
       batchSize: "50 Students",
-      duration: "4 Months",
+      duration: "5 Months",
       features: [
         "Figma mastery & design systems",
         "User research & usability testing",

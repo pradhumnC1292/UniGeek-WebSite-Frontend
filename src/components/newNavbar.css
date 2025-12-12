@@ -240,6 +240,18 @@
 }
 
 @media (max-width: 420px) {
+  .nn-navbar {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    width: 100vw;
+    height: 4.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+  }
   .brand-logo {
     height: 34px;
   }
@@ -250,6 +262,18 @@
 
 /* Adjust navbar position for mobile when MarqueeStrip is present */
 @media (max-width: 640px) {
+  .nn-navbar {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    width: 100vw;
+    height: 4.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+  }
   .nn-navbar {
     top: 40px;
   }

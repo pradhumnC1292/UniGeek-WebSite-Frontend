@@ -9,6 +9,7 @@ import "./CoursePages.css";
 import cardImg from "../assets/images/priceCard-img.png";
 import ResponsiveComponentCurriculumOverview from "../components/responsiveComponents/ResponsiveComponentCurriculumOverview";
 import ResponsiveAfterEnrollingJourney from "./../components/responsiveComponents/ResponsiveAfterEnrollingJourney";
+import CircularTestimonialsSection from "../components/CircularTestimonialsSection";
 
 const JavaCourse = () => {
   const courseData = {
@@ -31,7 +32,8 @@ const JavaCourse = () => {
       <JavaCourseHeroSection />
       <StatsBanner />
       <CourseUnigeekWay />
-      <ResponsiveComponentOurMentors />
+      {/* <ResponsiveComponentOurMentors /> */}
+      <CircularTestimonialsSection />
       <ResponsiveComponentCurriculumOverview />
       <ResponsiveAfterEnrollingJourney />
       <CoursePriceCards data={courseData} />

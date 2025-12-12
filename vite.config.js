@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "0.0.0.0", // allows LAN access
-    port: 5174, // optional: fix the port
+    port: 5177, // optional: fix the port
   },
   define: {
     "global.File": undefined,

@@ -322,10 +322,10 @@
   }
 
   .course-heading {
-    font-size: 2.5rem;
+    font-size: 2.2rem !important;
     font-family: "Outfit", sans-serif;
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 500 !important;
     color: var(--color-black);
   }
   .course-heading span {
@@ -336,8 +336,8 @@
     text-align: center;
   }
   .course-sub-pera {
-    min-width: 90%;
-    font-size: 1.5rem;
+    min-width: 820px;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #666;
   }

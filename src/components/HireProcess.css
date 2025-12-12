@@ -1,0 +1,252 @@
+:root {
+  --ds-bg: #ffffff;
+  --ds-surface: #ffffff;
+  --ds-stroke: #e9e9ef;
+  --ds-ink: #111827;
+  --ds-ink-2: #1e293b;
+  --ds-muted: #475569;
+  --ds-brand: #5b47b0;
+  --ds-accent: #2563eb;
+}
+
+.ds-wrap {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: var(--ds-bg);
+  overflow: hidden;
+}
+
+.ds-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.ds-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: fit-content;
+  padding: 3rem 2rem;
+}
+
+.ds-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ds-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: #000;
+}
+
+.ds-title span {
+  color: var(--ds-brand);
+}
+
+.ds-subtitle {
+  font-size: 1.15rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.upper-div {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 1rem;
+}
+
+.lower-div {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 1rem;
+}
+
+.ds-card {
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-stroke);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+  padding: 1rem clamp(20px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ds-card--xl {
+  min-height: fit-content;
+}
+
+.ds-card--sm {
+  min-height: fit-content;
+}
+
+.ds-kicker {
+  font: 600 16px/1 "Outfit", system-ui, sans-serif;
+  color: var(--ds-brand);
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ds-kicker-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--ds-brand);
+  flex-shrink: 0;
+}
+
+.ds-kicker-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.ds-label {
+  font: 600 clamp(18px, 2.4vw, 28px) / 1.2 "Outfit", system-ui, sans-serif;
+  color: var(--ds-ink-2);
+  margin-bottom: 8px;
+}
+
+.ds-blurb {
+  max-width: 54ch;
+  font: 400 clamp(14px, 1.1vw, 16px) / 1.6 "Outfit", system-ui, sans-serif;
+  color: var(--ds-muted);
+}
+
+.ds-area-big1 {
+  background: radial-gradient(
+      1200px 600px at 60% 30%,
+      rgba(37, 99, 235, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 0% 100%,
+      rgba(91, 71, 176, 0.12),
+      transparent 60%
+    ),
+    var(--ds-surface);
+}
+.ds-area-small1 {
+  background: radial-gradient(
+      700px 400px at 80% 20%,
+      rgba(91, 71, 176, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      600px 360px at 0% 100%,
+      rgba(37, 99, 235, 0.1),
+      transparent 60%
+    ),
+    var(--ds-surface);
+}
+.ds-area-small2 {
+  background: radial-gradient(
+      800px 460px at 20% 30%,
+      rgba(243, 186, 58, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px 420px at 100% 100%,
+      rgba(91, 71, 176, 0.1),
+      transparent 60%
+    ),
+    var(--ds-surface);
+}
+.ds-area-big2 {
+  background: radial-gradient(
+      1100px 600px at 70% 30%,
+      rgba(139, 92, 246, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 520px at 0% 100%,
+      rgba(37, 99, 235, 0.1),
+      transparent 60%
+    ),
+    var(--ds-surface);
+}
+
+@media (max-width: 1024px) {
+  .ds-grid {
+    padding: 40px 24px;
+  }
+
+  .ds-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .upper-div {
+    grid-template-columns: 60% 40%;
+  }
+
+  .lower-div {
+    grid-template-columns: 40% 60%;
+  }
+
+  .ds-card--xl,
+  .ds-card--sm {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .ds-grid {
+    gap: 16px;
+    padding: 28px 16px 36px;
+  }
+
+  .ds-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .ds-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #000;
+  }
+
+  .ds-subtitle {
+    font-size: 0.95rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    color: #666;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .upper-div,
+  .lower-div {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ds-card--xl,
+  .ds-card--sm {
+    min-height: unset;
+  }
+}
+
+@media (min-width: 1600px) {
+  .ds-grid {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}

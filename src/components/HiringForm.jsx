@@ -99,7 +99,7 @@ const HiringForm = ({ onClose, onSuccess }) => {
       submitData.append("companyName", formData.companyName);
       submitData.append("contactName", formData.contactName);
       submitData.append("email", formData.email);
-      if (formData.phone) submitData.append("phone", formData.phone);
+      submitData.append("phone", formData.phone);
       if (formData.role) submitData.append("role", formData.role);
       if (formData.techStack)
         submitData.append("techStack", formData.techStack);
@@ -179,9 +179,10 @@ const HiringForm = ({ onClose, onSuccess }) => {
           <input
             type="text"
             name="phone"
-            placeholder="Phone Number"
+            placeholder="WhatsApp Number *"
             value={formData.phone}
             onChange={handleChange}
+            required
           />
 
           <input

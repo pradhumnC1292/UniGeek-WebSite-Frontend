@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="ft__inner">
         <div className="ft__left">
           <div className="ft__brand">
-            <h2 className="ft__logo">GEEKSKUL</h2>
+            <h2 className="ft__logo">PROKOPI</h2>
             <p className="ft__desc">
               Empowering ambitious students with skills and guidance to launch
               successful careers in top tech companies.
@@ -131,7 +131,7 @@ export default function Footer() {
       <div className="ft__bottom">
         <p className="ft__copy">
           <FaRegCopyright className="ft__copy-icon" />
-          {` 2025 Pultox Technologies Pvt. Ltd., All rights reserved.`}
+          {` 2025 Prokopi Technology Pvt. Ltd., All rights reserved.`}
         </p>
       </div>
     </footer>

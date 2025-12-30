@@ -1,5 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Layout from "./layouts/Layout";
 import ScrollToTop from "./layouts/ScrollToTop";
 import Home from "./pages/Home";
@@ -13,11 +15,14 @@ import HiringPage from "./pages/HiringPage";
 import TermsAndConditions from "./components/TermsAndConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import MarqueeStrip from "./components/MarqueeStrip";
+import TabletToastNotification from "./components/TabletToastNotification";
 
 const App = () => {
   return (
     <>
+      <ToastContainer />
       <ScrollToTop />
+      <TabletToastNotification />
       <MarqueeStrip />
       <Routes>
         <Route path="/" element={<Layout />}>

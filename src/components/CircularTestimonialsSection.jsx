@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { CircularTestimonials } from "./CircularTestimonials";
+import { getApiUrl } from "../utils/apiConfig";
 import "./CircularTestimonials.css";
 
 const CircularTestimonialsSection = () => {
@@ -10,7 +11,7 @@ const CircularTestimonialsSection = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/mentors");
+        const { data } = await axios.get(getApiUrl("mentors"));
         // Normalize API response to always be an array
         const mentorsList = Array.isArray(data)
           ? data
@@ -33,7 +34,11 @@ const CircularTestimonialsSection = () => {
     name: mentor.name,
     designation: `${mentor.position}, ${mentor.company}`,
     quote: mentor.experience
-      ? `With ${mentor.experience} of experience, ${mentor.name} brings expertise in ${mentor.tag || "software development"} to guide students toward success.`
+      ? `With ${mentor.experience} of experience, ${
+          mentor.name
+        } brings expertise in ${
+          mentor.tag || "software development"
+        } to guide students toward success.`
       : `${mentor.name} is a ${mentor.position} at ${mentor.company}, bringing real-world industry experience to mentor students.`,
     src: mentor.image,
     tag: mentor.tag,
@@ -62,13 +67,13 @@ const CircularTestimonialsSection = () => {
       <section className="testimonials-section">
         <div className="testimonials-section-heading">
           <h2>
-            "Meet Your <span>Expert</span> Mentors"
+            Meet Your <span>Expert</span> Mentors
           </h2>
+          <p className="testimonials-section-subtitle">
+            Seasoned software developers with 5+ years of industry experience.
+          </p>
         </div>
-        <p className="testimonials-section-subtitle">
-          Seasoned software developers with 5+ years of industry experience,
-          passionately guiding you toward success.
-        </p>
+
         <div style={{ textAlign: "center", padding: "2rem" }}>
           <p>Loading mentors...</p>
         </div>
@@ -81,13 +86,13 @@ const CircularTestimonialsSection = () => {
       <section className="testimonials-section">
         <div className="testimonials-section-heading">
           <h2>
-            "Meet Your <span>Expert</span> Mentors"
+            Meet Your <span>Expert</span> Mentors
           </h2>
+          <p className="testimonials-section-subtitle">
+            Seasoned software developers with 5+ years of industry experience.
+          </p>
         </div>
-        <p className="testimonials-section-subtitle">
-          Seasoned software developers with 5+ years of industry experience,
-          passionately guiding you toward success.
-        </p>
+
         <div style={{ textAlign: "center", padding: "2rem" }}>
           <p>No mentors available at the moment.</p>
         </div>
@@ -101,13 +106,13 @@ const CircularTestimonialsSection = () => {
       <section className="testimonials-section">
         <div className="testimonials-section-heading">
           <h2>
-            "Meet Your <span>Expert</span> Mentors"
+            Meet Your <span>Expert</span> Mentors
           </h2>
+          <p className="testimonials-section-subtitle">
+            Seasoned software developers with 5+ years of industry experience.
+          </p>
         </div>
-        <p className="testimonials-section-subtitle">
-          Seasoned software developers with 5+ years of industry experience,
-          passionately guiding you toward success.
-        </p>
+
         <div style={{ textAlign: "center", padding: "2rem" }}>
           <p>No mentors available at the moment.</p>
         </div>
@@ -119,13 +124,17 @@ const CircularTestimonialsSection = () => {
     <section className="testimonials-section" data-scroll-section>
       <div className="testimonials-section-heading">
         <h2 data-scroll data-scroll-speed="1">
-          "Meet Your <span>Expert</span> Mentors"
+          Meet Your <span>Expert</span> Mentors
         </h2>
+        <p
+          className="testimonials-section-subtitle"
+          data-scroll
+          data-scroll-speed="1"
+        >
+          Seasoned software developers with 5+ years of industry experience.
+        </p>
       </div>
-      <p className="testimonials-section-subtitle" data-scroll data-scroll-speed="1">
-        Seasoned software developers with 5+ years of industry experience,
-        passionately guiding you toward success.
-      </p>
+
       <CircularTestimonials
         testimonials={testimonials}
         autoplay={true}
@@ -137,4 +146,3 @@ const CircularTestimonialsSection = () => {
 };
 
 export default CircularTestimonialsSection;
-

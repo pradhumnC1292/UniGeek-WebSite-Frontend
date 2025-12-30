@@ -1,7 +1,7 @@
 :root {
   --color-white: #fff;
-  --color-gray-dark: #3d3d3d;
-  --color-text-secondary: #666;
+  --color-gray-dark: #000000;
+  --color-text-secondary: #555;
   --color-purple: #5b47b0;
   --color-bubble: #f6f2fe;
   --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -9,6 +9,7 @@
 
 .wdm-section {
   display: block;
+  margin-bottom: -2rem;
 }
 @media (min-width: 768px) {
   .wdm-section {
@@ -17,15 +18,16 @@
 }
 
 .wdm-section {
-  padding: 1.25rem 0.75rem 2.25rem;
+  padding: 1.25rem 0.75rem 2rem;
   background: linear-gradient(180deg, var(--color-white), #fbfaff);
 }
 
 .wdm-card {
   background: var(--color-white);
   border-radius: 26px;
-  box-shadow: var(--shadow-soft);
-  padding: 1.5rem 1.1rem 2rem;
+  width: 100% !important;
+  /* box-shadow: var(--shadow-soft); */
+  padding: 1.5rem 1rem 1.5rem 0.5rem;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -45,15 +47,18 @@
 }
 
 .wdm-head {
-  text-align: center;
-  margin-bottom: 1.25rem;
+  text-align: left;
+  margin-bottom: 3rem;
+  padding: 0;
 }
 .wdm-title {
   margin: 0 0 0.5rem;
-  font-size: 1.6rem;
+  font-size: 30px;
   line-height: 1.2;
-  color: var(--color-gray-dark);
-  font-weight: 700;
+  color: black;
+  font-weight: 500;
+  text-align: left;
+  font-family: "Outfit", system-ui, sans-serif;
 }
 .wdm-title span {
   color: var(--color-purple);
@@ -63,6 +68,8 @@
   max-width: 28rem;
   color: var(--color-text-secondary);
   font-size: 0.95rem;
+  text-align: left;
+  font-family: "Outfit", system-ui, sans-serif;
 }
 
 .wdm-timeline {
@@ -111,7 +118,7 @@
   margin-left: auto;
   margin-right: 0;
   padding-left: 1.75rem;
-  text-align: right;
+  text-align: left;
   width: calc(50% - 18px);
 }
 

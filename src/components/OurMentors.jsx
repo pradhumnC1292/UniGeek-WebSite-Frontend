@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import linkedin from "../assets/icons/linkedin02.svg";
+import { getApiUrl } from "../utils/apiConfig";
 import "./OurMentors.css";
 
 const OurMentors = () => {
@@ -10,7 +11,7 @@ const OurMentors = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/mentors");
+        const { data } = await axios.get(getApiUrl("mentors"));
         setMentors(data.data ? data.data : data);
       } catch (error) {
         console.error("Error fetching mentors:", error);

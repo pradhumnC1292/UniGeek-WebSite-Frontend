@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import linkedin from "../assets/icons/linkedin02.svg";
+import { getApiUrl } from "../utils/apiConfig";
 import "./OurMentors.css";
 
 const OurMentorsMobile = () => {
@@ -9,7 +10,7 @@ const OurMentorsMobile = () => {
   useEffect(() => {
     const fetchMentors = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/mentors");
+        const { data } = await axios.get(getApiUrl("mentors"));
         // Normalize API response to always be an array
         const list = Array.isArray(data)
           ? data

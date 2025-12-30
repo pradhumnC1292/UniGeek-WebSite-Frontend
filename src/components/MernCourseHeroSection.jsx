@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CustomDropdown from "./CustomDropdown";
 import MernCoursePageLeftHeading from "./MernCoursePageLeftHeading";
 import { AnimatedGridPattern } from "./AnimatedGridPattern";
+import { getApiUrl } from "../utils/apiConfig";
 import "./JavaCourseHeroSection.css"; // reuse same CSS
 
 const MernCourseHeroSection = () => {
@@ -36,7 +37,7 @@ const MernCourseHeroSection = () => {
     const loadCourses = async () => {
       try {
         setCoursesLoading(true);
-        const response = await axios.get("http://localhost:5000/api/courses", {
+        const response = await axios.get(getApiUrl("courses"), {
           validateStatus: (status) => status < 500,
         });
 
@@ -103,7 +104,7 @@ const MernCourseHeroSection = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/enquiries",
+        getApiUrl("enquiries"),
         payload,
         {
           headers: { "Content-Type": "application/json" },
@@ -276,7 +277,7 @@ const MernCourseHeroSection = () => {
             </button>
             <div className="agreement">
               By submitting, you agree to the{" "}
-              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="terms-and-conditions">Prokopi's Terms</a> &{" "}
               <a href="privacy-policy">Privacy Policy</a>
             </div>
           </form>

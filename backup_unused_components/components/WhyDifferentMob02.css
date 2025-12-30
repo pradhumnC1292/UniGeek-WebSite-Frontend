@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --color-bg-left: #b8a8f687;
   --color-white: #fff;
   --color-black: #000;
@@ -28,7 +28,7 @@
   width: 100%;
 }
 
-/* Left Section */
+
 .left-section-mob {
   width: 100%;
   margin-bottom: 1rem;
@@ -51,12 +51,10 @@
   margin: 0 auto;
   max-width: 90%;
 }
-/* Hide the left-lower-mob section */
+
 .left-lower-mob {
   display: none;
 }
-
-/* Right Section */
 .right-section-mob {
   width: 100%;
   margin-bottom: 1rem;
@@ -83,7 +81,6 @@
   object-fit: contain;
 }
 
-/* Right Lower Section */
 .right-lower-mob {
   width: 100%;
   text-align: center;
@@ -115,7 +112,6 @@
   align-items: center;
 }
 
-/* Feature Items */
 .feature-mob {
   width: 90%;
   display: flex;
@@ -171,7 +167,7 @@
   margin: 0;
 }
 
-/* Responsive Rules */
+
 @media only screen and (max-width: 660px) {
   .left-upper-mob h2,
   .right-lower-title-mob h2 {
@@ -199,4 +195,4 @@
     margin-bottom: 0.5rem;
     margin-right: 0;
   }
-}
+} */

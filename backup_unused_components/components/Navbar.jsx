@@ -45,8 +45,8 @@ const Navbar = () => {
       <div className="navbar-container" ref={menuRef}>
         <div className="logo">
           {/* Make the logo clickable */}
-          <NavLink to="/" aria-label="Geekskul Home">
-            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+          <NavLink to="/" aria-label="Prokopi Home">
+            <img src={brandLogo} alt="Prokopi" className="brand-logo" />
           </NavLink>
         </div>
         <button

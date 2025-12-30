@@ -1,6 +1,6 @@
 import React from "react";
 import "./DashboardStats.css";
-import { AnimatedGradient } from "../components/AnimatedGradient.jsx"; // adjust path if needed
+import { AnimatedGradient } from "../components/AnimatedGradient.jsx"; 
 
 export default function DashboardStats() {
   const stats = {

@@ -4,6 +4,7 @@ import { MdPriceChange } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { BsFillRocketFill } from "react-icons/bs";
 import axios from "axios";
+import { getApiUrl } from "../utils/apiConfig";
 import "./FAQ.css";
 
 const FAQ = () => {
@@ -13,7 +14,7 @@ const FAQ = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/faqs")
+      .get(getApiUrl("faqs"))
       .then((response) => {
         setFaqs(response.data.data);
       })
@@ -35,7 +36,7 @@ const FAQ = () => {
         <h2 className="faq-title">
           Frequently Asked <span>Questions</span>
         </h2>
-        <p>These are the most commonly asked questions about Geekskul.</p>
+        <p>These are the most commonly asked questions about Prokopi.</p>
       </div>
       {/* Category Tabs */}
       <div className="faq-tabs">

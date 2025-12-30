@@ -1,5 +1,6 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "./BackgroundBeamsWithCollision";
+import "./HowToGetAdmission.css";
 
 const HowToGetAdmissionMob = () => {
   return (
@@ -7,7 +8,7 @@ const HowToGetAdmissionMob = () => {
       {/* <BackgroundBeamsWithCollision> */}
       <div className="title-div">
         <h2 className="admission-title-mob" data-scroll data-scroll-speed="2">
-          “How to get <span>Admission</span>”
+          How to get <span>Admission</span>
         </h2>
         <p className="sub-heading-mob" data-scroll data-scroll-speed="2">
           Your Pathway to an Exclusive, High-Quality Learning Experience

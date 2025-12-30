@@ -42,13 +42,12 @@ export default function WhyWerDiffrent() {
       <RetroGrid angle={65} />
       <div className="wd-shell">
         <header className="wd-head">
-          {/* <h2 id="wd-title" className="wd-title">
-            Why We’re Different
-          </h2> */}
+          <h2 id="wd-title" className="wd-title">
+            We’re not just another coding bootcamp.
+          </h2>
           <p className="wd-sub">
-            We’re not just another coding bootcamp. We’re India’s only
-            employer-certified career accelerator for niche tech jobs—with
-            transparent results and lifelong support.
+            We’re India’s only employer-certified career accelerator for niche
+            tech jobs—with transparent results and lifelong support.
           </p>
         </header>
 

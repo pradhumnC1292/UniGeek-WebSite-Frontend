@@ -32,7 +32,6 @@ const UiUxCourse = () => {
       <UIUXCourseHeroSection />
       <StatsBanner />
       <UIUXCourseUnigeekWay />
-      {/* <ResponsiveComponentOurMentors /> */}
       <CircularTestimonialsSection />
       <ResponsiveComponentCurriculumOverview />
       <ResponsiveUiUxAfterEnrollingJourney />

@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CustomDropdown from "./CustomDropdown";
 import CoursePageLeftHeading from "./CoursePageLeftHeading";
 import { AnimatedGridPattern } from "./AnimatedGridPattern";
+import { getApiUrl } from "../utils/apiConfig";
 import "./JavaCourseHeroSection.css";
 
 const JavaCourseHeroSection = () => {
@@ -40,7 +41,7 @@ const JavaCourseHeroSection = () => {
         console.log("Fetching courses from database...");
 
         // Direct API call to fetch courses from database
-        const response = await axios.get("http://localhost:5000/api/courses", {
+        const response = await axios.get(getApiUrl("courses"), {
           validateStatus: (status) => status < 500,
         });
 
@@ -74,7 +75,7 @@ const JavaCourseHeroSection = () => {
       } catch (error) {
         if (error.code === "ECONNREFUSED") {
           console.error(
-            "Backend server is not running at http://localhost:5000"
+            "Backend server is not running."
           );
         } else {
           console.error("Failed to load courses:", error.message);
@@ -135,7 +136,7 @@ const JavaCourseHeroSection = () => {
       console.log("Submitting enquiry payload:", payload);
 
       const res = await axios.post(
-        "http://localhost:5000/api/enquiries",
+        getApiUrl("enquiries"),
         payload,
         {
           headers: { "Content-Type": "application/json" },
@@ -311,7 +312,7 @@ const JavaCourseHeroSection = () => {
             </button>
             <div className="agreement">
               By submitting, you agree to the{" "}
-              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="terms-and-conditions">Prokopi's Terms</a> &{" "}
               <a href="privacy-policy">Privacy Policy</a>
             </div>
           </form>

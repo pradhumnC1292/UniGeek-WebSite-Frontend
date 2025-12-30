@@ -24,17 +24,18 @@
 }
 
 .whyhire-heading {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 500;
   color: var(--hire-heading-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .whyhire-heading span {
   color: #5b47b0;
 }
 .whyhire-subheading {
-  font-size: 1.2rem;
-  color: var(--hire-subheading-color);
+  font-size: 1rem;
+  font-family: "Outfit", system-ui, sans-serif;
+  color: #555;
   margin-bottom: 3rem;
   max-width: 800px;
   margin-left: auto;
@@ -73,7 +74,7 @@
 .whyhire-card p {
   font-size: 1rem;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .whyhire-differentiators {
@@ -140,8 +141,8 @@
   }
 
   .whyhire-heading {
-    font-size: 2.5rem !important;
-    font-weight: 600;
+    font-size: 2.2rem !important;
+    font-weight: 500;
     color: var(--hire-heading-color);
     margin-bottom: 1rem;
   }
@@ -149,7 +150,7 @@
     color: #5b47b0;
   }
   .whyhire-subheading {
-    font-size: 1.25rem !important;
+    font-size: 1rem !important;
     color: var(--hire-subheading-color);
     margin-bottom: 3rem;
     max-width: 800px !important;
@@ -198,8 +199,8 @@
   }
 
   .differentiator-heading {
-    font-size: 2.5rem !important;
-    font-weight: 600;
+    font-size: 2.2rem !important;
+    font-weight: 500;
     margin-bottom: 3rem;
     color: var(--hire-heading-color);
   }
@@ -245,16 +246,16 @@
   }
 
   .whyhire-heading {
-    font-size: clamp(1.6rem, 5vw, 2rem);
+    font-size: clamp(2rem, 5vw, 2rem);
     line-height: 1.2;
     margin-bottom: 0.75rem;
     letter-spacing: 0.2px;
   }
 
   .whyhire-subheading {
-    font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+    font-size: clamp(1rem, 2.6vw, 1.05rem);
     line-height: 1.55;
-    max-width: 92%;
+    max-width: 80%;
     margin-bottom: 2rem;
   }
 
@@ -332,6 +333,14 @@
 }
 
 @media (max-width: 480px) {
+  .whyhire-container {
+  }
+  .whyhire-content {
+    width: 100% !important;
+    text-align: left !important;
+    margin: 0 auto;
+  }
+
   .whyhire-grid {
     grid-template-columns: 1fr;
     gap: 0.9rem;
@@ -346,21 +355,42 @@
   .whyhire-icon {
     font-size: 1.35rem;
   }
+
   .whyhire-heading {
-    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    font-family: "Outfit", system-ui, sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
   }
 
+  .whyhire-subheading {
+    font-size: 0.95rem;
+    text-align: left;
+    max-width: 90%;
+    margin-left: 0;
+    margin-right: auto;
+    font-family: "Outfit", system-ui, sans-serif;
+  }
   .whyhire-card h3 {
     font-size: 1.05rem;
   }
 
   .whyhire-card p {
     font-size: 0.95rem;
+    padding: 0 !important;
+    text-align: left;
+    max-width: 550px;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 
   .differentiator-heading {
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    font-family: "Outfit", system-ui, sans-serif;
+    font-weight: 500;
+    max-width: 90%;
+    margin-bottom: 0.5rem;
   }
 
   .differentiator-card {

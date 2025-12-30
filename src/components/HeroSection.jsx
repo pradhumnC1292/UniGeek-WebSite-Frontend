@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import HeroLeftHeading from "./HeroLeftHeading";
 import CustomDropdown from "./CustomDropdown";
 import { AnimatedGridPattern } from "./AnimatedGridPattern";
+import { getApiUrl } from "../utils/apiConfig";
 import "./HeroSection.css";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -39,7 +40,7 @@ const HeroSection = () => {
         setCoursesLoading(true);
 
         // Try to fetch courses - handle authentication issue gracefully
-        const response = await axios.get("http://localhost:5000/api/courses", {
+        const response = await axios.get(getApiUrl("courses"), {
           validateStatus: (status) => status < 500,
         });
 
@@ -72,7 +73,7 @@ const HeroSection = () => {
       } catch (error) {
         if (error.code === "ECONNREFUSED") {
           console.error(
-            "Backend server is not running. Please start the server at http://localhost:5000"
+            "Backend server is not running. Please start the server."
           );
         } else {
           console.error("Failed to load courses:", error.message);
@@ -132,14 +133,10 @@ const HeroSection = () => {
 
       console.log("Submitting enquiry payload:", payload); // Debug log
 
-      const res = await axios.post(
-        "http://localhost:5000/api/enquiries",
-        payload,
-        {
-          headers: { "Content-Type": "application/json" },
-          validateStatus: () => true,
-        }
-      );
+      const res = await axios.post(getApiUrl("enquiries"), payload, {
+        headers: { "Content-Type": "application/json" },
+        validateStatus: () => true,
+      });
 
       console.log("Enquiry response:", res.status, res.data); // Debug log
 
@@ -317,7 +314,7 @@ const HeroSection = () => {
             </div>
             <div className="agreement">
               By submitting, you agree to the{" "}
-              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="terms-and-conditions">Prokopi's Terms</a> &{" "}
               <a href="privacy-policy">Privacy Policy</a>
             </div>
           </form>

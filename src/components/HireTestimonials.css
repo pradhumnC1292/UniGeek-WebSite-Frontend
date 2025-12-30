@@ -1,5 +1,5 @@
 .hire-testimonials-section {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   background: white;
 }
 
@@ -11,8 +11,8 @@
 .hire-testimonials-heading {
   font-family: "Outfit", sans-serif;
   font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
   color: #000;
   text-align: center;
 }
@@ -22,10 +22,10 @@
 }
 
 .hire-testimonials-subheading {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  color: #666;
+  color: #555;
   max-width: 700px;
   margin: 0 auto;
   margin-bottom: 3rem;
@@ -112,10 +112,10 @@
   }
 
   .hire-testimonials-subheading {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
-    color: #666;
+    color: #555;
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -123,5 +123,24 @@
 
   .hire-testimonials-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 660px) {
+  .hire-testimonials-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    font-family: "Outfit", system-ui, sans-serif;
+    color: #000;
+  }
+
+  .hire-testimonials-subheading {
+    font-size: 0.95rem;
+    padding: 0 !important;
+    text-align: left;
+    max-width: 90%;
+    margin-left: 0;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 }

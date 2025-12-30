@@ -12,7 +12,6 @@ const HiringPage = () => {
   return (
     <section className="hiring-page">
       <HiringPageHeroSec />
-      {/* <StatsBanner /> */}
       <WhyHireFromUs />
       <HireProcess />
       <HireProfiles />

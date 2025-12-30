@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { getApiUrl } from "../utils/apiConfig";
 import "./CurriculumOverviewMob.css";
 
 const CurriculumOverviewMob = () => {
@@ -16,7 +17,7 @@ const CurriculumOverviewMob = () => {
   useEffect(() => {
     const fetchCurriculums = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/curriculum", {
+        const res = await axios.get(getApiUrl("curriculum"), {
           params: { program },
         });
         console.log("Fetched curriculums:", res.data);
@@ -61,7 +62,7 @@ const CurriculumOverviewMob = () => {
     <section className="curriculum-sec-mob">
       <div className="curriculum-heading-mob">
         <h2 className="curriculum-title-mob">
-          “Course built to prepare you for <span>success</span>”
+          Course built to prepare you for <span>success</span>
         </h2>
         <p className="curriculum-sub-heading-mob">
           Curriculum crafted by seasoned developers with 5+ years of experience

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { getApiUrl } from "../utils/apiConfig";
 import "./MentorFormModal.css";
 
 const MentorFormModal = ({ role, onClose, onSuccess }) => {
@@ -100,7 +101,7 @@ const MentorFormModal = ({ role, onClose, onSuccess }) => {
 
       // Make API call to your backend
       const response = await axios.post(
-        "http://localhost:5000/api/mentorform",
+        getApiUrl("mentorform"),
         formDataToSend,
         {
           headers: {

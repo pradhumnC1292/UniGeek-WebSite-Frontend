@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaTimes } from "react-icons/fa";
 import CustomDropdown from "./CustomDropdown";
+import { getApiUrl } from "../utils/apiConfig";
 import "./CustomDropdown.css";
 import "./CallbackModal.css";
 
@@ -24,7 +25,7 @@ const CallbackModal = ({ isOpen, onClose }) => {
     const loadCourses = async () => {
       try {
         setCoursesLoading(true);
-        const response = await axios.get("http://localhost:5000/api/courses", {
+        const response = await axios.get(getApiUrl("courses"), {
           validateStatus: (status) => status < 500,
         });
 
@@ -45,7 +46,7 @@ const CallbackModal = ({ isOpen, onClose }) => {
       } catch (error) {
         if (error.code === "ECONNREFUSED") {
           console.error(
-            "Backend server is not running. Please start the server at http://localhost:5000"
+            "Backend server is not running. Please start the server."
           );
         } else {
           console.error("Failed to load courses:", error.message);
@@ -135,14 +136,10 @@ const CallbackModal = ({ isOpen, onClose }) => {
 
       console.log("Submitting enquiry payload:", payload);
 
-      const res = await axios.post(
-        "http://localhost:5000/api/enquiries",
-        payload,
-        {
-          headers: { "Content-Type": "application/json" },
-          validateStatus: () => true,
-        }
-      );
+      const res = await axios.post(getApiUrl("enquiries"), payload, {
+        headers: { "Content-Type": "application/json" },
+        validateStatus: () => true,
+      });
 
       console.log("Enquiry response:", res.status, res.data);
 
@@ -160,7 +157,9 @@ const CallbackModal = ({ isOpen, onClose }) => {
           onClose();
         }, 1500);
       } else if (res.status === 409) {
-        toast.success("You have already submitted the form. We'll contact you soon.");
+        toast.success(
+          "You have already submitted the form. We'll contact you soon."
+        );
         setFormData({
           name: "",
           email: "",
@@ -281,7 +280,7 @@ const CallbackModal = ({ isOpen, onClose }) => {
 
             <div className="callback-modal-agreement">
               By submitting, you agree to the{" "}
-              <a href="/terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="/terms-and-conditions">Prokopi's Terms</a> &{" "}
               <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </form>
@@ -292,4 +291,3 @@ const CallbackModal = ({ isOpen, onClose }) => {
 };
 
 export default CallbackModal;
-

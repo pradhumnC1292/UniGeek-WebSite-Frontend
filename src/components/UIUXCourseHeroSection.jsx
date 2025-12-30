@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import CustomDropdown from "./CustomDropdown";
 import UIUXCoursePageLeftHeading from "./UIUXCoursePageLeftHeading";
 import { AnimatedGridPattern } from "./AnimatedGridPattern";
+import { getApiUrl } from "../utils/apiConfig";
 import "./JavaCourseHeroSection.css"; // reuse same CSS
 
 const UIUXCourseHeroSection = () => {
@@ -35,7 +36,7 @@ const UIUXCourseHeroSection = () => {
     const loadCourses = async () => {
       try {
         setCoursesLoading(true);
-        const response = await axios.get("http://localhost:5000/api/courses", {
+        const response = await axios.get(getApiUrl("courses"), {
           validateStatus: (status) => status < 500,
         });
 
@@ -101,7 +102,7 @@ const UIUXCourseHeroSection = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/enquiries",
+        getApiUrl("enquiries"),
         payload,
         {
           headers: { "Content-Type": "application/json" },
@@ -274,7 +275,7 @@ const UIUXCourseHeroSection = () => {
             </button>
             <div className="agreement">
               By submitting, you agree to the{" "}
-              <a href="terms-and-conditions">Geekskul's Terms</a> &{" "}
+              <a href="terms-and-conditions">Prokopi's Terms</a> &{" "}
               <a href="privacy-policy">Privacy Policy</a>
             </div>
           </form>

@@ -17,7 +17,6 @@
   position: relative;
   isolation: isolate;
   padding: clamp(3rem, 6vw, 5rem) 1rem;
-  /* background: linear-gradient(180deg, var(--color-white), #faf8ff); */
   overflow: hidden;
   min-height: 500px;
 }
@@ -36,21 +35,21 @@
 }
 
 .wd-title {
-  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
-  line-height: 1.15;
-  color: var(--color-gray-dark);
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  margin: 0 0 0.75rem 0;
-  font-family: "outfit", sans-serif;
+  font-size: 2.2rem;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .wd-sub {
-  max-width: 760px;
+  font-size: 1rem;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  color: #555;
   margin: 0 auto;
-  color: var(--color-text-secondary);
-  font-size: clamp(0.98rem, 1.3vw, 1.05rem);
-  font-family: "outfit", sans-serif;
+  line-height: 1.6;
+  max-width: 550px;
 }
 
 .wd-grid {
@@ -184,6 +183,12 @@
 }
 
 @media (max-width: 480px) {
+  .wd-head {
+    width: 90%;
+    text-align: left !important;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+    font-family: "outfit", sans-serif;
+  }
   .wd-section .retrogrid-root {
     opacity: 0.65;
   }

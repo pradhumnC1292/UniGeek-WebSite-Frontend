@@ -56,8 +56,8 @@ const NewNavbar = () => {
     <header className="nn-navbar">
       <div className="nn-container">
         <div className="nn-brand">
-          <NavLink to="/" aria-label="Geekskul Home">
-            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+          <NavLink to="/" aria-label="Prokopi Home">
+            <img src={brandLogo} alt="Prokopi" className="brand-logo" />
           </NavLink>
         </div>
 

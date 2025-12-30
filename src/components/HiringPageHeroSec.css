@@ -35,7 +35,7 @@
 
 .hiring-hero-heading {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0.7rem;
 }
 
@@ -45,7 +45,8 @@
 
 .hiring-hero-subheading {
   font-size: 1rem;
-  color: var(--color-gray);
+  font-family: "Outfit", system-ui, sans-serif;
+  color: #555;
   margin-bottom: 2rem;
   line-height: 1.5;
   max-width: 660px;
@@ -79,7 +80,7 @@
 
 .hiring-feature-text p {
   font-size: 0.95rem;
-  color: var(--color-gray);
+  color: #555;
   margin: 0.2rem 0 0;
 }
 
@@ -277,7 +278,7 @@
 
   .hiring-hero-subheading {
     font-size: 1.25rem;
-    color: var(--color-gray);
+    color: #555;
     margin-bottom: 2rem;
     line-height: 1.3;
     max-width: 760px !important;
@@ -309,7 +310,7 @@
 
   .hiring-feature-text p {
     font-size: 1rem;
-    color: var(--color-gray);
+    color: #555;
     margin: 0.4rem 0 0;
   }
 
@@ -499,8 +500,9 @@
 
   .hiring-hero-heading {
     font-size: 2.8rem !important;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0.7rem;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 
   .hiring-hero-heading span {
@@ -509,7 +511,8 @@
 
   .hiring-hero-subheading {
     font-size: 1.2rem !important;
-    color: var(--color-gray);
+    font-family: "Outfit", system-ui, sans-serif;
+    color: #555;
     margin-bottom: 2rem;
     line-height: 1.5;
     max-width: 660px;
@@ -543,7 +546,7 @@
 
   .hiring-feature-text p {
     font-size: 1.2rem !important;
-    color: var(--color-gray);
+    color: #555;
     margin: 0.2rem 0 0;
   }
 
@@ -732,8 +735,9 @@
 
   .hiring-hero-heading {
     font-size: 2.7rem !important;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0.7rem;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 
   .hiring-hero-heading span {
@@ -742,10 +746,11 @@
 
   .hiring-hero-subheading {
     font-size: 1.15rem !important;
-    color: var(--color-gray);
+    color: #555;
     margin-bottom: 2rem;
     line-height: 1.5;
     max-width: 660px;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 
   .hiring-features {
@@ -776,7 +781,7 @@
 
   .hiring-feature-text p {
     font-size: 1.1rem !important;
-    color: var(--color-gray);
+    color: #555;
     margin: 0.2rem 0 0;
   }
 
@@ -966,8 +971,9 @@
 
   .hiring-hero-heading {
     font-size: 2.7rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0.7rem;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 
   .hiring-hero-heading span {
@@ -976,7 +982,7 @@
 
   .hiring-hero-subheading {
     font-size: 1.15rem;
-    color: var(--color-gray);
+    color: #555;
     margin-bottom: 2rem;
     line-height: 1.5;
     max-width: 660px;
@@ -1010,7 +1016,7 @@
 
   .hiring-feature-text p {
     font-size: 1.1rem;
-    color: var(--color-gray);
+    color: #555;
     margin: 0.2rem 0 0;
   }
 
@@ -1198,10 +1204,10 @@
   }
 
   .hiring-hero-heading {
-    font-family: "Outfit", sans-serif;
-    font-size: 1.75rem;
+    font-size: 30px;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    text-align: left;
+    font-family: "Outfit", system-ui, sans-serif;
     color: #000;
   }
 
@@ -1210,12 +1216,13 @@
   }
 
   .hiring-hero-subheading {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
-    color: #666;
+    color: #555;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    max-width: 90%;
     margin-bottom: 2rem;
   }
 
@@ -1247,7 +1254,7 @@
 
   .hiring-feature-text p {
     font-size: 1rem !important;
-    color: var(--color-gray);
+    color: #555;
     margin: 0.2rem 0 0;
   }
 
@@ -1281,12 +1288,21 @@
 }
 
 @media screen and (max-width: 380px) {
+  .hiring-hero-left-div {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
   .hiring-hero-heading {
     font-family: "Outfit", sans-serif;
-    font-size: 1.75rem;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 0.75rem;
     color: #000;
+    text-align: left;
   }
 
   .hiring-hero-heading span {
@@ -1294,12 +1310,13 @@
   }
 
   .hiring-hero-subheading {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
-    color: #666;
-    max-width: 100%;
-    margin: 0 auto;
+    color: #555;
+    max-width: 90%;
+    text-align: left;
+    margin: 0;
     margin-bottom: 2rem;
   }
 
@@ -1331,7 +1348,7 @@
 
   .hiring-feature-text p {
     font-size: 1rem !important;
-    color: var(--color-gray);
+    color: #555;
     margin: 0.2rem 0 0;
   }
 

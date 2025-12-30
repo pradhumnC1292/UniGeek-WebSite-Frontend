@@ -7,13 +7,13 @@ const CourseUnigeekWay = () => {
     <section className="course-unigeek-way-container">
       <div className="course-unigeek-way-content">
         <h2 className="course-unigeek-heading">
-          “Why Choose Us”{" "}
+          Why Choose Us{" "}
           <span role="img" aria-label="">
             ✨
           </span>
         </h2>
         <p className="course-unigeek-subheading">
-          At Geekskul, we focus on real skills, real projects, and real growth—
+          At Prokopi, we focus on real skills, real projects, and real growth—
           so you can step into the industry with confidence.
         </p>
 

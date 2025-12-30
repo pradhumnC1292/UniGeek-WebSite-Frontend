@@ -52,8 +52,8 @@
 //     <header className="mob-nav">
 //       <div className="mob-wrap">
 //         <div className="mob-brand">
-//           <NavLink to="/" className="mob-logo" aria-label="Geekskul Home">
-//             <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+//           <NavLink to="/" className="mob-logo" aria-label="Prokopi Home">
+//             <img src={brandLogo} alt="Prokopi" className="brand-logo" />
 //           </NavLink>
 //         </div>
 

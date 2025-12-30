@@ -30,7 +30,7 @@ export default function WhyDiffrent_Mob() {
       <div className="wdm-card">
         <header className="wdm-head">
           <h2 id="wdm-title" className="wdm-title">
-            “Why We Are <span>Different</span> from Others ?”
+            Why We Are <span>Different</span> from Others ?
           </h2>
           <p className="wdm-sub">
             We have highly professional mentors and a learner-first system.

@@ -58,8 +58,8 @@ const DesktopNavbar = () => {
     <header className="nav nav--desktop">
       <div className="nav__wrap container">
         <div className="nav__brand">
-          <NavLink to="/" className="brand" aria-label="Geekskul Home">
-            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+          <NavLink to="/" className="brand" aria-label="Prokopi Home">
+            <img src={brandLogo} alt="Prokopi" className="brand-logo" />
           </NavLink>
         </div>
 
@@ -218,8 +218,8 @@ const TabletNavbar = () => {
     <header className="nav nav--tablet">
       <div className="nav__wrap container">
         <div className="nav__brand">
-          <NavLink to="/" className="brand" aria-label="Geekskul Home">
-            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+          <NavLink to="/" className="brand" aria-label="Prokopi Home">
+            <img src={brandLogo} alt="Prokopi" className="brand-logo" />
           </NavLink>
         </div>
 
@@ -244,7 +244,7 @@ const TabletNavbar = () => {
             aria-modal="true"
           >
             <div className="drawer__header">
-              {/* <span className="brand">GEEKSKUL</span> */}
+              {/* <span className="brand">PROKOPI</span> */}
               <button
                 className="icon-btn"
                 aria-label="Close menu"
@@ -397,8 +397,8 @@ const MobileNavbar = () => {
     <header className="nav nav--mobile">
       <div className="nav__wrap container">
         <div className="nav__brand">
-          <NavLink to="/" className="brand" aria-label="Geekskul Home">
-            <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+          <NavLink to="/" className="brand" aria-label="Prokopi Home">
+            <img src={brandLogo} alt="Prokopi" className="brand-logo" />
           </NavLink>
         </div>
 
@@ -423,7 +423,7 @@ const MobileNavbar = () => {
           >
             <div className="sheet__header">
               <span className="brand">
-                <img src={brandLogo} alt="Geekskul" className="brand-logo" />
+                <img src={brandLogo} alt="Prokopi" className="brand-logo" />
               </span>
               <button
                 className="icon-btn"

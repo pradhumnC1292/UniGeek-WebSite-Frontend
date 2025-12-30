@@ -7,7 +7,7 @@ const UIUXCourseUnigeekWay = () => {
     <section className="course-unigeek-way-container">
       <div className="course-unigeek-way-content">
         <h2 className="course-unigeek-heading">
-          “Why do you choose us”{" "}
+          Why choose us{" "}
           <span role="img" aria-label="">
             ✨
           </span>

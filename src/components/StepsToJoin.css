@@ -25,17 +25,18 @@
 }
 
 .steps-join-heading {
-  font-family: "Outfit", sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  font-family: "Outfit", system-ui, sans-serif;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   color: var(--steps-heading-color);
 }
 
 .steps-join-subheading {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-family: "Outfit", system-ui, sans-serif;
   margin-bottom: 3rem;
-  max-width: 800px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   color: var(--steps-subheading-color);
@@ -77,7 +78,7 @@
 
 .steps-card-description {
   font-size: 1rem;
-  color: #666;
+  color: #555;
   line-height: 1.4;
 }
 
@@ -125,7 +126,7 @@
 
 @media (max-width: 820px) {
   .steps-join-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .steps-join-subheading {
     font-size: 1rem;
@@ -143,10 +144,17 @@
     padding: 2rem 1rem;
   }
   .steps-join-heading {
-    font-size: 1.8rem;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    font-family: "Outfit", system-ui, sans-serif;
   }
   .steps-join-subheading {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0 !important;
+    text-align: left;
+    max-width: 550px;
+    font-family: "Outfit", system-ui, sans-serif;
   }
   .steps-card-title {
     font-size: 1.2rem;

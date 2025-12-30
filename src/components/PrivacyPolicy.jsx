@@ -5,14 +5,14 @@ const PrivacyPolicy = () => {
   return (
     <div className="privacy-container">
       <h1 className="privacy-title">Privacy Policy</h1>
-      <p className="privacy-effective-date">Effective Date: 15 April 2025</p>
+      <p className="privacy-effective-date">Effective Date: 25 December 2025</p>
 
       <div className="privacy-section">
         <p className="privacy-paragraph">
-          Geekskul ("we," "us," or "our") is a product of Pultox Technologies
-          Pvt. Ltd., a company registered in the Republic of India. This Privacy
+          Prokopi ("we," "us," or "our") is a product of Prokopi Technology Pvt.
+          Ltd., a company registered in the Republic of India. This Privacy
           Policy outlines how we collect, use, share, and safeguard your
-          information when you interact with our platform. By using Geekskul’s
+          information when you interact with our platform. By using Prokopi’s
           website, courses, or services, you consent to the data practices
           described herein.
         </p>
@@ -311,7 +311,7 @@ const PrivacyPolicy = () => {
           8. Course, Pricing, and Placement Disclaimer
         </h2>
         <p className="privacy-paragraph">
-          Geekskul provides educational services and placement assistance, not
+          Prokopi provides educational services and placement assistance, not
           job guarantees. We facilitate resume-building, mock interviews, and
           introduce hiring opportunities. Job placement is influenced by
           external factors like individual performance and market conditions. We
@@ -320,7 +320,7 @@ const PrivacyPolicy = () => {
         </p>
         <p className="privacy-paragraph">
           All course-related decisions, including student batch allocation and
-          mentorship, are at the sole discretion of Geekskul.
+          mentorship, are at the sole discretion of Prokopi.
         </p>
       </div>
 
@@ -344,7 +344,7 @@ const PrivacyPolicy = () => {
         <p className="privacy-paragraph">
           We may update this Privacy Policy periodically to reflect legal,
           regulatory, or operational changes. You are encouraged to revisit this
-          page regularly. Your continued use of Geekskul services after such
+          page regularly. Your continued use of Prokopi services after such
           updates implies your acceptance.
         </p>
       </div>
@@ -355,9 +355,9 @@ const PrivacyPolicy = () => {
           If you have questions or concerns about this Privacy Policy, please
           reach out to us:
         </p>
-        <p className="privacy-paragraph">📧 hello@geekskul.com</p>
+        <p className="privacy-paragraph">📧 prokopipvtltd@gmail.com</p>
         <p className="privacy-paragraph">
-          📝 Geekskul is a product of Pultox Technologies Pvt. Ltd.
+          📝 Prokopi is a product of Prokopi Technology Pvt. Ltd.
         </p>
       </div>
     </div>

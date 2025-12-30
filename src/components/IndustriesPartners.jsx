@@ -71,7 +71,7 @@ export default function IndustriesPartners() {
         {/* Heading Section from original MarqueeSection */}
         <div className="industries-partners__header">
           <h2 className="industries-partners__heading">
-            "Trusted by Learners, <span>Recognized</span> by Industries"
+            Trusted by Learners. <span>Recognized</span> by Industries.
           </h2>
           <p className="industries-partners__subheading">
             Helping students gain real skills and connect with top startups and

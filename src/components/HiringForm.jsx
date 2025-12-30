@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./HiringForm.css";
 import { toast } from "react-toastify";
-
-const API_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+import { getApiUrl } from "../utils/apiConfig";
 
 const HiringForm = ({ onClose, onSuccess }) => {
   const [formData, setFormData] = useState({
@@ -108,7 +106,7 @@ const HiringForm = ({ onClose, onSuccess }) => {
       if (formData.attachment)
         submitData.append("attachment", formData.attachment);
 
-      await axios.post(`${API_URL}/hiring-requests`, submitData, {
+      await axios.post(getApiUrl("hiring-requests"), submitData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

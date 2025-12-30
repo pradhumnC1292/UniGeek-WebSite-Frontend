@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
 import StatsBanner from "../components/StatsBanner";
+import FeatureSectionWithBentoGrid from "../components/FeatureSectionWithBentoGrid";
 import MentorBanner from "../components/MentorBanner";
 import DashboardStats from "../components/DashboardStats";
 import CircularTestimonialsSection from "../components/CircularTestimonialsSection";
@@ -19,15 +20,12 @@ const Home = () => {
     <div className="home-page">
       <HeroSection />
       <StatsBanner />
-      {/* <MentorBanner /> */}
-      <DashboardStats />
+      <FeatureSectionWithBentoGrid />
       <IndustriesPartners />
       <CircularTestimonialsSection />
       <ResponsiveComponent />
       <WhyWerDiffrent />
-      {/* <WhyWerDiffrentResponsive /> */}
-      {/* <ResponsiveComponentWhyDifferentMob02 /> */}
-      <CareerServicesResponsive />
+      {/* <CareerServicesResponsive /> */}
       <CourseSection />
       <HowToGetAdmissionResponsiveComponent />
       <FAQ />

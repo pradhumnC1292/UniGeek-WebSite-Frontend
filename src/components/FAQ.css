@@ -29,9 +29,9 @@
   text-align: center;
 }
 .heading-faq p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
-  color: #666;
+  color: #555;
 }
 
 .faq-title {
@@ -296,9 +296,9 @@
     text-align: center;
   }
   .heading-faq p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: #555;
   }
 
   .faq-title {
@@ -421,9 +421,9 @@
     color: var(--purple-bg);
   }
   .heading-faq p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: #555;
   }
 
   .faq-container {
@@ -535,7 +535,7 @@
   .heading-faq p {
     font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: #555;
   }
 
   .faq-title {
@@ -644,8 +644,8 @@
   }
 
   .heading-faq {
-    min-width: 0 !important;
-    max-width: 410px !important;
+    width: 90%;
+    max-width: 800px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -655,23 +655,30 @@
 
   .heading-faq h2 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .heading-faq p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: #555;
   }
 
-  .faq-title {
-    font-size: 1.6rem !important;
-    font-weight: 600 !important;
+  .faq-title h2 {
+    font-size: 30px !important;
+    font-weight: 500 !important;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
   }
-  .faq-title span {
+  .faq-title h2 span {
     color: var(--purple-bg);
+  }
+
+  .faq-title p {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    margin-left: 0;
   }
 
   .faq-tabs {
@@ -772,7 +779,7 @@
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 480px) {
   .faq-section {
     width: 100vw;
     height: fit-content;
@@ -789,21 +796,24 @@
 
   .heading-faq {
     min-width: 0 !important;
-    max-width: 300px !important;
+    max-width: 90% !important;
     height: 10rem;
-    text-align: center;
+    text-align: left;
   }
   .heading-faq p {
     font-size: 1rem;
     font-weight: 400;
-    color: #666;
+    color: #555;
+    text-align: left;
+    margin-left: 0;
   }
 
   .faq-title {
-    font-size: 1.6rem !important;
-    font-weight: 600 !important;
+    font-size: 30px !important;
+    font-weight: 500 !important;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
+    margin-left: 0;
   }
   .faq-title span {
     color: var(--purple-bg);
@@ -926,21 +936,25 @@
 
   .heading-faq {
     min-width: 0 !important;
-    max-width: 300px !important;
+    max-width: 90% !important;
     height: 10rem;
-    text-align: center;
+    text-align: left !important;
+    margin-left: 0;
   }
   .heading-faq p {
     font-size: 1rem;
-    font-weight: 400;
-    color: #666;
+    padding: 0 !important;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 0;
+    font-family: "Outfit", system-ui, sans-serif;
   }
 
   .faq-title {
-    font-size: 1.4rem !important;
-    font-weight: 500 !important;
-    margin-bottom: 1rem;
-    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    font-family: "Outfit", system-ui, sans-serif;
   }
   .faq-title span {
     color: var(--purple-bg);

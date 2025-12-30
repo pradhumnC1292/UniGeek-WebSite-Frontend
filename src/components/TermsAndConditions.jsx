@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
       <div className="terms-section">
         <h2 className="terms-section-heading">1. Introduction</h2>
         <p className="terms-paragraph">
-          Welcome to Geekskul, a product of Pluto Technologies Pvt. Ltd.
+          Welcome to Prokopi, a product of Prokopi Technology Pvt. Ltd.
           (“Company”, “we”, “our”, “us”). These Terms & Conditions (“Terms”)
           govern your access to and use of our website and services, including
           all content, features, and offerings (collectively, the “Services”).
@@ -54,7 +54,7 @@ const TermsAndConditions = () => {
         <h2 className="terms-section-heading">4. Intellectual Property</h2>
         <p className="terms-paragraph">
           All content, logos, course material, code, design elements, and
-          digital assets provided by Geekskul (a product of Pluto Technologies
+          digital assets provided by Prokopi (a product of Prokopi Technology
           Pvt. Ltd.) are protected by intellectual property laws and remain the
           sole property of the Company or its licensors. Unauthorized
           reproduction, distribution, or commercial use is strictly prohibited.
@@ -72,7 +72,7 @@ const TermsAndConditions = () => {
           5. Course Access, Curriculum & Updates
         </h2>
         <p className="terms-paragraph">
-          Geekskul, operated by Pluto Technologies Pvt. Ltd., reserves the right
+          Prokopi, operated by Prokopi Technology Pvt. Ltd., reserves the right
           to update, modify, or discontinue any course, module, feature, or
           service at its sole discretion without prior notice. The course
           duration, curriculum, trainers, and structure are subject to change
@@ -105,7 +105,7 @@ const TermsAndConditions = () => {
           7. Placement Assistance Disclaimer
         </h2>
         <p className="terms-paragraph">
-          While Geekskul (a Pluto Technologies Pvt. Ltd. initiative) offers
+          While Prokopi (a Prokopi Technology Pvt. Ltd. initiative) offers
           placement preparation support including resume reviews, mock
           interviews, and access to hiring partners, we do not guarantee job
           placement or employment. Success depends on individual effort, skill,
@@ -122,9 +122,9 @@ const TermsAndConditions = () => {
         <p className="terms-paragraph">
           Access to course content is primarily optimized for desktops and
           laptops. Live classes may not be fully supported on mobile devices,
-          and access from mobile is discouraged unless otherwise stated.
-          Geekskul is not responsible for technical issues arising from
-          incompatible or unsupported devices.
+          and access from mobile is discouraged unless otherwise stated. Prokopi
+          is not responsible for technical issues arising from incompatible or
+          unsupported devices.
         </p>
       </div>
 
@@ -132,8 +132,8 @@ const TermsAndConditions = () => {
         <h2 className="terms-section-heading">9. Third-party Links</h2>
         <p className="terms-paragraph">
           Our website may contain links to third-party websites. These links are
-          provided for convenience only. Geekskul does not control or endorse
-          the content of these external sites and assumes no responsibility for
+          provided for convenience only. Prokopi does not control or endorse the
+          content of these external sites and assumes no responsibility for
           their content, services, or policies.
         </p>
       </div>
@@ -141,7 +141,7 @@ const TermsAndConditions = () => {
       <div className="terms-section">
         <h2 className="terms-section-heading">10. Limitation of Liability</h2>
         <p className="terms-paragraph">
-          To the maximum extent permitted by law, Geekskul (Pluto Technologies
+          To the maximum extent permitted by law, Prokopi (Prokopi Technology
           Pvt. Ltd.) disclaims all warranties, express or implied, regarding the
           website and services. We are not liable for any loss or damage
           including indirect, incidental, or consequential losses, arising from
@@ -173,8 +173,8 @@ const TermsAndConditions = () => {
       <div className="terms-section">
         <h2 className="terms-section-heading">12. Communication Consent</h2>
         <p className="terms-paragraph">
-          By registering on Geekskul, you authorize us and our affiliates
-          (including partners of Pluto Technologies Pvt. Ltd.) to contact you
+          By registering on Prokopi, you authorize us and our affiliates
+          (including partners of Prokopi Technology Pvt. Ltd.) to contact you
           via phone calls, SMS, WhatsApp, or email for transactional,
           promotional, or informational purposes, even if your number is
           registered with DND (Do Not Disturb).
@@ -206,10 +206,10 @@ const TermsAndConditions = () => {
           or our services, please contact us at:
         </p>
         <p className="terms-contact">
-          <strong>Email:</strong> hello@geekskul.com
+          <strong>Email:</strong> prokopipvtltd@gmail.com
           <br />
-          <strong>Note:</strong> Geekskul is a product of Pultox Technologies
-          Pvt. Ltd.
+          <strong>Note:</strong> Prokopi is a product of Prokopi Technology Pvt.
+          Ltd.
         </p>
       </div>
     </section>

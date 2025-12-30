@@ -32,7 +32,6 @@ const JavaCourse = () => {
       <JavaCourseHeroSection />
       <StatsBanner />
       <CourseUnigeekWay />
-      {/* <ResponsiveComponentOurMentors /> */}
       <CircularTestimonialsSection />
       <ResponsiveComponentCurriculumOverview />
       <ResponsiveAfterEnrollingJourney />
